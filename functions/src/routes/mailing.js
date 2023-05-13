@@ -1,8 +1,10 @@
 import { Router } from 'express';
-import { mailingGetHandler } from '../handlers/mailingHandlers.js';
+import { mailingPostHandler } from '../handlers/mailingHandlers.js';
 
 const router = Router();
 
-router.post('/', mailingGetHandler);
+router
+  .post('/', mailingPostHandler)
+  .get('/', (req, res) => res.send({ message: 'Get OK' }));
 
 export default router;

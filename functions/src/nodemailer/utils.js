@@ -2,8 +2,11 @@ import fs from 'fs';
 import path from 'path';
 import transporter from './config.js';
 import xlsx from 'xlsx';
+import os from 'os';
 
-const attachmPath = path.join(process.cwd(), 'src/nodemailer/attachments');
+// GCFunctions solo acepta escribir archivos que no son de la app, los de la app son solo READ.
+// Se crea un directorio /tmp para escribir estos archivos. Tiene vida solamente en durante la instancia de la función.
+const tmpPath = os.tmpdir();
 
 export const sendEmailOrder = (email, order) => {
   let itemsToString = '';
@@ -44,7 +47,7 @@ export const sendEmailOrder = (email, order) => {
     attachments: [
       {
         filename: order.id.concat('.xlsx'),
-        path: path.join(attachmPath, order.id.concat('.xlsx')),
+        path: path.join(tmpPath, order.id.concat('.xlsx')),
       },
     ],
   };
@@ -53,7 +56,7 @@ export const sendEmailOrder = (email, order) => {
     if (err) {
       console.log(err.message);
     } else {
-      fs.unlink(path.join(attachmPath, order.id + '.xlsx'), (unlinkError) => {
+      fs.unlink(path.join(tmpPath, order.id + '.xlsx'), (unlinkError) => {
         if (unlinkError) {
           console.log('No se pudo borrar el archivo - error al borrar');
         } else {
@@ -102,5 +105,5 @@ export const createXlsFile = (object) => {
   xlsx.utils.book_append_sheet(workbook, worksheet, 'Pedido');
 
   // Error en el ejecutar writeAsyncFile:
-  xlsx.writeFile(workbook, path.join(attachmPath, object.id.concat('.xlsx')));
+  xlsx.writeFile(workbook, path.join(tmpPath, object.id.concat('.xlsx')));
 };
