@@ -67,40 +67,13 @@ export const sendEmailOrder = (email, order) => {
 export const createFileandSend = (body) => {
   console.log(body);
   createXlsFile(body);
-  /* const filePath = path.join(attachmPath, body.id + '.xls');
-  
-  let itemsToString = '';
-
-  body.items.forEach(
-    (item) =>
-      (itemsToString +=
-        item.CODIGO +
-        ' ---- ' +
-        item.MEDIDA +
-        ' ---- ' +
-        item.quantity +
-        ' un' +
-        '\n')
-  ); */
-
-  /*fs.writeFile(filePath, data, (err) => {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log('Archivo creado con sucesso!!');
-      sendEmailOrder(body.email, body, data);
-      return;
-    }
-  }); */
 
   sendEmailOrder(body.email, body);
 };
 
 export const createXlsFile = (object) => {
   let aoaData = [];
-  /* Object.keys(object).forEach((key) => {
-    aoaData[0] = ;
-  }); */
+
   aoaData[0] = [
     'PEDIDO N° ',
     object.id,
@@ -111,9 +84,10 @@ export const createXlsFile = (object) => {
     'CLIENTE: ',
     object.email,
   ];
-  aoaData[1] = ['CODIGO', 'TIPO', 'PRODUCTO', 'CANTIDAD', 'PRECIO'];
+  aoaData[1] = ['_____', '_____', '_____', '_____', '_____'];
+  aoaData[2] = ['CODIGO', 'TIPO', 'PRODUCTO', 'CANTIDAD', 'PRECIO'];
   object.items.forEach((item, index) => {
-    aoaData[index + 2] = [
+    aoaData[index + 3] = [
       item.CODIGO,
       item.TIPO,
       item.MEDIDA,
@@ -125,9 +99,8 @@ export const createXlsFile = (object) => {
   const workbook = xlsx.utils.book_new();
   const worksheet = xlsx.utils.aoa_to_sheet(aoaData);
 
-  console.log(worksheet);
-
   xlsx.utils.book_append_sheet(workbook, worksheet, 'Pedido');
 
+  // Error en el ejecutar writeAsyncFile:
   xlsx.writeFile(workbook, path.join(attachmPath, object.id.concat('.xlsx')));
 };

@@ -10,9 +10,6 @@ admin.initializeApp(functions.config().firebase);
 
 dotenv.config({ path: process.cwd() });
 
-console.log('index.js:13 - ', process.cwd());
-console.log('index.js:14 - ', process.env.P);
-
 const appMail = express();
 
 appMail.use(express.json());
@@ -26,4 +23,5 @@ appMail.use((req, res, next) => {
 });
 appMail.use('/api/mailing', mailingRouter);
 
+appMail.listen(6000, () => console.log('Server running on port: 6000'));
 export const app = functions.https.onRequest(appMail);
