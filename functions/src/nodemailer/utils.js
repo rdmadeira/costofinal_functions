@@ -8,7 +8,7 @@ import os from 'os';
 // Se crea un directorio /tmp para escribir estos archivos. Tiene vida solamente en durante la instancia de la función.
 const tmpPath = os.tmpdir();
 
-export const sendEmailOrder = (email, order) => {
+export const sendEmailOrder = async (email, order) => {
   let itemsToString = '';
 
   order.items.forEach(
@@ -67,14 +67,15 @@ export const sendEmailOrder = (email, order) => {
   });
 };
 
-export const createFileandSend = (body) => {
+export const createFileandSend = async (body) => {
   console.log(body);
-  createXlsFile(body);
+  await createXlsFile(body);
 
-  sendEmailOrder(body.email, body);
+  await sendEmailOrder(body.email, body);
+  return;
 };
 
-export const createXlsFile = (object) => {
+export const createXlsFile = async (object) => {
   let aoaData = [];
 
   aoaData[0] = [
