@@ -31,7 +31,7 @@ export const sendEmailOrder = async (email, order) => {
   const sendMailOptions = {
     from: 'compras.costofinal@gmail.com',
     to: email,
-    cc: 'compras.costofinal@gmail.com',
+    cc: 'costofinalbronce@gmail.com',
     subject: `${order.name} Gracias por su pedido!!`,
     html: `
     <h2>Pedido n° ${order.id} registrado con suceso...</h2>
