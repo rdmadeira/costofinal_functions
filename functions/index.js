@@ -23,7 +23,7 @@ appMail.use((req, res, next) => {
 });
 appMail.use('/api/mailing', mailingRouter);
 
-/* appMail.listen(6000, () => console.log('Server running on port:6000'));
- */ export const app = functions
+appMail.listen(6000, () => console.log('Server running on port:6000'));
+export const app = functions
   .runWith({ secrets: ['MAIL', 'MAIL_KEY'] })
   .https.onRequest(appMail);

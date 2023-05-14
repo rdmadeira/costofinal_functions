@@ -77,6 +77,7 @@ export const createFileandSend = async (body) => {
 
 export const createXlsFile = async (object) => {
   let aoaData = [];
+  let Total = 0;
 
   aoaData[0] = [
     'PEDIDO N° ',
@@ -89,7 +90,8 @@ export const createXlsFile = async (object) => {
     object.email,
   ];
   aoaData[1] = ['_____', '_____', '_____', '_____', '_____'];
-  aoaData[2] = ['CODIGO', 'TIPO', 'PRODUCTO', 'CANTIDAD', 'PRECIO'];
+  aoaData[2] = ['CODIGO', 'TIPO', 'PRODUCTO', 'CANTIDAD', 'PRECIO', 'SUBTOTAL'];
+
   object.items.forEach((item, index) => {
     aoaData[index + 3] = [
       item.CODIGO,
@@ -97,8 +99,12 @@ export const createXlsFile = async (object) => {
       item.MEDIDA,
       item.quantity,
       item.PRECIO,
+      item.PRECIO * item.quantity,
     ];
+    Total += item.PRECIO * item.quantity;
   });
+  aoaData.push(['XXXXXX', 'XXXXXX', 'XXXXXX', 'XXXXXX', 'XXXXXX', 'XXXXXX']);
+  aoaData.push(['', '', '', '', 'TOTAL: ', Total]);
 
   const workbook = xlsx.utils.book_new();
   const worksheet = xlsx.utils.aoa_to_sheet(aoaData);
