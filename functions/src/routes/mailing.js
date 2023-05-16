@@ -7,4 +7,4 @@ router
   .post('/', mailingPostHandler)
   .get('/', (req, res) => res.send({ message: 'Get OK' }));
 
-export default router;
+export { router as mailingRouter };
