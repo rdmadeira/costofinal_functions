@@ -105,10 +105,25 @@ export const createXlsFile = async (object) => {
   });
   aoaData.push(['XXXXXX', 'XXXXXX', 'XXXXXX', 'XXXXXX', 'XXXXXX', 'XXXXXX']);
   aoaData.push(['', '', '', '', 'TOTAL: ', Total]);
+  const addressData = [
+    ['Nombre: ', `${object.name} ${object.lastname}`],
+    [
+      'Dirección: ',
+      `${object.address.calle} ${object.address.numero} ${
+        object.address.complemento || ''
+      }`,
+    ],
+    ['Localidad: ', `${object.address.localidad}`],
+    ['CP: ', `${object.address.CP}`],
+    ['Telefono: ', `${object.phone}`],
+  ];
+  /* aoaData.push(addressData); */
 
   const workbook = xlsx.utils.book_new();
   const worksheet = xlsx.utils.aoa_to_sheet(aoaData);
-
+  xlsx.utils.sheet_add_aoa(worksheet, addressData, {
+    origin: `A${aoaData.length + 2}`,
+  });
   xlsx.utils.book_append_sheet(workbook, worksheet, 'Pedido');
 
   // Error en el ejecutar writeAsyncFile:
