@@ -11,7 +11,6 @@ admin.initializeApp(functions.config().firebase);
 dotenv.config({ path: process.cwd() });
 
 const appMail = express();
-const getProducts = express();
 
 /* ***************************************************** */
 appMail.use(express.json());
@@ -24,9 +23,15 @@ appMail.use((req, res, next) => {
   next();
 });
 appMail.use('/api/mailing', mailingRouter);
+
+export const app = functions
+  .runWith({ secrets: ['MAIL', 'MAIL_KEY'] })
+  .https.onRequest(appMail);
+
 /* ***************************************************** */
-getProducts.use(express.json());
-getProducts.use((req, res, next) => {
+const updatePrices = express();
+updatePrices.use(express.json());
+updatePrices.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.header(
     'Access-Control-Allow-Headers',
@@ -34,13 +39,6 @@ getProducts.use((req, res, next) => {
   );
   next();
 });
-getProducts.use('/api/products', productsRouter);
+updatePrices.use('/api/upPrices', productsRouter);
 
-/* products.listen(3300, () => console.log('Server running on port 3300')); */
-export const app = functions
-  .runWith({ secrets: ['MAIL', 'MAIL_KEY'] })
-  .https.onRequest(appMail);
-
-export const products = functions
-  .runWith({ secrets: ['MAIL', 'MAIL_KEY'] })
-  .https.onRequest(getProducts);
+export const products = functions.https.onRequest(updatePrices);
