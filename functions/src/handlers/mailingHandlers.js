@@ -3,7 +3,7 @@ import { createFileandSend } from '../nodemailer/utils.js';
 export const mailingPostHandler = (req, res) => {
   const data = req.body;
 
-  res.set('Access-Control-Allow-Origin', '*');
+  res.set('Access-Control-Allow-Origin', 'https://www.costofinal.com.ar');
   if (data.email) {
     console.info('POST /mailing success');
     createFileandSend(data)
