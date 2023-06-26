@@ -29,9 +29,9 @@ export const app = functions
   .https.onRequest(appMail);
 
 /* ***************************************************** */
-const updatePrices = express();
-updatePrices.use(express.json());
-updatePrices.use((req, res, next) => {
+const updateProducts = express();
+updateProducts.use(express.json());
+updateProducts.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.header(
     'Access-Control-Allow-Headers',
@@ -39,6 +39,6 @@ updatePrices.use((req, res, next) => {
   );
   next();
 });
-updatePrices.use('/api/upPrices', productsRouter);
+updateProducts.use('/api/products', productsRouter);
 
-export const products = functions.https.onRequest(updatePrices);
+export const products = functions.https.onRequest(updateProducts);

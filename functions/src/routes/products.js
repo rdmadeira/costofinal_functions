@@ -1,12 +1,14 @@
 import { Router } from 'express';
-import { getProductsHandler } from '../handlers/productsHandlers.js';
+import {
+  getProductsHandler,
+  putProductsHandler,
+  postUpdatePriceHandler,
+} from '../handlers/productsHandlers.js';
 
 const router = Router();
 
-router.get('/products', getProductsHandler);
-router.get('/', (req, res) => {
-  /* getAuth();  Falta hacer algo para manipular acceso a la app*/
-  res.send('Setup authorizating first...');
-});
+router.get('/', getProductsHandler);
+router.put('/', putProductsHandler);
+router.post('/update-price', postUpdatePriceHandler);
 
 export { router as productsRouter };
