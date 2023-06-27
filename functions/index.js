@@ -4,7 +4,13 @@ import dotenv from 'dotenv';
 import * as functions from 'firebase-functions';
 import admin from 'firebase-admin';
 
-import { mailingRouter, productsRouter } from './src/routes/index.js';
+import {
+  mailingRouter,
+  productsRouter,
+  authRouter,
+} from './src/routes/index.js';
+import { setHeaderAllowOrigin } from './src/middlewares/setHeader.js';
+import errorHandler from './src/errors/errorsHandler.js';
 
 admin.initializeApp(functions.config().firebase);
 
@@ -31,14 +37,9 @@ export const app = functions
 /* ***************************************************** */
 const updateProducts = express();
 updateProducts.use(express.json());
-updateProducts.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.header(
-    'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With, Content-Type, Accept'
-  );
-  next();
-});
+updateProducts.use(setHeaderAllowOrigin);
 updateProducts.use('/api/products', productsRouter);
+updateProducts.use('/api/auth', authRouter);
+updateProducts.use(errorHandler);
 
 export const products = functions.https.onRequest(updateProducts);
