@@ -5,12 +5,12 @@ import * as functions from 'firebase-functions';
 import admin from 'firebase-admin';
 
 import {
-  mailingRouter,
+  mailingRouter /* ,
   productsRouter,
-  authRouter,
+  authRouter, */,
 } from './src/routes/index.js';
-import { setHeaderAllowOrigin } from './src/middlewares/setHeader.js';
-import errorHandler from './src/errors/errorsHandler.js';
+/* import { setHeaderAllowOrigin } from './src/middlewares/setHeader.js';
+import errorHandler from './src/errors/errorsHandler.js'; */
 
 admin.initializeApp(functions.config().firebase);
 
@@ -35,7 +35,7 @@ export const app = functions
   .https.onRequest(appMail);
 
 /* ***************************************************** */
-const updateProducts = express();
+/* const updateProducts = express();
 updateProducts.use(express.json());
 updateProducts.use(setHeaderAllowOrigin);
 updateProducts.use('/api/products', productsRouter);
@@ -43,3 +43,4 @@ updateProducts.use('/api/auth', authRouter);
 updateProducts.use(errorHandler);
 
 export const products = functions.https.onRequest(updateProducts);
+ */

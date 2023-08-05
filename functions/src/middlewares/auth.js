@@ -1,4 +1,4 @@
-import jwt from 'jsonwebtoken';
+/* import jwt from 'jsonwebtoken';
 
 export const authVerify = (req, res, next) => {
   let token;
@@ -15,3 +15,4 @@ export const authVerify = (req, res, next) => {
 
   const decode = jwt.verify(token, process.env.JWT_KEY);
 };
+ */
