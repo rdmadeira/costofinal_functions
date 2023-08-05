@@ -1,4 +1,7 @@
+import { getProductsFromFirestore } from '../firebase/utils.js';
+
 export const updateAllPrices = (factorAumento, productsJson) => {
+  console.log(factorAumento);
   let updatedProductsJson = {};
   for (const prodType in productsJson) {
     updatedProductsJson[prodType] = {};
@@ -6,6 +9,7 @@ export const updateAllPrices = (factorAumento, productsJson) => {
       updatedProductsJson[prodType][subType] = [];
       productsJson[prodType][subType].forEach((producto, index) => {
         updatedProductsJson[prodType][subType].push(producto);
+        console.log(parseFloat(productsJson[prodType][subType][index].PRECIO));
         updatedProductsJson[prodType][subType][index].PRECIO =
           parseFloat(productsJson[prodType][subType][index].PRECIO) *
           (1 + factorAumento / 100);
@@ -15,7 +19,6 @@ export const updateAllPrices = (factorAumento, productsJson) => {
           productsJson[prodType][subType]
           ); */
     }
-    console.log('updated' + ': ', updatedProductsJson);
   }
   return updatedProductsJson;
 };

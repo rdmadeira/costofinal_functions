@@ -42,5 +42,10 @@ updateProducts.use('/api/products', productsRouter);
 updateProducts.use('/api/auth', authRouter);
 updateProducts.use(errorHandler);
 
+<<<<<<< HEAD
 export const products = functions.https.onRequest(updateProducts);
  */
+
+/* export const products = functions
+  .runWith({ secrets: ['USER_UID', 'DATABASE_API_KEY'] })
+  .https.onRequest(updateProducts); */

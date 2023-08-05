@@ -29,16 +29,15 @@ export const putProductsHandler = async (req, res, next) => {
 };
 
 export const postUpdatePriceHandler = async (req, res, next) => {
-  const { incrementFactor } = req.body;
+  const { incrementFactor } = /* req.body */ 30;
 
   const products = await getProductsFromFirestore();
 
   if (!products.isSuccess) {
-    res.status(500).json({ message: products.message });
     return next(products.error);
   }
 
-  const updatedProducts = updateAllPrices(incrementFactor, products);
+  const updatedProducts = updateAllPrices(incrementFactor, products.data);
 
   res.status(200).json({
     message: 'Successful Updated Prices!',
