@@ -1,7 +1,4 @@
-import { getProductsFromFirestore } from '../firebase/utils.js';
-
-export const updateAllPrices = (factorAumento, productsJson) => {
-  console.log(factorAumento);
+export const updateAllPrices = (productsJson) => {
   let updatedProductsJson = {};
   for (const prodType in productsJson) {
     updatedProductsJson[prodType] = {};

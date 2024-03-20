@@ -6,11 +6,13 @@ import admin from 'firebase-admin';
 
 import {
   mailingRouter /* ,
-  productsRouter,
   authRouter, */,
+  productsRouter,
 } from './src/routes/index.js';
 /* import { setHeaderAllowOrigin } from './src/middlewares/setHeader.js';
 import errorHandler from './src/errors/errorsHandler.js'; */
+
+import bodyParser from 'body-parser';
 
 admin.initializeApp(functions.config().firebase);
 
@@ -33,6 +35,24 @@ appMail.use('/api/mailing', mailingRouter);
 export const app = functions
   .runWith({ secrets: ['MAIL', 'MAIL_KEY'] })
   .https.onRequest(appMail);
+
+/* Crear ruta de acceso de DB - productos */
+const getProductsApi = express();
+
+getProductsApi.use(express.json());
+getProductsApi.use(bodyParser.urlencoded({ extended: true }));
+getProductsApi.use((req, res, next) => {
+  /* res.setHeader('Access-Control-Allow-Origin', '*'); */ // Desabilitar CORS para prueba
+  /* res.header(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept'
+  ); */
+  next();
+});
+
+getProductsApi.use('/api/products', productsRouter);
+
+export const products = functions.https.onRequest(getProductsApi);
 
 /* ***************************************************** */
 /* const updateProducts = express();
