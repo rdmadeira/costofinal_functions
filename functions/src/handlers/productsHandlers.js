@@ -3,10 +3,11 @@ import {
   updateProductsToFirestore,
   createNewProductsToFirestore,
 } from '../firebase/utils.js';
+
 import { updateAllPrices } from '../utils/utils.js';
 
 import { fileURLToPath } from 'url';
-import path, { dirname, resolve } from 'path';
+import path, { dirname } from 'path';
 
 import {
   getStorage,
@@ -61,7 +62,7 @@ export const getUpdatePriceHandler = async (req, res, next) => {
 
 // Todavia falta:
 export const postUpdatePriceHandler = async (req, res, next) => {
-  console.log('req.file', await req.file);
+  console.log('req', req.file);
 
   try {
     const dataTime = '19/03/2024 22:30:25';

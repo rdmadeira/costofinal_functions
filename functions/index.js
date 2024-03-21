@@ -39,6 +39,8 @@ export const app = functions
 /* Crear ruta de acceso de DB - productos */
 const getProductsApi = express();
 
+getProductsApi.use(express.static('public'));
+
 getProductsApi.use(express.json());
 getProductsApi.use(bodyParser.urlencoded({ extended: true }));
 getProductsApi.use((req, res, next) => {
