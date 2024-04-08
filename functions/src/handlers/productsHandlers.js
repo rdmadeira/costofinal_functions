@@ -3,6 +3,7 @@ import {
   updateProductsToFirestore,
   createNewProductsToFirestore,
 } from '../firebase/utils.js';
+import { createAsyncJsonFromDB, updatePrices } from '../utils/utils.js';
 
 import { updateAllPrices } from '../utils/utils.js';
 
@@ -12,9 +13,11 @@ import path, { dirname } from 'path';
 import {
   getStorage,
   ref,
+  uploadBytes,
   getDownloadURL,
   uploadBytesResumable,
 } from 'firebase/storage';
+import admin from 'firebase-admin';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -61,45 +64,51 @@ export const getUpdatePriceHandler = async (req, res, next) => {
 };
 
 // Todavia falta:
+
+import fs from 'fs';
+import { Readable } from 'stream';
+
+//mandar a utils ---
+const uploadFile = async (originalname, mimetype, buffer, filePath) => {
+  const fileStream = Readable.from(buffer);
+  const storage = admin.storage().bucket();
+  const fileUpload = storage.file(originalname);
+  const writeStream = fileUpload.createWriteStream({
+    metadata: {
+      contentType: mimetype,
+    },
+  });
+  fileStream
+    .pipe(writeStream)
+    .on('error', (error) => {
+      console.log('error', error);
+    })
+    .on('finish', () => console.log('File upload finished'));
+
+  fs.writeFile(filePath, buffer, (err) =>
+    err
+      ? console.log('error', err)
+      : console.log('File uploaded in filesystem!!!')
+  );
+};
+
 export const postUpdatePriceHandler = async (req, res, next) => {
-  console.log('req', req.file);
-
   try {
-    const dataTime = '19/03/2024 22:30:25';
-    const storageRef = ref(
-      storage,
-      `uploads/${req.file.originalname} - ${dataTime}`
-    );
-    const metadata = {
-      contentType: req.file.mimetype,
-    };
+    const { fieldname, originalname, encoding, mimetype, buffer } =
+      req.files[0];
+    const filePath = path.resolve('src/temp/files', originalname);
+    /*     console.log('filePath', filePath);
+     */
 
-    const snapshot = await uploadBytesResumable(
-      storageRef,
-      req.file.buffer,
-      metadata
-    );
+    await uploadFile(originalname, mimetype, buffer, filePath);
 
-    const downloadURL = await getDownloadURL(snapshot.ref);
+    await createAsyncJsonFromDB('products');
 
-    const message = 'File succesfully uploaded.';
-    console.log(message);
+    updatePrices(filePath);
 
-    return res.json({
-      message,
-      name: req.file.originalname,
-      type: req.file.mimetype,
-      downloadURL: downloadURL,
-    });
+    res.send('Ok');
   } catch (error) {
     console.log('error', error);
     next(error);
   }
-
-  /* const updatedProducts = updateAllPrices(products.data); */
-
-  /* res.status(200).json({
-    message: 'Successful Updated Prices!',
-    data: updatedProducts,
-  }); */
 };

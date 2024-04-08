@@ -1,0 +1,4476 @@
+{
+  "BRONCE ROSCADO PARA AGUA": {
+    "Tapones": [
+      {
+        "MEDIDA": "Tapon  1/2",
+        "KIT": 20,
+        "TIPO": "Tapones",
+        "PRECIO": 693,
+        "id": "bdf0b4c1-a96b-42f5-a18a-3e6e803b0729",
+        "CODIGO": "TO12BR"
+      },
+      {
+        "PRECIO": 1140,
+        "MEDIDA": "Tapon  3/4",
+        "CODIGO": "TO34BR",
+        "TIPO": "Tapones",
+        "id": "60e244de-34ab-4195-b01b-db96ae7ad5f7",
+        "KIT": 20
+      }
+    ],
+    "Entreroscas": [
+      {
+        "id": "82883408-4d21-49ed-ae8b-fa12efc7a1a7",
+        "CODIGO": "E12BR",
+        "PRECIO": 849,
+        "KIT": 20,
+        "TIPO": "Entreroscas",
+        "MEDIDA": "Entrerosca 1/2"
+      },
+      {
+        "CODIGO": "E34BR",
+        "id": "22bc8b94-5fd8-4d26-9c53-870b28a2d7f5",
+        "KIT": 20,
+        "TIPO": "Entreroscas",
+        "PRECIO": 1259,
+        "MEDIDA": "Entrerosca 3/4"
+      },
+      {
+        "PRECIO": 1974,
+        "TIPO": "Entreroscas",
+        "MEDIDA": "Entrerosca 1",
+        "CODIGO": "E1BR",
+        "id": "89716344-cfb3-4789-9d93-3ffd984f003a",
+        "KIT": 20
+      }
+    ],
+    "Codos": [
+      {
+        "id": "6ed8ab15-2204-43c7-ae37-33291a5fb804",
+        "TIPO": "Codos",
+        "KIT": 20,
+        "PRECIO": 1557,
+        "MEDIDA": "Codo Hembra -Hembra 1/2 90 º",
+        "CODIGO": "CODOHH12BR"
+      },
+      {
+        "PRECIO": 2328,
+        "TIPO": "Codos",
+        "KIT": 20,
+        "id": "a8a9ebc9-f42d-4891-8fda-e42907da9d63",
+        "MEDIDA": "Codo Hembra -Hembra 3/4 90 º",
+        "CODIGO": "CODOHH34BR"
+      },
+      {
+        "CODIGO": "CODOHM12BR",
+        "KIT": 20,
+        "MEDIDA": "Codo Hembra -Macho 1/2 90 º",
+        "PRECIO": 1557,
+        "TIPO": "Codos",
+        "id": "abc90d81-e903-4018-8eb5-8ed28740f42f"
+      },
+      {
+        "id": "9878f1bf-c4e9-40b6-a5e4-e1d717958be6",
+        "MEDIDA": "Codo Hembra -Macho 3/4 90 º",
+        "PRECIO": 2328,
+        "KIT": 20,
+        "CODIGO": "CODOHM34BR",
+        "TIPO": "Codos"
+      },
+      {
+        "PRECIO": 1911,
+        "KIT": 20,
+        "TIPO": "Codos",
+        "MEDIDA": "Codo Hembra - Hembra 3/4 x 1/2",
+        "id": "a5f4840b-9ed4-4091-b5ae-0cc340df169f",
+        "CODIGO": "CODOHH3412BR"
+      }
+    ],
+    "Tapas": [
+      {
+        "TIPO": "Tapas",
+        "id": "a6ffc784-ec27-4d58-91cb-d6f105d1b838",
+        "CODIGO": "TA12BR",
+        "KIT": 20,
+        "PRECIO": 885,
+        "MEDIDA": "Tapa 1/2"
+      },
+      {
+        "MEDIDA": "Tapa 3/4",
+        "KIT": 20,
+        "TIPO": "Tapas",
+        "id": "edeef771-f9b2-45a3-98c4-26d2f95c05fe",
+        "PRECIO": 1032,
+        "CODIGO": "TA4BR"
+      }
+    ],
+    "Tees": [
+      {
+        "id": "119b5cd4-688f-4895-ac9d-2fb78a27886f",
+        "MEDIDA": "Tee 1/2",
+        "PRECIO": 1875,
+        "KIT": 20,
+        "TIPO": "Tees",
+        "CODIGO": "TEE12BR"
+      },
+      {
+        "MEDIDA": "Tee 3/4",
+        "id": "da7516fe-bc08-44df-b75a-964941e45133",
+        "KIT": 20,
+        "CODIGO": "TEE34BR",
+        "TIPO": "Tees",
+        "PRECIO": 2767
+      },
+      {
+        "id": "7054d0a3-3bc4-4ae0-a836-e2a165a4e011",
+        "TIPO": "Tees",
+        "MEDIDA": "Tee 1 ",
+        "PRECIO": 4119,
+        "CODIGO": "TEE1BR",
+        "KIT": 20
+      },
+      {
+        "id": "907c9203-30e6-407c-8847-1b069c50240e",
+        "CODIGO": "TEE3412BR",
+        "MEDIDA": "Tee 3/4 X 1/2",
+        "TIPO": "Tees",
+        "KIT": 20,
+        "PRECIO": 2449
+      }
+    ],
+    "Bujes": [
+      {
+        "id": "5ef7803b-7c8d-4a39-bc58-891904bdeba4",
+        "TIPO": "Bujes",
+        "PRECIO": 913,
+        "KIT": 20,
+        "CODIGO": "B3412BR",
+        "MEDIDA": "Buje 3/4 x 1/2"
+      },
+      {
+        "KIT": 20,
+        "PRECIO": 1754,
+        "id": "145aa4a1-8282-4e0d-a7b7-0fe51aebe020",
+        "TIPO": "Bujes",
+        "CODIGO": "B112BR",
+        "MEDIDA": "Buje 1 x 1/2"
+      },
+      {
+        "PRECIO": 1430,
+        "id": "63aea108-612e-45aa-b7b3-a9605eb72ffb",
+        "CODIGO": "B134BR",
+        "MEDIDA": "Buje 1 x 3/4",
+        "KIT": 20,
+        "TIPO": "Bujes"
+      }
+    ],
+    "Reducciones": [
+      {
+        "PRECIO": 1224,
+        "TIPO": "Reducciones",
+        "id": "f7390de9-51a9-4101-a9fb-723306a1dce3",
+        "KIT": 20,
+        "CODIGO": "RMM3412BR",
+        "MEDIDA": "Reduccion M M 3/4 x 1/2"
+      }
+    ],
+    "Uniones": [
+      {
+        "CODIGO": "UDC12BR",
+        "PRECIO": 2916,
+        "id": "efd7d442-8a4e-4edf-8bf4-fbc813985d55",
+        "MEDIDA": "Union doble conica 1/2",
+        "KIT": 10,
+        "TIPO": "Uniones"
+      },
+      {
+        "CODIGO": "UDC34BR",
+        "KIT": 10,
+        "PRECIO": 5292,
+        "id": "e3fed231-fb9d-4755-bf75-27ed488f310d",
+        "TIPO": "Uniones",
+        "MEDIDA": "Union doble conica 3/4"
+      }
+    ],
+    "Bridas": [
+      {
+        "KIT": 10,
+        "id": "2120fa40-bf61-4f30-a327-16ddf1058d7f",
+        "CODIGO": "BRIDA12BR",
+        "TIPO": "Bridas",
+        "PRECIO": 2653.56,
+        "MEDIDA": "Brida 1/2"
+      },
+      {
+        "PRECIO": 2327.7617999999998,
+        "TIPO": "Bridas",
+        "MEDIDA": "Brida 3/4",
+        "id": "4e5d5be2-216e-457c-a56c-2451bccbbcb3",
+        "CODIGO": "BRIDA34BR",
+        "KIT": 10
+      },
+      {
+        "MEDIDA": "Brida 1 ",
+        "TIPO": "Bridas",
+        "KIT": 10,
+        "CODIGO": "BRIDA1BR",
+        "id": "40a3b966-12b9-496a-80f4-4bd859c8c589",
+        "PRECIO": 945.945
+      }
+    ],
+    "Cuplas": [
+      {
+        "id": "d3ed73ef-5ca1-45fd-b372-125c4a417875",
+        "PRECIO": 1160,
+        "MEDIDA": "Cupla 1/2",
+        "CODIGO": "C12BR",
+        "TIPO": "Cuplas",
+        "KIT": 20
+      },
+      {
+        "PRECIO": 1458,
+        "KIT": 20,
+        "TIPO": "Cuplas",
+        "id": "b803b840-15e8-4cf1-bae0-ad16e43e3b3e",
+        "CODIGO": "C34BR",
+        "MEDIDA": "Cupla 3/4"
+      },
+      {
+        "CODIGO": "C1BR",
+        "KIT": 20,
+        "MEDIDA": "Cupla 1",
+        "id": "b2667b9b-064c-4faf-b463-a1f5c17956af",
+        "TIPO": "Cuplas",
+        "PRECIO": 2406
+      },
+      {
+        "KIT": 20,
+        "CODIGO": "C114BR",
+        "MEDIDA": "Cupla 1 1/4",
+        "PRECIO": 2406,
+        "TIPO": "Cuplas",
+        "id": "73ec0b4c-bb50-4cd4-81d3-6ece6426d535"
+      },
+      {
+        "PRECIO": 1302,
+        "TIPO": "Cuplas",
+        "CODIGO": "c3412br",
+        "KIT": 20,
+        "id": "b23817ef-5320-45b0-9298-3c2c6f949df9",
+        "MEDIDA": "Cupla 3/4 x 1/2"
+      }
+    ]
+  },
+  "BRONCE TRAFILADO": {
+    "Prolongaciones": [
+      {
+        "TIPO": "Prolongaciones",
+        "id": "35bbca82-8951-47d2-a2b6-6fbdc33d183c",
+        "PRECIO": 1712,
+        "MEDIDA": "Prolongación bajo mesada 5,5 cm con estriado interno",
+        "KIT": 20,
+        "CODIGO": "PRO"
+      },
+      {
+        "PRECIO": 1849,
+        "CODIGO": "PROL",
+        "id": "d82f049d-270c-4415-bfc7-347c977aa6ea",
+        "TIPO": "Prolongaciones",
+        "KIT": 20,
+        "MEDIDA": "Prolongación bajo mesada 6 cm con estriado interno"
+      },
+      {
+        "id": "73af07eb-1b53-44bc-9280-89a741ede822",
+        "CODIGO": "PRO1212",
+        "TIPO": "Prolongaciones",
+        "PRECIO": 910,
+        "MEDIDA": "Prolongacion 1/2 x 1/2 con estriado interno",
+        "KIT": 20
+      },
+      {
+        "KIT": 20,
+        "id": "c5d4248f-41f7-4961-9e5b-e381718e7125",
+        "CODIGO": "PRO1234",
+        "PRECIO": 1038,
+        "MEDIDA": "Prolongacion 1/2 x 3/4 con estriado interno",
+        "TIPO": "Prolongaciones"
+      },
+      {
+        "KIT": 20,
+        "MEDIDA": "Prolongacion 1/2 x 1 con estriado interno",
+        "id": "d8f8df2c-a932-4885-9353-ff4a5e0e0597",
+        "PRECIO": 1243,
+        "CODIGO": "PRO121",
+        "TIPO": "Prolongaciones"
+      },
+      {
+        "id": "618dc480-539c-4248-a47b-98c9b7e3a063",
+        "CODIGO": "PRO12114",
+        "PRECIO": 1639,
+        "MEDIDA": "Prolongacion 1/2 x 1 1/4 con estriado interno",
+        "TIPO": "Prolongaciones",
+        "KIT": 20
+      },
+      {
+        "id": "b43d2915-18d5-4045-994c-caece027aed5",
+        "PRECIO": 1876,
+        "KIT": 20,
+        "MEDIDA": "Prolongacion 1/2 x 1 1/2 con estriado interno",
+        "TIPO": "Prolongaciones",
+        "CODIGO": "PRO12112"
+      },
+      {
+        "TIPO": "Prolongaciones",
+        "MEDIDA": "Prolongacion 1/2 x 2 con estriado interno",
+        "KIT": 20,
+        "id": "c6e407ed-02be-4290-8c68-ca7467b827de",
+        "PRECIO": 2162,
+        "CODIGO": "PRO122"
+      },
+      {
+        "KIT": 20,
+        "TIPO": "Prolongaciones",
+        "MEDIDA": "Prolongacion 3/4 x 3/4 con estriado interno",
+        "PRECIO": 1755,
+        "CODIGO": "PRO3434",
+        "id": "492e0512-2137-42e5-9721-0924714b045d"
+      },
+      {
+        "id": "c71647e7-3a4a-4b92-bcf2-439406b85fab",
+        "TIPO": "Prolongaciones",
+        "KIT": 20,
+        "PRECIO": 2155,
+        "CODIGO": "PRO341",
+        "MEDIDA": "Prolongacion 3/4 x 1 con estriado interno"
+      },
+      {
+        "MEDIDA": "Prolongacion 3/4 x 11/4 con estriado interno",
+        "PRECIO": 2382,
+        "CODIGO": "PRO34114",
+        "TIPO": "Prolongaciones",
+        "id": "1073a2c0-0c46-4503-b0b7-8088c21c1ba1",
+        "KIT": 20
+      },
+      {
+        "CODIGO": "PRO34112",
+        "KIT": 20,
+        "MEDIDA": "Prolongacion 3/4 x 11/2 con estriado interno",
+        "TIPO": "Prolongaciones",
+        "PRECIO": 2616,
+        "id": "0c9aaf44-5592-4e19-b375-47663de0834f"
+      },
+      {
+        "PRECIO": 2979,
+        "MEDIDA": "Prolongacion 3/4 x 2 con estriado interno",
+        "CODIGO": "PRO342",
+        "TIPO": "Prolongaciones",
+        "KIT": 20,
+        "id": "841eebcc-a310-42f2-9b84-a9c84b079c0a"
+      }
+    ],
+    "Mariposas": [
+      {
+        "TIPO": "Mariposas",
+        "CODIGO": "MRIPOSA3",
+        "id": "c19bd5e7-0e30-402f-a750-373655b5a3bc",
+        "PRECIO": 585,
+        "MEDIDA": "Mariposa 3 kl",
+        "KIT": 20
+      },
+      {
+        "TIPO": "Mariposas",
+        "CODIGO": "MARIPOSA10",
+        "PRECIO": 815,
+        "MEDIDA": "Mariposa 10 kl",
+        "KIT": 20,
+        "id": "913e93dd-78f4-4854-b93a-c2183aae2a5a"
+      }
+    ],
+    "Pernos": [
+      {
+        "PRECIO": 460,
+        "MEDIDA": "Perno 3 kl",
+        "KIT": 20,
+        "TIPO": "Pernos",
+        "CODIGO": "PERNO3",
+        "id": "4771fc52-1413-4fda-8618-646d5511a171"
+      },
+      {
+        "CODIGO": "PERNO10",
+        "TIPO": "Pernos",
+        "KIT": 20,
+        "PRECIO": 766,
+        "id": "6f3b169b-e297-45e7-a067-232757eb1126",
+        "MEDIDA": "Perno 10 kl"
+      }
+    ],
+    "Tetones": [
+      {
+        "KIT": 20,
+        "id": "da5fb5e7-e1d8-4983-b080-b545574c0fd8",
+        "TIPO": "Tetones",
+        "PRECIO": 453,
+        "MEDIDA": "Tetón Macho de 1/8",
+        "CODIGO": "TM18"
+      },
+      {
+        "TIPO": "Tetones",
+        "PRECIO": 489,
+        "KIT": 20,
+        "MEDIDA": "Tetón Macho de 1/4",
+        "CODIGO": "TM14",
+        "id": "77dda5de-7471-4499-8b36-f990708f333e"
+      },
+      {
+        "KIT": 20,
+        "TIPO": "Tetones",
+        "CODIGO": "TM38",
+        "MEDIDA": "Tetón Macho de 3/8",
+        "PRECIO": 610,
+        "id": "2c6b6dd6-0d63-40a6-921f-6f2402612e6d"
+      },
+      {
+        "id": "9164a94f-1364-416c-89f8-05e66eeebee4",
+        "MEDIDA": "Tetón Macho de 1/2",
+        "KIT": 20,
+        "PRECIO": 823,
+        "CODIGO": "TM12",
+        "TIPO": "Tetones"
+      },
+      {
+        "PRECIO": 462,
+        "TIPO": "Tetones",
+        "KIT": 20,
+        "CODIGO": "TH18",
+        "MEDIDA": "Tetón hembra de 1/8",
+        "id": "26d2eb8c-ffd6-4231-a900-46fba19be913"
+      },
+      {
+        "CODIGO": "TH14",
+        "id": "99c1288a-c99e-406f-9399-8db9fb2b2b90",
+        "KIT": 20,
+        "TIPO": "Tetones",
+        "PRECIO": 587,
+        "MEDIDA": "Tetón hembra de 1/4"
+      },
+      {
+        "KIT": 20,
+        "CODIGO": "TH38",
+        "PRECIO": 709,
+        "TIPO": "Tetones",
+        "id": "e7e68134-e931-4b8d-afc8-3b6433b96f67",
+        "MEDIDA": "Tetón hembra de 3/8"
+      },
+      {
+        "TIPO": "Tetones",
+        "KIT": 20,
+        "id": "715efd60-9b59-46f4-8628-97fb650f4cc1",
+        "PRECIO": 953,
+        "CODIGO": "TH12",
+        "MEDIDA": "Tetón hembra de 1/2"
+      },
+      {
+        "id": "16ceb05e-508e-4bae-97a0-1ece44a8e7d0",
+        "KIT": 20,
+        "PRECIO": 1346,
+        "CODIGO": "TCM12",
+        "MEDIDA": "Tetón curvo 1/2 h",
+        "TIPO": "Tetones"
+      },
+      {
+        "id": "57a812d9-be58-46ed-bb97-b74a077b2008",
+        "CODIGO": "TC12H",
+        "PRECIO": 1346,
+        "KIT": 20,
+        "MEDIDA": "Tetón curvo 1/2 m",
+        "TIPO": "Tetones"
+      },
+      {
+        "MEDIDA": "Tetón 1/2 Macho x 1/2 ",
+        "id": "a8276acc-b4f9-4bf0-8216-6977e3a5f000",
+        "TIPO": "Tetones",
+        "PRECIO": 958,
+        "CODIGO": "TM12R",
+        "KIT": 20
+      },
+      {
+        "MEDIDA": "Tetón 1/2 Hembra x 1/2",
+        "id": "a8499166-3b0e-4f2c-9ccc-f523d5509391",
+        "TIPO": "Tetones",
+        "PRECIO": 1155,
+        "CODIGO": "TH12R",
+        "KIT": 20
+      }
+    ],
+    "Virolas": [
+      {
+        "MEDIDA": "Virolas de aluminio x 1/8",
+        "PRECIO": 59,
+        "id": "adfb8837-33a6-4e63-8a4a-5b7ecdf8fe1f",
+        "KIT": 20,
+        "CODIGO": "VA18",
+        "TIPO": "Virolas"
+      },
+      {
+        "PRECIO": 59,
+        "CODIGO": "VA516",
+        "KIT": 20,
+        "id": "51605a70-3a89-42ee-8f66-fdc056e3948d",
+        "MEDIDA": "Virolas de aluminio x 5/16",
+        "TIPO": "Virolas"
+      },
+      {
+        "KIT": 20,
+        "MEDIDA": "Virolas de aluminio x 3/8",
+        "id": "0eb46d03-5496-4bd9-8543-ea9e856b7845",
+        "CODIGO": "VA38",
+        "PRECIO": 65,
+        "TIPO": "Virolas"
+      },
+      {
+        "id": "f35efb04-2d69-4871-bb14-276542476d13",
+        "PRECIO": 92,
+        "KIT": 20,
+        "MEDIDA": "Virolas de aluminio x 1/2",
+        "TIPO": "Virolas",
+        "CODIGO": "VA12"
+      },
+      {
+        "TIPO": "Virolas",
+        "id": "4c9be541-cadb-42c0-a2f6-dae170b1da9c",
+        "MEDIDA": "Virolas de bronce x 1/8",
+        "KIT": 20,
+        "PRECIO": 132,
+        "CODIGO": "VB18"
+      },
+      {
+        "id": "87904f68-6af6-4d9c-acaf-ec5995d9bdd0",
+        "CODIGO": "VB516",
+        "KIT": 20,
+        "PRECIO": 154,
+        "MEDIDA": "Virolas de bronce x 5/16",
+        "TIPO": "Virolas"
+      },
+      {
+        "PRECIO": 173,
+        "id": "92f94975-106e-4536-a9f5-0cfadce297b6",
+        "CODIGO": "VB38",
+        "KIT": 20,
+        "TIPO": "Virolas",
+        "MEDIDA": "Virolas de bronce x 3/8"
+      },
+      {
+        "KIT": 20,
+        "TIPO": "Virolas",
+        "id": "561aad9e-1e8b-4dd1-b19a-41de73710a37",
+        "MEDIDA": "Virolas de bronce x 1/2",
+        "PRECIO": 221,
+        "CODIGO": "BVB12"
+      }
+    ],
+    "Bujes de Reduccion": [
+      {
+        "KIT": 20,
+        "id": "f96a3f30-7a78-4381-b04a-64b63ca8ea46",
+        "PRECIO": 277,
+        "MEDIDA": "Buje Reducción 1/4 x 1/8",
+        "CODIGO": 1418,
+        "TIPO": "Bujes de Reduccion"
+      },
+      {
+        "PRECIO": 459,
+        "CODIGO": 3818,
+        "id": "4af5c46d-f0f5-4809-8bfb-23a838a46daf",
+        "KIT": 20,
+        "TIPO": "Bujes de Reduccion",
+        "MEDIDA": "Buje Reducción 3/8 x 1/8"
+      },
+      {
+        "KIT": 20,
+        "CODIGO": 3814,
+        "TIPO": "Bujes de Reduccion",
+        "id": "0bb7677a-c22e-4822-b9a2-6c9cb42a64a8",
+        "PRECIO": 412,
+        "MEDIDA": "Buje Reducción 3/8 x 1/4"
+      },
+      {
+        "MEDIDA": "Buje Reducción 1/2 x 1/8",
+        "CODIGO": 1218,
+        "KIT": 20,
+        "TIPO": "Bujes de Reduccion",
+        "id": "58319521-c8a4-4f59-a8f4-40e010067f05",
+        "PRECIO": 556
+      },
+      {
+        "id": "9eb319d4-7297-4c0d-8794-3ceedaea5290",
+        "TIPO": "Bujes de Reduccion",
+        "MEDIDA": "Buje Reducción 1/2 x 1/4",
+        "PRECIO": 476,
+        "KIT": 20,
+        "CODIGO": 1214
+      },
+      {
+        "MEDIDA": "Buje Reducción 1/2 x 3/8",
+        "CODIGO": 1238,
+        "KIT": 20,
+        "TIPO": "Bujes de Reduccion",
+        "id": "05afc74a-831b-4f8f-9706-628873d86a5f",
+        "PRECIO": 504
+      },
+      {
+        "PRECIO": 1064,
+        "MEDIDA": "Buje Reducción 3/4 x 1/2",
+        "id": "80311645-5378-4a51-b0f0-ee7700c9c947",
+        "CODIGO": 3412,
+        "KIT": 20,
+        "TIPO": "Bujes de Reduccion"
+      }
+    ],
+    "Tapas": [
+      {
+        "KIT": 20,
+        "TIPO": "Tapas",
+        "CODIGO": "TA18",
+        "MEDIDA": "Tapa de 1/8",
+        "PRECIO": 276,
+        "id": "8390b318-7ec6-44e1-8c60-046ec93832db"
+      },
+      {
+        "MEDIDA": "Tapa de 1/4",
+        "id": "6793db95-40fa-415b-94b3-6f014126b86b",
+        "KIT": 20,
+        "PRECIO": 322,
+        "CODIGO": "TA14",
+        "TIPO": "Tapas"
+      },
+      {
+        "TIPO": "Tapas",
+        "CODIGO": "TA38",
+        "MEDIDA": "Tapa de 3/8",
+        "PRECIO": 444,
+        "id": "83aa4499-3613-4d1d-bd17-98e95b70e397",
+        "KIT": 20
+      },
+      {
+        "TIPO": "Tapas",
+        "id": "109f0cb4-4b9c-4631-b6ce-33ed603dc6bf",
+        "PRECIO": 605,
+        "KIT": 20,
+        "CODIGO": "TA12",
+        "MEDIDA": "Tapa de 1/2"
+      }
+    ],
+    "Insertos": [
+      {
+        "id": "1830714b-e859-46af-bd14-72ab10efce9a",
+        "MEDIDA": "Inserto de bronce estría Fina ",
+        "KIT": 20,
+        "CODIGO": "IF",
+        "PRECIO": 217,
+        "TIPO": "Insertos"
+      },
+      {
+        "MEDIDA": "Inserto de bronce estría Gruesa",
+        "PRECIO": 205,
+        "TIPO": "Insertos",
+        "KIT": 20,
+        "id": "a4a5d341-e81e-4697-872d-64255267003d",
+        "CODIGO": "IG"
+      },
+      {
+        "MEDIDA": "Inserto de bronce estría cuadrado",
+        "TIPO": "Insertos",
+        "id": "90073748-36af-47d4-b619-0a2a89080187",
+        "CODIGO": "IC",
+        "KIT": 20,
+        "PRECIO": 205
+      },
+      {
+        "MEDIDA": "Inserto de plastico estría fina",
+        "KIT": 20,
+        "id": "04c22950-74b1-4bc2-9d1d-8ec31064e24b",
+        "CODIGO": "IFP",
+        "TIPO": "Insertos",
+        "PRECIO": 26
+      },
+      {
+        "id": "41c82686-5543-443e-9819-7709480db7ab",
+        "MEDIDA": "Inserto de plastico estría gruesa",
+        "CODIGO": "IGP",
+        "KIT": 20,
+        "PRECIO": 26,
+        "TIPO": "Insertos"
+      },
+      {
+        "TIPO": "Insertos",
+        "KIT": 20,
+        "PRECIO": 26,
+        "id": "f4139398-019e-43a5-8f58-49a5010e958b",
+        "MEDIDA": "Inserto de plastico estría cuadrada",
+        "CODIGO": "ICP"
+      }
+    ],
+    "Uniones": [
+      {
+        "id": "707e8324-cca4-49b7-b683-9039e9082d09",
+        "CODIGO": "UR1238C",
+        "PRECIO": 1368,
+        "TIPO": "Uniones",
+        "MEDIDA": "Unión Reductora de BCE 1/2 x 3/8 CONICA",
+        "KIT": 20
+      },
+      {
+        "KIT": 20,
+        "PRECIO": 1301,
+        "MEDIDA": "Unión Reductora de BCE 1/2 x 3/8 ",
+        "id": "cba1d765-4868-4d37-bef6-6ddafdf7efec",
+        "CODIGO": "UR1238",
+        "TIPO": "Uniones"
+      },
+      {
+        "MEDIDA": "Unión Reductora de BCE 3/4 x 1/2",
+        "id": "a335a23f-7264-4763-a7be-e0c635bd7390",
+        "KIT": 20,
+        "PRECIO": 2162,
+        "TIPO": "Uniones",
+        "CODIGO": "UR3412"
+      },
+      {
+        "MEDIDA": "Unión Reductora de BCE 3/4 x 3/8",
+        "id": "a72e412b-50bb-41bc-bd46-aff570de018f",
+        "KIT": 20,
+        "CODIGO": "UR3438",
+        "TIPO": "Uniones",
+        "PRECIO": 2049
+      }
+    ],
+    "Nuez": [
+      {
+        "KIT": 20,
+        "TIPO": "Nuez",
+        "PRECIO": 849,
+        "id": "d6931d8f-a736-4828-aed5-29773bf7e5d4",
+        "CODIGO": "NC",
+        "MEDIDA": "Nuez comun CON ESTRIADO INTERNO"
+      },
+      {
+        "PRECIO": 933,
+        "id": "5baba07b-b96d-44d2-aea0-b5f9913b4084",
+        "TIPO": "Nuez",
+        "CODIGO": "NI",
+        "MEDIDA": "Nuez invertida CON ESTRIADO INTERNO",
+        "KIT": 20
+      }
+    ],
+    "Reducciones": [
+      {
+        "PRECIO": 453,
+        "KIT": 20,
+        "id": "4bf88c87-e673-444c-a309-195dfa1be9df",
+        "MEDIDA": "Reducción MM 1/4 x 1/8  P/ virola ",
+        "TIPO": "Reducciones",
+        "CODIGO": "RM1418"
+      },
+      {
+        "PRECIO": 572,
+        "TIPO": "Reducciones",
+        "id": "98272169-a838-45d5-b25a-c2dd4686a462",
+        "KIT": 20,
+        "CODIGO": "RM3818",
+        "MEDIDA": "Reducción MM 3/8 x 1/8  P/ virola "
+      },
+      {
+        "KIT": 20,
+        "MEDIDA": "Reducción MM 3/8 x 1/4  P/ virola ",
+        "CODIGO": "RM3814",
+        "TIPO": "Reducciones",
+        "id": "20cd656b-e05d-43ad-8c07-9c663b7f7c6b",
+        "PRECIO": 566
+      },
+      {
+        "KIT": 20,
+        "TIPO": "Reducciones",
+        "PRECIO": 735,
+        "id": "e010d57a-2fdb-4525-ab53-69f52f787be0",
+        "CODIGO": "RM1238",
+        "MEDIDA": "Reducción MM 1/2 x 3/8  P/ virola "
+      },
+      {
+        "KIT": 20,
+        "TIPO": "Reducciones",
+        "id": "355f20bb-b665-4dca-ad0f-da92d46a4e8a",
+        "CODIGO": "RM1214",
+        "MEDIDA": "Reducción MM 1/2 x 1/4  P/ virola ",
+        "PRECIO": 697
+      },
+      {
+        "MEDIDA": "Reducción MM 1/2 x 1/8  P/ virola ",
+        "CODIGO": "RM1218",
+        "PRECIO": 696,
+        "TIPO": "Reducciones",
+        "KIT": 20,
+        "id": "572eb098-80cb-42ee-b3d8-c503466a44ea"
+      },
+      {
+        "id": "f7393d96-026b-4b35-950f-c44d89bfa7dc",
+        "MEDIDA": "Reducción HM 1/4 x 1/8  P/ virola ",
+        "PRECIO": 463,
+        "TIPO": "Reducciones",
+        "CODIGO": "RH1418",
+        "KIT": 20
+      },
+      {
+        "MEDIDA": "Reducción HM 3/8 x 1/4  P/ virola ",
+        "id": "3d593168-7b38-4d40-8754-96a87db7988e",
+        "KIT": 20,
+        "PRECIO": 622,
+        "TIPO": "Reducciones",
+        "CODIGO": "RH3814"
+      },
+      {
+        "id": "94b5683e-5d08-46b0-8a06-79430a520bd6",
+        "MEDIDA": "Reducción HM 3/8 x 1/8  P/ virola ",
+        "TIPO": "Reducciones",
+        "KIT": 20,
+        "CODIGO": "RH3818",
+        "PRECIO": 624
+      },
+      {
+        "TIPO": "Reducciones",
+        "PRECIO": 747,
+        "MEDIDA": "Reducción HM 1/2 x 1/4  P/ virola ",
+        "KIT": 20,
+        "id": "ae20ef33-e114-471e-8696-021319210e16",
+        "CODIGO": "RH1214"
+      },
+      {
+        "id": "d82936e8-6106-4da1-9e4c-a638381c9aae",
+        "TIPO": "Reducciones",
+        "PRECIO": 790,
+        "MEDIDA": "Reducción HM 1/2 x 3/8  P/ virola ",
+        "KIT": 20,
+        "CODIGO": "RH1238"
+      },
+      {
+        "KIT": 20,
+        "PRECIO": 878,
+        "TIPO": "Reducciones",
+        "CODIGO": "RH1218",
+        "MEDIDA": "Reducción HM 1/2 x 1/8  P/ virola ",
+        "id": "74b1f158-6f12-4869-8cca-f4e9bc026663"
+      },
+      {
+        "TIPO": "Reducciones",
+        "PRECIO": 1622,
+        "id": "3e8152f9-b583-4b09-9064-6d038aeb6f46",
+        "MEDIDA": "Reducción HM 3/4 X 1/2  P/ virola para agua",
+        "CODIGO": "RH3412",
+        "KIT": 20
+      },
+      {
+        "CODIGO": "RH3412N",
+        "PRECIO": 1691,
+        "KIT": 20,
+        "id": "623d85c1-5d59-4d95-bcf5-d3eb11c15471",
+        "TIPO": "Reducciones",
+        "MEDIDA": "Reducción HM 3/4 x 1/2  P/ virola niquelada"
+      },
+      {
+        "PRECIO": 1778,
+        "KIT": 20,
+        "id": "3bd10a93-1758-48e5-a148-86c4a52e3a1f",
+        "CODIGO": "RH3412CROMADA",
+        "MEDIDA": "Reducción HM 3/4 x 1/2  P/ virola CROMADA",
+        "TIPO": "Reducciones"
+      },
+      {
+        "CODIGO": "RH3412GAS",
+        "MEDIDA": "Reducción HM 3/4 X 1/2  P/ virola para virola -GAS",
+        "KIT": 20,
+        "PRECIO": 1622,
+        "TIPO": "Reducciones",
+        "id": "df42bfbe-4c2a-410d-a340-032346c47474"
+      },
+      {
+        "KIT": 20,
+        "id": "6b5a75aa-59aa-4ed4-ba7b-1fd27a80d4dd",
+        "TIPO": "Reducciones",
+        "CODIGO": "RHM18",
+        "MEDIDA": "Reduccion MH 1/8",
+        "PRECIO": 440
+      },
+      {
+        "TIPO": "Reducciones",
+        "KIT": 20,
+        "MEDIDA": "Reduccion MH 1/4",
+        "CODIGO": "RHM14",
+        "id": "cda56c67-76d3-499d-be2a-eccdfa6c141c",
+        "PRECIO": 552
+      },
+      {
+        "id": "8602ee51-e310-4bc8-8425-7e3b14dbad90",
+        "TIPO": "Reducciones",
+        "MEDIDA": "Reduccion MH 3/8",
+        "PRECIO": 622,
+        "KIT": 20,
+        "CODIGO": "RHM38"
+      }
+    ],
+    "Cuplas": [
+      {
+        "KIT": 20,
+        "CODIGO": "C18",
+        "MEDIDA": "Cuplas de 1/8",
+        "id": "6c047757-4a88-4b51-b45c-3859abd050c5",
+        "PRECIO": 364,
+        "TIPO": "Cuplas"
+      },
+      {
+        "CODIGO": "C14",
+        "PRECIO": 473,
+        "id": "bdca66a1-1330-49a5-9f5e-4349aeba50f3",
+        "MEDIDA": "Cuplas de 1/4",
+        "TIPO": "Cuplas",
+        "KIT": 20
+      },
+      {
+        "id": "f8f32a4b-1d84-4f38-ad2e-c9c797ffcd32",
+        "TIPO": "Cuplas",
+        "KIT": 20,
+        "MEDIDA": "Cuplas de 3/8",
+        "PRECIO": 630,
+        "CODIGO": "C38"
+      },
+      {
+        "PRECIO": 1020,
+        "CODIGO": "C12",
+        "KIT": 20,
+        "TIPO": "Cuplas",
+        "MEDIDA": "Cuplas de 1/2",
+        "id": "8d606ebb-ee40-4ff1-a7ae-0d56ee848296"
+      }
+    ],
+    "Cuplas Reducción": [
+      {
+        "MEDIDA": "Cupla reducción 1/4 X 1/8",
+        "KIT": 20,
+        "PRECIO": 594,
+        "TIPO": "Cuplas Reducción",
+        "id": "bd479047-725c-48d1-a552-87db9304c387",
+        "CODIGO": "CUPLA1418"
+      },
+      {
+        "TIPO": "Cuplas Reducción",
+        "CODIGO": "CUPLA3814",
+        "PRECIO": 734,
+        "KIT": 20,
+        "MEDIDA": "Cupla reducción 3/8 x 1/4",
+        "id": "e09164a2-6601-49dc-8c89-08d12bd730fc"
+      },
+      {
+        "TIPO": "Cuplas Reducción",
+        "KIT": 20,
+        "PRECIO": 734,
+        "MEDIDA": "Cupla reducción 3/8 x 1/8",
+        "id": "927a1fd0-120b-42d2-828e-a13033e8a80b",
+        "CODIGO": "CUPLA3818"
+      },
+      {
+        "TIPO": "Cuplas Reducción",
+        "MEDIDA": "Cupla reducción 1/2 x 3/8",
+        "PRECIO": 902,
+        "id": "642e71cf-557d-41d5-84f9-35eff2dddbc9",
+        "CODIGO": "CUPLA1238",
+        "KIT": 20
+      },
+      {
+        "PRECIO": 902,
+        "TIPO": "Cuplas Reducción",
+        "MEDIDA": "Cupla reducción 1/2 x 1/4",
+        "KIT": 20,
+        "id": "e3414ce7-8914-42e3-85c2-d5420b634679",
+        "CODIGO": "CUPLA1214"
+      },
+      {
+        "CODIGO": "CUPLA1218",
+        "TIPO": "Cuplas Reducción",
+        "id": "8dc3358b-5451-40e8-b357-38fa548e73ce",
+        "PRECIO": 902,
+        "KIT": 20,
+        "MEDIDA": "Cupla reducción 1/2 x 1/8"
+      }
+    ],
+    "Conexiones de cocina": [
+      {
+        "KIT": 20,
+        "TIPO": "Conexiones de cocina",
+        "id": "ff85bd24-58b1-46c3-b8ef-cad977be4beb",
+        "MEDIDA": "Conexión de cocina c/ caño ",
+        "CODIGO": "CC",
+        "PRECIO": 3130
+      },
+      {
+        "KIT": 20,
+        "MEDIDA": "Conexión de cocina sin caño ",
+        "CODIGO": "CS",
+        "PRECIO": 2480,
+        "TIPO": "Conexiones de cocina",
+        "id": "b43a1230-912a-4b22-8c4d-3008c801ac6d"
+      }
+    ],
+    "Tapones": [
+      {
+        "PRECIO": 305,
+        "KIT": 20,
+        "id": "473a1f40-c290-4321-bbb3-e0ee92150b77",
+        "MEDIDA": "Tapón de 1/8",
+        "CODIGO": "TO18",
+        "TIPO": "Tapones"
+      },
+      {
+        "MEDIDA": "Tapón de 1/4",
+        "id": "75df2d0c-56e4-4b73-8098-1e99b5c8e519",
+        "PRECIO": 304,
+        "KIT": 20,
+        "TIPO": "Tapones",
+        "CODIGO": "TO14"
+      },
+      {
+        "id": "67313c88-fca0-4df8-a726-ad03ad8bcf28",
+        "KIT": 20,
+        "CODIGO": "TO38",
+        "TIPO": "Tapones",
+        "PRECIO": 412,
+        "MEDIDA": "Tapón de 3/8"
+      },
+      {
+        "TIPO": "Tapones",
+        "CODIGO": "TO12",
+        "PRECIO": 685,
+        "id": "6bd70f75-8477-4dfc-8cf2-9546f30ed677",
+        "MEDIDA": "Tapón de 1/2",
+        "KIT": 20
+      }
+    ],
+    "Entreroscas": [
+      {
+        "id": "6c5af1dc-3180-413f-b5c7-a790e8472b31",
+        "PRECIO": 359,
+        "CODIGO": "E18",
+        "TIPO": "Entreroscas",
+        "MEDIDA": "Entre rosca  P/ virola 1/8",
+        "KIT": 20
+      },
+      {
+        "KIT": 20,
+        "TIPO": "Entreroscas",
+        "PRECIO": 411,
+        "id": "58a65546-004b-4e6a-8c70-cb0ad8db9cc6",
+        "CODIGO": "E14",
+        "MEDIDA": "Entre rosca  P/ virola 1/4"
+      },
+      {
+        "MEDIDA": "Entre rosca  P/ virola 3/8",
+        "id": "ed745a72-3fd4-4053-a8be-844cef76f346",
+        "TIPO": "Entreroscas",
+        "CODIGO": "E38",
+        "PRECIO": 606,
+        "KIT": 20
+      },
+      {
+        "id": "b41ee87a-928b-4774-956c-7280116dbfcc",
+        "KIT": 20,
+        "TIPO": "Entreroscas",
+        "PRECIO": 910,
+        "MEDIDA": "Entre rosca  P/ virola 1/2",
+        "CODIGO": "E12"
+      }
+    ],
+    "Tuercas": [
+      {
+        "TIPO": "Tuercas",
+        "MEDIDA": "Tuerca de ajuste x 1/8",
+        "CODIGO": "T18",
+        "PRECIO": 199,
+        "id": "ec1528a7-337a-4ddc-bf1c-4b4d0aa29b3c",
+        "KIT": 20
+      },
+      {
+        "KIT": 20,
+        "id": "b55a1310-9ae1-485a-81ca-183cab376ee2",
+        "CODIGO": "T14",
+        "MEDIDA": "Tuerca de ajuste x 1/4",
+        "PRECIO": 243,
+        "TIPO": "Tuercas"
+      },
+      {
+        "CODIGO": "T38",
+        "id": "419feccc-dcac-4893-bef6-85013c33942d",
+        "KIT": 20,
+        "MEDIDA": "Tuerca de ajuste x 3/8",
+        "TIPO": "Tuercas",
+        "PRECIO": 312
+      },
+      {
+        "id": "1924b1d4-0702-429b-aa2f-98d3744df76f",
+        "MEDIDA": "Tuerca de ajuste x 1/2",
+        "KIT": 20,
+        "TIPO": "Tuercas",
+        "CODIGO": "T12",
+        "PRECIO": 533
+      },
+      {
+        "KIT": 20,
+        "id": "5712c476-232d-4e5e-a619-8bb67b90d87a",
+        "CODIGO": "T34",
+        "MEDIDA": "Tuerca de ajuste x 3/4 ",
+        "PRECIO": 804,
+        "TIPO": "Tuercas"
+      },
+      {
+        "MEDIDA": "Tuerca de 1/4 x 1/8",
+        "PRECIO": 292,
+        "TIPO": "Tuercas",
+        "CODIGO": "T1418",
+        "KIT": 20,
+        "id": "197e9329-3400-45ca-9440-c43074ef0d55"
+      },
+      {
+        "PRECIO": 199,
+        "id": "c327af10-2f21-4fe1-8fb8-b91d06de7117",
+        "TIPO": "Tuercas",
+        "CODIGO": "T18316",
+        "KIT": 20,
+        "MEDIDA": "Tuerca de 1/8 X 3/16"
+      },
+      {
+        "TIPO": "Tuercas",
+        "id": "365d9e1f-8225-49fb-94fb-4161e8855f71",
+        "MEDIDA": "Tuerca 3/8  x 5/16",
+        "CODIGO": "T38516",
+        "KIT": 20,
+        "PRECIO": 312
+      },
+      {
+        "KIT": 20,
+        "PRECIO": 131,
+        "MEDIDA": "Tuerca Plana 1/8",
+        "id": "b40dcc6a-84b5-4d8e-8100-10a78e86dede",
+        "CODIGO": "TP18",
+        "TIPO": "Tuercas"
+      },
+      {
+        "KIT": 20,
+        "PRECIO": 172,
+        "id": "edea9271-fbb1-41c1-a7cb-cb6592ae0060",
+        "MEDIDA": "Tuerca plana 1/4",
+        "CODIGO": "TP14",
+        "TIPO": "Tuercas"
+      },
+      {
+        "CODIGO": "TP38",
+        "TIPO": "Tuercas",
+        "KIT": 20,
+        "id": "72ed812b-5e8d-4306-b726-c5929c973d17",
+        "MEDIDA": "Tuerca plana 3/8",
+        "PRECIO": 208
+      },
+      {
+        "KIT": 20,
+        "TIPO": "Tuercas",
+        "PRECIO": 346,
+        "MEDIDA": "Tuerca plana 1/2",
+        "id": "c4ead173-a4d6-4942-9abb-c4493a36932e",
+        "CODIGO": "TP12"
+      }
+    ]
+  },
+  "CODOS Y TEES PARA GAS": {
+    "Codo Manguera": [
+      {
+        "KIT": 20,
+        "MEDIDA": "Codo manguera para gas",
+        "PRECIO": 1018,
+        "id": "b46bbe86-cef7-4781-8fa4-a9d6a1974bef",
+        "TIPO": "Codo Manguera",
+        "CODIGO": "CMG"
+      }
+    ],
+    "Codos": [
+      {
+        "CODIGO": "HH18",
+        "TIPO": "Codos",
+        "PRECIO": 1121,
+        "MEDIDA": "Codo Hembra -Hembra 1/8 ",
+        "id": "188b6740-37b9-4230-b8f4-1fc7802fb92a",
+        "KIT": 20
+      },
+      {
+        "TIPO": "Codos",
+        "KIT": 20,
+        "MEDIDA": "Codo Hembra -Hembra 1/4",
+        "PRECIO": 855,
+        "id": "8e430ee0-598d-4714-a019-14528bd8e25e",
+        "CODIGO": "HH14"
+      },
+      {
+        "PRECIO": 1138,
+        "MEDIDA": "Codo Hembra - Hembra 3/8",
+        "id": "c7072db3-31bb-4a1c-a462-0c186edb9b2c",
+        "KIT": 20,
+        "TIPO": "Codos",
+        "CODIGO": "HH38"
+      },
+      {
+        "PRECIO": 930,
+        "MEDIDA": "Codo Hembra -Macho 1/8",
+        "CODIGO": "HM18",
+        "TIPO": "Codos",
+        "KIT": 20,
+        "id": "3ca07ebb-4378-4ca2-827c-d990da630ea2"
+      },
+      {
+        "CODIGO": "HM14",
+        "id": "7b542f99-5dca-4f0d-99e0-30ae39c3b8a9",
+        "MEDIDA": "Codo Hembra -Macho 1 / 4 ",
+        "PRECIO": 966,
+        "KIT": 20,
+        "TIPO": "Codos"
+      },
+      {
+        "PRECIO": 1155,
+        "id": "b1745abf-0f06-4bcf-8248-ce9067ee77ba",
+        "MEDIDA": "Codo Hembra  -Macho 3 / 8 ",
+        "TIPO": "Codos",
+        "KIT": 20,
+        "CODIGO": "MH38"
+      },
+      {
+        "id": "201957a4-5fd2-4bb0-8ce4-66248ffa6344",
+        "PRECIO": 844,
+        "TIPO": "Codos",
+        "KIT": 20,
+        "CODIGO": "MM18",
+        "MEDIDA": "Codo Macho - Macho 1/8"
+      },
+      {
+        "CODIGO": "MM14",
+        "KIT": 20,
+        "PRECIO": 1047,
+        "TIPO": "Codos",
+        "MEDIDA": "Codo Macho - Macho 1 /4 ",
+        "id": "a8782ce8-c982-4542-8f9d-4eb23ea1ffb3"
+      },
+      {
+        "TIPO": "Codos",
+        "MEDIDA": "Codo Macho - Macho 3 / 8 ",
+        "CODIGO": "MM38",
+        "id": "0c1adc50-f125-4963-b544-c4701d3296f2",
+        "PRECIO": 1272,
+        "KIT": 20
+      }
+    ],
+    "Union Manguera": [
+      {
+        "PRECIO": 458,
+        "TIPO": "Union Manguera",
+        "CODIGO": "UM",
+        "KIT": 20,
+        "id": "cb5949d7-c04d-4457-9794-0cbed21446e2",
+        "MEDIDA": "Union manguera"
+      }
+    ],
+    "Tees": [
+      {
+        "MEDIDA": "Tee Hembra - Hembra - Hembra 1/8",
+        "id": "5d807b03-d2e0-4514-ab81-fa11fd7935e2",
+        "TIPO": "Tees",
+        "PRECIO": 1523,
+        "CODIGO": "THH18",
+        "KIT": 20
+      },
+      {
+        "KIT": 20,
+        "PRECIO": 1082,
+        "TIPO": "Tees",
+        "MEDIDA": "Tee Hembra - Hembra - Hembra 1/4",
+        "id": "4c72a7d0-149a-4e2a-9954-7abfdca4672b",
+        "CODIGO": "THH14"
+      },
+      {
+        "TIPO": "Tees",
+        "KIT": 20,
+        "PRECIO": 1472,
+        "MEDIDA": "Tee Hembra - Hembra - Hembra 3/8",
+        "id": "d93a724a-a71a-4301-809e-33eed1648999",
+        "CODIGO": "THH38"
+      },
+      {
+        "KIT": 20,
+        "id": "a365521f-10ba-4791-a1ff-a10393fc713a",
+        "PRECIO": 1225,
+        "CODIGO": "TMM18",
+        "MEDIDA": "Tee Macho - Macho - Macho 1/8",
+        "TIPO": "Tees"
+      },
+      {
+        "id": "7f99bb14-c171-4272-9ec0-c20f6de070ff",
+        "TIPO": "Tees",
+        "PRECIO": 1372,
+        "MEDIDA": "Tee Macho - Macho - Macho 1/ 4",
+        "CODIGO": "TMM14",
+        "KIT": 20
+      },
+      {
+        "MEDIDA": "Tee Macho - Macho - Macho 3/ 8",
+        "id": "8c23e9a1-0766-4a00-9967-99524d883324",
+        "KIT": 20,
+        "PRECIO": 1787,
+        "TIPO": "Tees",
+        "CODIGO": "TMM38"
+      },
+      {
+        "KIT": 20,
+        "MEDIDA": "Tee manguera para gas ",
+        "TIPO": "Tees",
+        "CODIGO": "TM",
+        "id": "fba1fb68-0779-430c-9484-f881befd2475",
+        "PRECIO": 1153
+      }
+    ],
+    "Codos Reduccion": [
+      {
+        "MEDIDA": "Codo Red. 1/2 hembra x 1/8 hembra",
+        "KIT": 20,
+        "CODIGO": "CRHH1218",
+        "TIPO": "Codos Reduccion",
+        "PRECIO": 1358,
+        "id": "3ec5e680-5547-4387-96de-c68ce815921f"
+      },
+      {
+        "MEDIDA": "Codo Red. 1/2 hembra x 1/4 hembra",
+        "TIPO": "Codos Reduccion",
+        "CODIGO": "CRHH1214",
+        "PRECIO": 1439,
+        "KIT": 20,
+        "id": "5352ef78-d6a5-4429-85e9-1bdef18977b4"
+      },
+      {
+        "TIPO": "Codos Reduccion",
+        "PRECIO": 1635,
+        "KIT": 20,
+        "CODIGO": "CRHH1238",
+        "id": "17bc2bd2-4b61-4254-9eb2-9e0b4af4e423",
+        "MEDIDA": "Codo Red. 1/2 hembra x 3/8 hembra"
+      },
+      {
+        "TIPO": "Codos Reduccion",
+        "id": "df69718e-1d3e-4e6a-8ab7-965f7936c69a",
+        "PRECIO": 1255,
+        "MEDIDA": "Codo Red. 3/8 hembra x 1/4 hembra",
+        "KIT": 20,
+        "CODIGO": "CRHH3814"
+      },
+      {
+        "id": "05d3f6c6-68b9-4ff1-b39f-86be2c778c66",
+        "TIPO": "Codos Reduccion",
+        "PRECIO": 1391,
+        "MEDIDA": "Codo Red. 3/8 hembra x 1/8 hembra",
+        "KIT": 20,
+        "CODIGO": "CRHH3818"
+      },
+      {
+        "PRECIO": 1242,
+        "MEDIDA": "Codo Red. 1/4 hembra x 1/8 hembra",
+        "id": "5c8f14ea-b6a4-4723-8343-52857a416dc5",
+        "TIPO": "Codos Reduccion",
+        "CODIGO": "CRHH1418",
+        "KIT": 20
+      },
+      {
+        "CODIGO": "CRHM1218",
+        "MEDIDA": "Codo Red. 1/ 2 hembra x 1 / 8 Macho ",
+        "id": "74ae7c08-3275-4df3-abb4-b8d0213979b5",
+        "PRECIO": 1326,
+        "TIPO": "Codos Reduccion",
+        "KIT": 20
+      },
+      {
+        "MEDIDA": "Codo Red. 1/ 2 hembra x 1 / 4 Macho ",
+        "PRECIO": 1227,
+        "KIT": 20,
+        "id": "d103d2f5-0b92-4590-8db2-01af86f2dfe8",
+        "TIPO": "Codos Reduccion",
+        "CODIGO": "CRHM1214"
+      },
+      {
+        "CODIGO": "CRHM1238",
+        "KIT": 20,
+        "id": "c25b9f82-f28a-4a3c-8373-93db7c7823f1",
+        "PRECIO": 1343,
+        "MEDIDA": "Codo Red. 1/ 2 hembra x 3 / 8 Macho ",
+        "TIPO": "Codos Reduccion"
+      },
+      {
+        "id": "433d29d8-0b1d-4ae0-9220-5bd4f73ea48e",
+        "CODIGO": "CRHM3925",
+        "KIT": 20,
+        "PRECIO": 1250,
+        "TIPO": "Codos Reduccion",
+        "MEDIDA": "Codo Red. 3/8 hembra x 1/4 Macho "
+      },
+      {
+        "id": "b7a308b9-c3ea-4671-898d-b117556c4632",
+        "TIPO": "Codos Reduccion",
+        "MEDIDA": "Codo Red. 3/8 hembra x 1/8 Macho ",
+        "KIT": 20,
+        "CODIGO": "CRHM3818",
+        "PRECIO": 1250
+      },
+      {
+        "id": "36fd948a-736b-408a-8e46-ae1489674670",
+        "TIPO": "Codos Reduccion",
+        "PRECIO": 1269,
+        "CODIGO": "CRHM1438",
+        "MEDIDA": "Codo Red. 1/4 hembra x 3/8 Macho ",
+        "KIT": 20
+      },
+      {
+        "id": "6d8438c4-1513-42b4-b43a-04dcee638d87",
+        "PRECIO": 1269,
+        "KIT": 20,
+        "TIPO": "Codos Reduccion",
+        "MEDIDA": "Codo Red. 1/8 hembra x 1/4 Macho ",
+        "CODIGO": "CRHM1814"
+      },
+      {
+        "MEDIDA": "Codo Red. 1/4 hembra x 1/8 Macho ",
+        "PRECIO": 1242,
+        "TIPO": "Codos Reduccion",
+        "KIT": 20,
+        "CODIGO": "CRHM1418",
+        "id": "17544b97-b6a9-444a-b430-dc59c3059e79"
+      },
+      {
+        "CODIGO": "CR1218",
+        "PRECIO": 1211,
+        "MEDIDA": "Codo Red. 1/ 2 Macho x 1 / 8 Macho ",
+        "KIT": 20,
+        "TIPO": "Codos Reduccion",
+        "id": "291069dc-bd78-491e-867b-a53e56272c3f"
+      },
+      {
+        "TIPO": "Codos Reduccion",
+        "CODIGO": "CR1214",
+        "PRECIO": 1055,
+        "KIT": 20,
+        "id": "ced40ace-e96d-4bbd-94a8-aa49c9cba103",
+        "MEDIDA": "Codo Red. 1/ 2 Macho x 1 / 4 Macho "
+      },
+      {
+        "CODIGO": "CR1238",
+        "PRECIO": 1299,
+        "KIT": 20,
+        "MEDIDA": "Codo Red. 1/ 2 Macho x 3 / 8 Macho ",
+        "TIPO": "Codos Reduccion",
+        "id": "fe811edb-82a7-4fb8-9dbc-fd8821d60117"
+      },
+      {
+        "MEDIDA": "Codo Red. 3/8 Macho x 1/4 Macho ",
+        "TIPO": "Codos Reduccion",
+        "CODIGO": "CRM3814",
+        "id": "24e099b5-a20f-4c19-8a13-bafee36674e0",
+        "KIT": 20,
+        "PRECIO": 1343
+      },
+      {
+        "id": "9b55d9d6-8b18-4d72-8c44-9dd2946bbcb7",
+        "KIT": 20,
+        "MEDIDA": "Codo Red. 3/8 Macho x 1/8 Macho ",
+        "PRECIO": 1343,
+        "TIPO": "Codos Reduccion",
+        "CODIGO": "CRM3818"
+      },
+      {
+        "KIT": 20,
+        "TIPO": "Codos Reduccion",
+        "id": "99c9cce1-5015-448c-b3ab-badbc3edf894",
+        "PRECIO": 930,
+        "CODIGO": "CR1418",
+        "MEDIDA": "Codo Red. 1/4 Macho x 1/8 Macho "
+      }
+    ]
+  },
+  "FERRETERIA": {
+    "ESPATULAS": [
+      {
+        "KIT": 12,
+        "CODIGO": "ESPP2",
+        "id": "543597a5-46d9-487b-b7c6-4afb4e0dfcc1",
+        "PRECIO": 2246,
+        "TIPO": "ESPATULAS",
+        "MEDIDA": "ESPATULA PROFESIONAL PINAS 20 (caja x 12u) U"
+      },
+      {
+        "CODIGO": "ESPP3",
+        "KIT": 12,
+        "PRECIO": 2426,
+        "MEDIDA": "ESPATULA PROFESIONAL PINAS 30 (caja x 12u) U.",
+        "TIPO": "ESPATULAS",
+        "id": "73f0f9d2-7904-472d-bd96-143a673ec15a"
+      },
+      {
+        "KIT": 12,
+        "TIPO": "ESPATULAS",
+        "id": "f78fae89-6e07-41f0-8740-4f4018586b2a",
+        "CODIGO": "ESPP4",
+        "MEDIDA": "ESPATULA PROFESIONAL PINAS 40 (caja x 12u) U.",
+        "PRECIO": 2584
+      },
+      {
+        "CODIGO": "ESPP5",
+        "KIT": 12,
+        "TIPO": "ESPATULAS",
+        "id": "5e49933e-6341-4fd6-9c5a-32288c833789",
+        "PRECIO": 2924,
+        "MEDIDA": "ESPATULA PROFESIONAL PINAS 50 (caja x 12u) U"
+      },
+      {
+        "MEDIDA": "ESPATULA PROFESIONAL PINAS 60 (caja x 12u) U.",
+        "TIPO": "ESPATULAS",
+        "KIT": 12,
+        "id": "127e464d-2af0-43a2-b643-ca8538a0ca89",
+        "PRECIO": 3219,
+        "CODIGO": "ESPP6"
+      },
+      {
+        "PRECIO": 3551,
+        "MEDIDA": "ESPATULA PROFESIONAL PINAS 70 (caja x 12u) U.",
+        "CODIGO": "ESPP7",
+        "TIPO": "ESPATULAS",
+        "KIT": 12,
+        "id": "5b6daa3e-d56f-4765-92a3-6ec085c5aa55"
+      },
+      {
+        "PRECIO": 3916,
+        "id": "919959c5-783e-4fa1-ab38-7f37b097d7c6",
+        "CODIGO": "ESPP8",
+        "TIPO": "ESPATULAS",
+        "KIT": 12,
+        "MEDIDA": "ESPATULA PROFESIONAL PINAS 80 (caja x 12u) U."
+      },
+      {
+        "CODIGO": "ESPP9",
+        "id": "4c1a644b-7c7f-496b-9fc4-6a4bc0a5f7f4",
+        "MEDIDA": "ESPATULA PROFESIONAL PINAS 90 (caja x 12u) U.",
+        "TIPO": "ESPATULAS",
+        "PRECIO": 4235,
+        "KIT": 12
+      }
+    ],
+    "Tarugos SIN tope": [
+      {
+        "MEDIDA": "TARUGO PY 4 (Caja/bolsa x 400u) ",
+        "CODIGO": "TAPY4",
+        "TIPO": "Tarugos SIN tope",
+        "id": "a3015779-4093-4911-84cd-919fba819c9e",
+        "KIT": 1,
+        "PRECIO": 3300
+      },
+      {
+        "TIPO": "Tarugos SIN tope",
+        "PRECIO": 1315,
+        "KIT": 1,
+        "id": "a310343d-d7ce-4dce-a564-f16eb3eea8a0",
+        "MEDIDA": "TARUGO PY 5 (Caja/bolsa x 200u)",
+        "CODIGO": "TAPY5"
+      },
+      {
+        "id": "2ce01047-14b5-4b8f-b4bf-d67217d17e9c",
+        "TIPO": "Tarugos SIN tope",
+        "CODIGO": "TAPY6",
+        "KIT": 1,
+        "MEDIDA": "TARUGO PY 6 (Caja/bolsa x 200u)",
+        "PRECIO": 2084
+      },
+      {
+        "KIT": 1,
+        "TIPO": "Tarugos SIN tope",
+        "CODIGO": "TAPY8",
+        "PRECIO": 2238,
+        "MEDIDA": "TARUGO PY 8 (Caja/bolsa x 100u)",
+        "id": "b6684cba-fe47-4e7e-bf2a-65426ae2d79e"
+      },
+      {
+        "TIPO": "Tarugos SIN tope",
+        "KIT": 2,
+        "id": "af52a021-b1b6-4bc7-9455-d53f7783bd16",
+        "PRECIO": 2084,
+        "MEDIDA": "TARUGO PY 10 (Caja/bolsa x 50u)",
+        "CODIGO": "TAPY10"
+      },
+      {
+        "KIT": 4,
+        "PRECIO": 2798,
+        "CODIGO": "TAPY12",
+        "TIPO": "Tarugos SIN tope",
+        "MEDIDA": "TARUGO PY 12 (Caja/bolsa x 25u)",
+        "id": "95f9b160-5687-41c0-8467-2b8dce4efdf9"
+      },
+      {
+        "TIPO": "Tarugos SIN tope",
+        "id": "8f8e587a-2f7a-46cb-8a41-5b4a0f4e37a9",
+        "CODIGO": "TAPY14",
+        "PRECIO": 3525,
+        "MEDIDA": "TARUGO PY 14 (Caja/bolsa x 20u)",
+        "KIT": 5
+      }
+    ],
+    "LLANAS": [
+      {
+        "PRECIO": 6266,
+        "MEDIDA": "LLANA DENTADA SANTA JUANA 4 x 4 (caja x 8u) U.",
+        "TIPO": "LLANAS",
+        "id": "b5ed7942-37c2-4b50-b4ea-e8445da127e2",
+        "CODIGO": "LLADE",
+        "KIT": 8
+      },
+      {
+        "KIT": 8,
+        "MEDIDA": "LLANA DENTADA SANTA JUANA 6 x 6 (caja x 8u) U.",
+        "CODIGO": "LLADE6",
+        "id": "088e6fe7-94f9-48c7-b238-8be06d692486",
+        "TIPO": "LLANAS",
+        "PRECIO": 6266
+      },
+      {
+        "CODIGO": "LLADE8",
+        "PRECIO": 6266,
+        "KIT": 8,
+        "MEDIDA": "LLANA DENTADA SANTA JUANA 8 x 8 (caja x 8u) U.",
+        "id": "5fa693a1-fbf9-40ff-8696-697311bd4a5c",
+        "TIPO": "LLANAS"
+      },
+      {
+        "PRECIO": 6266,
+        "MEDIDA": "LLANA DENTADA SANTA JUANA 10 x 10 (caja x 8u) U.",
+        "CODIGO": "LLADE10",
+        "KIT": 8,
+        "id": "e25bc443-5883-487b-8bf8-418bbc265188",
+        "TIPO": "LLANAS"
+      },
+      {
+        "MEDIDA": "LLANA DENTADA SANTA JUANA 12 x 12 (caja x 8u) U.",
+        "CODIGO": "LLADE12",
+        "TIPO": "LLANAS",
+        "KIT": 8,
+        "PRECIO": 6266,
+        "id": "e41f3762-393f-4323-a1a0-ba8524d44b72"
+      },
+      {
+        "TIPO": "LLANAS",
+        "PRECIO": 5206,
+        "CODIGO": "LLAYE25",
+        "id": "0a6a8647-3212-4d4c-ba6d-3245928efeb9",
+        "KIT": 8,
+        "MEDIDA": "LLANA YESERO SANTA JUANA 12x25 (caja x 8u) U."
+      },
+      {
+        "KIT": 8,
+        "PRECIO": 5567,
+        "MEDIDA": "LLANA YESERO SANTA JUANA 12x30 (caja x 8u) U.",
+        "CODIGO": "LLAYE30",
+        "id": "27cbe470-3514-41b9-a98d-2d2a3a0fe324",
+        "TIPO": "LLANAS"
+      }
+    ],
+    "PEGAMENTOS": [
+      {
+        "id": "c2b8f4b9-ccdd-4221-90e7-6e11c7148cb4",
+        "PRECIO": 3832.435299,
+        "TIPO": "PEGAMENTOS",
+        "KIT": 6,
+        "MEDIDA": "POXIPOL Met.   10 MIN. 21G / 14ML",
+        "CODIGO": "POXIMETX14"
+      },
+      {
+        "MEDIDA": "POXIPOL Transp..  10 MIN.  16G / 14ML",
+        "KIT": 6,
+        "id": "afc96b24-675b-4eb2-8873-cf281369f157",
+        "PRECIO": 3832.435299,
+        "TIPO": "PEGAMENTOS",
+        "CODIGO": "POXITRX14"
+      },
+      {
+        "MEDIDA": "POXIPOL Met.    10 MIN.  108G / 70ML",
+        "KIT": 6,
+        "TIPO": "PEGAMENTOS",
+        "CODIGO": "POXIMETX70",
+        "PRECIO": 11433.947756,
+        "id": "d0aaa7fc-a982-496a-9d45-f79e8e0cf9ed"
+      },
+      {
+        "PRECIO": 11433.947756,
+        "KIT": 6,
+        "MEDIDA": "POXIPOL Transp..  10 MIN.       82G / 70ML",
+        "id": "a16f3a88-5a89-4624-b49d-d481545faf73",
+        "CODIGO": "POXITRX70",
+        "TIPO": "PEGAMENTOS"
+      },
+      {
+        "MEDIDA": "POXIPOL Met. 10 MIN.       1,085G / 700ML",
+        "id": "170a9b07-5c3d-46e3-9ca8-0307f41f67c5",
+        "PRECIO": 69802.920803,
+        "KIT": 6,
+        "CODIGO": "POXIMETX700",
+        "TIPO": "PEGAMENTOS"
+      },
+      {
+        "CODIGO": "POXITRX700",
+        "MEDIDA": "POXIPOL Transp..  10 MIN. 826G / 700ML",
+        "id": "56e09d25-796a-4bbf-97bc-342eb8866d02",
+        "PRECIO": 69802.920803,
+        "TIPO": "PEGAMENTOS",
+        "KIT": 6
+      },
+      {
+        "TIPO": "PEGAMENTOS",
+        "id": "afdef88b-ba79-4e78-9e19-f5a5b4b37443",
+        "PRECIO": 11433.947756,
+        "MEDIDA": "POXIPOL     FRAGUADO LENTO  98G / 70ML",
+        "KIT": 6,
+        "CODIGO": "POXIFLX70"
+      },
+      {
+        "id": "98efb28e-8f2b-4479-bbdc-b8eb6ea6be16",
+        "PRECIO": 2661.685642,
+        "TIPO": "PEGAMENTOS",
+        "KIT": 6,
+        "CODIGO": "PR23",
+        "MEDIDA": "POXI-RAN  Pomo      23G "
+      },
+      {
+        "KIT": 6,
+        "CODIGO": "PR45",
+        "MEDIDA": "POXI-RAN  Pomo      45G ",
+        "PRECIO": 4245.156377,
+        "TIPO": "PEGAMENTOS",
+        "id": "b9d49a86-2faf-4d4e-a273-fb9324c8990e"
+      },
+      {
+        "KIT": 6,
+        "CODIGO": "PR90",
+        "PRECIO": 6789.990746,
+        "TIPO": "PEGAMENTOS",
+        "MEDIDA": "POXI-RAN  Pomo      90G",
+        "id": "fd3a0320-ed72-4c81-ba86-aaa7d7623843"
+      },
+      {
+        "KIT": 6,
+        "id": "da9215a1-7ed3-43c8-b13b-1a28ebf72049",
+        "PRECIO": 8087.360127,
+        "MEDIDA": "POXI-RAN  Lata      225G ",
+        "CODIGO": "PR225",
+        "TIPO": "PEGAMENTOS"
+      },
+      {
+        "MEDIDA": "POXI-RAN  Lata      450G",
+        "CODIGO": "PR450",
+        "id": "e450875b-7d62-4bce-bfa5-4ea25b9074cd",
+        "PRECIO": 13073.084178,
+        "TIPO": "PEGAMENTOS",
+        "KIT": 6
+      },
+      {
+        "MEDIDA": "POXI-RAN  Lata      850G",
+        "CODIGO": "PR850",
+        "id": "51fd8f84-357d-4ecd-89b5-a1dcf5485f7f",
+        "KIT": 6,
+        "TIPO": "PEGAMENTOS",
+        "PRECIO": 23712.681454
+      },
+      {
+        "TIPO": "PEGAMENTOS",
+        "id": "6450bcd8-aa3b-47e7-8d6b-f0eaee22e2a0",
+        "MEDIDA": "POXI-RAN  Lata      3,4KG.",
+        "KIT": 6,
+        "PRECIO": 76001.493799,
+        "CODIGO": "PR3400"
+      },
+      {
+        "PRECIO": 3824.791124,
+        "CODIGO": "PLINAX70",
+        "KIT": 6,
+        "TIPO": "PEGAMENTOS",
+        "MEDIDA": "POXILINA  10MIN.       70G ",
+        "id": "b351303a-006b-4564-b368-a6547a1afc53"
+      },
+      {
+        "id": "7b211573-8e02-4406-81cf-eb8fc4090641",
+        "CODIGO": "PLINAX250",
+        "MEDIDA": "POXILINA  10MIN.       250G ",
+        "KIT": 6,
+        "PRECIO": 8386.577276,
+        "TIPO": "PEGAMENTOS"
+      },
+      {
+        "TIPO": "PEGAMENTOS",
+        "KIT": 6,
+        "id": "fbe64364-d727-405d-968d-2d50e6fdc1d1",
+        "PRECIO": 2651.547052,
+        "CODIGO": "PLINAFLX70",
+        "MEDIDA": "POXILINA  FRAGUADO LENTO       70G"
+      },
+      {
+        "KIT": 6,
+        "id": "e9f9925a-43c4-4249-bac5-b04d862c62b5",
+        "CODIGO": "PLINAFLX250",
+        "MEDIDA": "POXILINA  FRAGUADO LENTO  250G",
+        "TIPO": "PEGAMENTOS",
+        "PRECIO": 6345.099761
+      },
+      {
+        "MEDIDA": "FASTIX INTERIOR Pomo  25G (Bl Ne y Tr)",
+        "TIPO": "PEGAMENTOS",
+        "PRECIO": 3339.281407,
+        "KIT": 6,
+        "CODIGO": "FASTIX25",
+        "id": "99533b7b-1604-44b9-9496-4b8d52f403ea"
+      },
+      {
+        "KIT": 6,
+        "CODIGO": "FASTIX100",
+        "PRECIO": 6093.099474,
+        "MEDIDA": "FASTIX INTERIOR Pomo 100G (Bl Ne y Tr)",
+        "TIPO": "PEGAMENTOS",
+        "id": "4e1bca80-9505-4801-b3cf-796a373d6dac"
+      },
+      {
+        "KIT": 6,
+        "MEDIDA": "FASTIX INTERIOR Cartucho 280G (Bl Ne y Tr)",
+        "PRECIO": 10511.159043,
+        "TIPO": "PEGAMENTOS",
+        "id": "6d6aa5fa-87f1-44b9-8eab-d548f2484d9b",
+        "CODIGO": "FASTIX280"
+      },
+      {
+        "id": "8be005dd-16c1-44f0-9cf3-738f46bcaf8e",
+        "CODIGO": "FASTIXAT25",
+        "KIT": 6,
+        "MEDIDA": "FASTIX ALTA TEMP.         Pomo      25G",
+        "TIPO": "PEGAMENTOS",
+        "PRECIO": 4155.276972
+      },
+      {
+        "CODIGO": "FASTIXAT100",
+        "KIT": 6,
+        "PRECIO": 7687.867495,
+        "TIPO": "PEGAMENTOS",
+        "MEDIDA": "FASTIX ALTA TEMP.         Pomo      100G",
+        "id": "65341f27-40f8-4bf6-be69-f03e1b67a4e9"
+      },
+      {
+        "KIT": 6,
+        "id": "d9b73b0a-4a95-4fd3-9f80-4b36d3ae591c",
+        "CODIGO": "FASTIXAT280",
+        "PRECIO": 13797.17262,
+        "TIPO": "PEGAMENTOS",
+        "MEDIDA": "FASTIX ALTA TEMP.   Cartucho      280G"
+      },
+      {
+        "PRECIO": 5367.112058,
+        "CODIGO": "FASTIXMOT25",
+        "KIT": 6,
+        "id": "02a90820-df98-42de-ba01-68276f4cd861",
+        "MEDIDA": "FASTIX PARA MOTORES 25G      ",
+        "TIPO": "PEGAMENTOS"
+      },
+      {
+        "CODIGO": "FASTIXMOT100",
+        "KIT": 6,
+        "PRECIO": 10387.580896,
+        "id": "85035b20-26ae-4668-935e-d89857f0eeea",
+        "MEDIDA": "FASTIX PARA MOTORES 100G          ",
+        "TIPO": "PEGAMENTOS"
+      },
+      {
+        "TIPO": "PEGAMENTOS",
+        "PRECIO": 3339.281407,
+        "MEDIDA": "FASTIX EXTERIOR TRANSP.  Pomo      25G    NUEVO",
+        "CODIGO": "FASTIXET25",
+        "KIT": 6,
+        "id": "b564ad26-736f-4146-a32a-6dbe357df391"
+      },
+      {
+        "TIPO": "PEGAMENTOS",
+        "PRECIO": 6093.099474,
+        "CODIGO": "FASTIXET100",
+        "id": "5b7901f9-dfa6-41cc-918f-26aa8277ff60",
+        "KIT": 6,
+        "MEDIDA": "FASTIX EXTERIOR TRANSP. Pomo      100G   NUEVO"
+      },
+      {
+        "CODIGO": "FASTIXET280",
+        "id": "8a628daf-3fed-4038-a057-55b819c8b86b",
+        "MEDIDA": "FASTIX EXTERIOR TRANSP. Cartucho  280G  NUEVO",
+        "PRECIO": 10511.159043,
+        "TIPO": "PEGAMENTOS",
+        "KIT": 6
+      },
+      {
+        "MEDIDA": "JUNTAFLEX TRANSP  Cartucho      280G",
+        "KIT": 6,
+        "PRECIO": 9686.618095,
+        "id": "1347b9f9-3e20-4362-b776-a1ee8664ff18",
+        "CODIGO": "JUNTAFLEXX280",
+        "TIPO": "PEGAMENTOS"
+      },
+      {
+        "PRECIO": 1390.515665,
+        "CODIGO": "GOTITAX2",
+        "KIT": 6,
+        "TIPO": "PEGAMENTOS",
+        "id": "c0122366-3a8f-4f26-821d-5bbaf755a517",
+        "MEDIDA": "LA GOTITA     Pomo      2ML"
+      },
+      {
+        "PRECIO": 5013.693685,
+        "KIT": 6,
+        "TIPO": "PEGAMENTOS",
+        "MEDIDA": "LA GOTITA     PROFESIONAL      10ML",
+        "id": "44cfd836-21a1-4be3-a9fc-83c735aa87a0",
+        "CODIGO": "GOTITAX10"
+      },
+      {
+        "KIT": 6,
+        "MEDIDA": "LA GOTITA    GEL        3G",
+        "PRECIO": 1745.189292,
+        "id": "34898615-9790-4c88-8791-a8e745074e34",
+        "CODIGO": "GOTITAGELX3",
+        "TIPO": "PEGAMENTOS"
+      },
+      {
+        "PRECIO": 2862.832049,
+        "TIPO": "PEGAMENTOS",
+        "KIT": 6,
+        "id": "9741106a-02fb-4952-8b17-d11f269e7dda",
+        "MEDIDA": "POXI-MIX     Interior/ Exterior       500G",
+        "CODIGO": "POXIMIX500"
+      },
+      {
+        "PRECIO": 3801.263158,
+        "KIT": 6,
+        "CODIGO": "POXIMIX1250",
+        "id": "aa4c3593-c3c5-41a5-8ab1-a3885e527fc8",
+        "MEDIDA": "POXI-MIX     Interior/ Exterior      1,25KG",
+        "TIPO": "PEGAMENTOS"
+      },
+      {
+        "id": "383caa07-e85a-40af-84b0-5f9850de4068",
+        "MEDIDA": "POXI-MIX     Interior/ Exterior      3KG",
+        "CODIGO": "POXIMIX3",
+        "PRECIO": 8369.116371,
+        "KIT": 6,
+        "TIPO": "PEGAMENTOS"
+      },
+      {
+        "KIT": 6,
+        "id": "182fa24d-69e2-4ad5-9d1b-62a69f05081c",
+        "CODIGO": "POXIMIX5",
+        "MEDIDA": "POXI-MIX     Interior/ Exterior       5KG",
+        "PRECIO": 13388.941489,
+        "TIPO": "PEGAMENTOS"
+      },
+      {
+        "PRECIO": 934.375673,
+        "CODIGO": "VG30",
+        "id": "c84c56d4-d71e-4b99-a13a-910a12e3c436",
+        "MEDIDA": "VOLIGOMA            30ML",
+        "KIT": 6,
+        "TIPO": "PEGAMENTOS"
+      },
+      {
+        "TIPO": "PEGAMENTOS",
+        "CODIGO": "VG50",
+        "MEDIDA": "VOLIGOMA            50ML",
+        "id": "41930c89-3aa4-4e71-9498-9f5647f430d4",
+        "PRECIO": 1521.351755,
+        "KIT": 6
+      },
+      {
+        "MEDIDA": "VOLIBARRA / UNIPOX STICK          10G",
+        "id": "4f359558-b046-44b1-a6f6-083545ee79b0",
+        "CODIGO": "VOLISTICK10",
+        "TIPO": "PEGAMENTOS",
+        "PRECIO": 1204.062167,
+        "KIT": 6
+      },
+      {
+        "TIPO": "PEGAMENTOS",
+        "PRECIO": 1918.60746,
+        "CODIGO": "VOLISTICK22",
+        "KIT": 6,
+        "id": "cc9f7d95-5b1a-48df-b0b8-305ea76c4feb",
+        "MEDIDA": "VOLIBARRA / UNIPOX STICK          22G"
+      },
+      {
+        "id": "69df59e1-0f11-4eb2-b73e-7a809e05bb65",
+        "KIT": 6,
+        "MEDIDA": "VOLIBARRA / UNIPOX STICK          40G",
+        "CODIGO": "VOLISTICK40",
+        "TIPO": "PEGAMENTOS",
+        "PRECIO": 2940.464681
+      },
+      {
+        "CODIGO": "UNIPOXT25",
+        "KIT": 6,
+        "TIPO": "PEGAMENTOS",
+        "MEDIDA": "UNIPOX     Tradicional      25ML",
+        "PRECIO": 1331.550913,
+        "id": "e73eace7-be8e-4a54-ba56-1576b48a9426"
+      },
+      {
+        "PRECIO": 4087.78293,
+        "KIT": 6,
+        "MEDIDA": "UNIPOX     Tradicional      100ML",
+        "id": "a94947c9-77d0-43dc-84b6-bcf35fea596d",
+        "CODIGO": "UNIPOXT100",
+        "TIPO": "PEGAMENTOS"
+      },
+      {
+        "id": "6dc35c2d-5aaa-44bb-8dd0-ebb2e3c5dc02",
+        "MEDIDA": "POXITAS     12 U      ",
+        "KIT": 3,
+        "PRECIO": 7265.297501,
+        "CODIGO": "POXITAS12",
+        "TIPO": "PEGAMENTOS"
+      },
+      {
+        "KIT": 6,
+        "id": "4a0c1d9f-a91f-4203-a0b2-67d5664471ad",
+        "PRECIO": 3630.146289,
+        "TIPO": "PEGAMENTOS",
+        "MEDIDA": "EL PULPITO     50G",
+        "CODIGO": "PULPITO50"
+      },
+      {
+        "PRECIO": 5394.003461,
+        "CODIGO": "PULPITO120",
+        "MEDIDA": "EL PULPITO     120G",
+        "id": "12de3fc0-d7a9-46f9-b975-3733c8589eb7",
+        "KIT": 6,
+        "TIPO": "PEGAMENTOS"
+      },
+      {
+        "PRECIO": 7762.989619,
+        "id": "86038ffb-7d27-4884-bca7-8a84e46d37a3",
+        "TIPO": "PEGAMENTOS",
+        "MEDIDA": "EL PULPITO     240G",
+        "KIT": 6,
+        "CODIGO": "PULPITO240"
+      },
+      {
+        "MEDIDA": "EL PULPITO     400G",
+        "PRECIO": 12672.674245,
+        "TIPO": "PEGAMENTOS",
+        "CODIGO": "PULPITO400",
+        "KIT": 6,
+        "id": "aad2cbb6-2cc5-45d2-83a0-eb9366327425"
+      },
+      {
+        "PRECIO": 3481.688364,
+        "id": "82748f56-e29d-4699-bbe9-f8c782731045",
+        "TIPO": "PEGAMENTOS",
+        "CODIGO": "ECCOLE9",
+        "MEDIDA": "ECCOLE           9G",
+        "KIT": 12
+      }
+    ],
+    "WD": [
+      {
+        "id": "817a49e3-1eac-4455-908a-931762a1627e",
+        "TIPO": "WD",
+        "KIT": 6,
+        "CODIGO": "WD40X155",
+        "MEDIDA": "WD-40               Aerosol       155G",
+        "PRECIO": 5152.898135
+      },
+      {
+        "id": "a17b3ab6-6d05-458c-b946-73e7c24103af",
+        "KIT": 6,
+        "CODIGO": "WD40X220",
+        "MEDIDA": "WD-40               Aerosol       FT 220G",
+        "PRECIO": 7664.77404,
+        "TIPO": "WD"
+      },
+      {
+        "TIPO": "WD",
+        "MEDIDA": "WD-40               Aerosol       311G",
+        "CODIGO": "WD40X311",
+        "id": "b9a451da-9608-41c1-8bd9-05349aa65014",
+        "PRECIO": 8018.964877,
+        "KIT": 6
+      },
+      {
+        "CODIGO": "WD40LC226",
+        "id": "47d3c546-4340-4c1f-8546-83cab8b02912",
+        "KIT": 6,
+        "MEDIDA": "WD-40  LIMPIADOR DE CONTACTOS   226G        ",
+        "PRECIO": 12385.044056,
+        "TIPO": "WD"
+      },
+      {
+        "KIT": 6,
+        "MEDIDA": "WD-40  LUBRICANTE DE SILICONA   226G        ",
+        "CODIGO": "WD40LS226",
+        "PRECIO": 12385.044056,
+        "id": "ef6091e9-c8bc-4fe1-8ebf-e95ec8f2e954",
+        "TIPO": "WD"
+      },
+      {
+        "id": "bbc87ddc-be93-4e04-bfac-4243361df8b7",
+        "CODIGO": "WD40LSECO226",
+        "PRECIO": 12385.044056,
+        "KIT": 6,
+        "MEDIDA": "WD-40  LUBRICANTE SECO   226G        ",
+        "TIPO": "WD"
+      },
+      {
+        "CODIGO": "WD40OXIDO226",
+        "id": "fdda11f3-48a4-462f-9a1b-013ae93c49ed",
+        "PRECIO": 12385.044056,
+        "MEDIDA": "WD-40  PENETRANTE QUITAOXIDO   226G        ",
+        "TIPO": "WD",
+        "KIT": 6
+      }
+    ],
+    "CINTAS": [
+      {
+        "TIPO": "CINTAS",
+        "PRECIO": 1031,
+        "KIT": 6,
+        "id": "a572b952-6b74-4b05-b1f8-566478873ac1",
+        "MEDIDA": "CINTA de Papel NORTON 12 x 50mts",
+        "CODIGO": "CIENN12"
+      },
+      {
+        "CODIGO": "CIENN15",
+        "MEDIDA": "CINTA DE PAPEL NORTON 15 x 50mts.",
+        "TIPO": "CINTAS",
+        "PRECIO": 1448,
+        "id": "64042cf7-abfd-45df-bb97-6bd34ec7f032",
+        "KIT": 6
+      },
+      {
+        "PRECIO": 1738,
+        "id": "a7736e90-9a1f-4d2e-a355-917472548c61",
+        "MEDIDA": "CINTA DE PAPEL NORTON 18 x 50mts ",
+        "CODIGO": "CIENN18",
+        "TIPO": "CINTAS",
+        "KIT": 6
+      },
+      {
+        "MEDIDA": "CINTA DE PAPEL NORTON 24 x 50mts ",
+        "CODIGO": "CIENN24",
+        "KIT": 6,
+        "PRECIO": 2319,
+        "TIPO": "CINTAS",
+        "id": "191a6eae-727e-4173-88e0-757886d21fbd"
+      },
+      {
+        "KIT": 6,
+        "MEDIDA": "CINTA DE PAPEL NORTON 36 x 50mts ",
+        "id": "647029e5-1340-41ee-ac3d-ae92ce8c72d9",
+        "CODIGO": "CIENN36",
+        "TIPO": "CINTAS",
+        "PRECIO": 3474
+      },
+      {
+        "PRECIO": 4632,
+        "CODIGO": "CIENN48",
+        "KIT": 6,
+        "id": "48606ccd-61df-4ffe-8e8e-189db9adc637",
+        "MEDIDA": "CINTA DE PAPEL NORTON 48 x 50mts",
+        "TIPO": "CINTAS"
+      }
+    ]
+  },
+  "FLEXIBLES Y VALVULAS": {
+    "Flexibles mallados color puntales trafilados": [
+      {
+        "TIPO": "Flexibles mallados color puntales trafilados",
+        "id": "fb626d00-83f5-4ad1-ae2a-edbaa3309a5b",
+        "MEDIDA": "Flexible mallado color x 30 cm. ",
+        "PRECIO": 2120,
+        "KIT": 12,
+        "CODIGO": "C30"
+      },
+      {
+        "TIPO": "Flexibles mallados color puntales trafilados",
+        "MEDIDA": "Flexible mallado color x 40 cm. ",
+        "CODIGO": "C40",
+        "KIT": 12,
+        "PRECIO": 2241,
+        "id": "df976cad-23d1-4b12-b059-80301188ff19"
+      },
+      {
+        "TIPO": "Flexibles mallados color puntales trafilados",
+        "id": "01f91c34-aa7e-44b4-9d21-548b19e8fc8d",
+        "CODIGO": "C50",
+        "PRECIO": 2363,
+        "MEDIDA": "Flexible mallado color x 50 cm. ",
+        "KIT": 12
+      },
+      {
+        "CODIGO": "C60",
+        "PRECIO": 2485,
+        "KIT": 12,
+        "MEDIDA": "Flexible mallado color x 60 cm. ",
+        "id": "ead4745b-9668-4fa5-aae0-9f9846ef4124",
+        "TIPO": "Flexibles mallados color puntales trafilados"
+      },
+      {
+        "KIT": 12,
+        "TIPO": "Flexibles mallados color puntales trafilados",
+        "MEDIDA": "Flexible mallado color x 70 cm. ",
+        "id": "63d34afb-1f52-4d7e-b3c2-04c7c542f7e2",
+        "CODIGO": "C70",
+        "PRECIO": 2607
+      },
+      {
+        "KIT": 12,
+        "CODIGO": "C80",
+        "TIPO": "Flexibles mallados color puntales trafilados",
+        "MEDIDA": "Flexible mallado color x 80 cm. ",
+        "PRECIO": 2728,
+        "id": "a5f2d195-c0c5-4d86-a8b0-ac492216f157"
+      },
+      {
+        "id": "b7cea35b-4655-437e-8399-a2e7da9f45ea",
+        "KIT": 12,
+        "CODIGO": "C90",
+        "MEDIDA": "Flexible mallado color x 90 cm. ",
+        "PRECIO": 2850,
+        "TIPO": "Flexibles mallados color puntales trafilados"
+      },
+      {
+        "id": "872327ad-33a4-4c0c-9dbc-6353eff26909",
+        "KIT": 12,
+        "CODIGO": "C100",
+        "PRECIO": 2972,
+        "TIPO": "Flexibles mallados color puntales trafilados",
+        "MEDIDA": "Flexible mallado color x 1,00 cm. "
+      },
+      {
+        "MEDIDA": "Flexible mallado color x 1,10 cm. ",
+        "PRECIO": 3093,
+        "CODIGO": "C110",
+        "id": "3e2b273a-5c70-4c80-ae37-f21c0b768697",
+        "TIPO": "Flexibles mallados color puntales trafilados",
+        "KIT": 12
+      },
+      {
+        "CODIGO": "C120",
+        "TIPO": "Flexibles mallados color puntales trafilados",
+        "PRECIO": 3215,
+        "MEDIDA": "Flexible mallado color x 1,20 cm. ",
+        "id": "7c1bf3d4-3efd-43a3-aef7-c0541f61ea0f",
+        "KIT": 12
+      },
+      {
+        "KIT": 12,
+        "CODIGO": "C130",
+        "MEDIDA": "Flexible mallado color x 1,30 cm. ",
+        "id": "7b0c3ed2-33ee-437f-be71-e2785cc2274e",
+        "PRECIO": 3337,
+        "TIPO": "Flexibles mallados color puntales trafilados"
+      },
+      {
+        "CODIGO": "C140",
+        "id": "22afe178-9a3a-451e-8e76-7b8d09c094dd",
+        "MEDIDA": "Flexible mallado color x 1,40 cm. ",
+        "TIPO": "Flexibles mallados color puntales trafilados",
+        "PRECIO": 3458,
+        "KIT": 12
+      },
+      {
+        "id": "5561b621-1a30-4330-9e2c-f3aecbdc8eca",
+        "TIPO": "Flexibles mallados color puntales trafilados",
+        "CODIGO": "C150",
+        "PRECIO": 3580,
+        "MEDIDA": "Flexible mallado color  x 1,50 cm. ",
+        "KIT": 12
+      }
+    ],
+    "Flexibles mallados para agua de 3/4": [
+      {
+        "TIPO": "Flexibles mallados para agua de 3/4",
+        "KIT": 12,
+        "CODIGO": "F3420",
+        "MEDIDA": "Flexible mallado p/ agua 3/4 x 20 cm",
+        "id": "40b9ecb8-06eb-4719-bd9d-fd490ee900a2",
+        "PRECIO": 3438
+      },
+      {
+        "PRECIO": 3548,
+        "CODIGO": "F3425",
+        "MEDIDA": "Flexible mallado p/ agua 3/4 x 25 cm",
+        "KIT": 12,
+        "TIPO": "Flexibles mallados para agua de 3/4",
+        "id": "6fb3445f-dd7b-42bc-98df-1cd0036b4bed"
+      },
+      {
+        "TIPO": "Flexibles mallados para agua de 3/4",
+        "MEDIDA": "Flexible mallado p/ agua 3/4 x 30 cm",
+        "CODIGO": "F3430",
+        "PRECIO": 3658,
+        "KIT": 12,
+        "id": "75d41d58-9766-402c-9d64-92fd680607f1"
+      },
+      {
+        "TIPO": "Flexibles mallados para agua de 3/4",
+        "CODIGO": "F3435",
+        "PRECIO": 3768,
+        "MEDIDA": "Flexible mallado p/ agua 3/4 x 35 cm",
+        "KIT": 12,
+        "id": "75b3a0bb-76d0-4cce-b1f4-e17937448873"
+      },
+      {
+        "MEDIDA": "Flexible mallado p/ agua 3/4 x 40 cm",
+        "TIPO": "Flexibles mallados para agua de 3/4",
+        "CODIGO": "F3440",
+        "id": "a71171f2-883e-4ae5-9157-10c2429025e3",
+        "PRECIO": 3879,
+        "KIT": 12
+      },
+      {
+        "CODIGO": "F3445",
+        "MEDIDA": "Flexible mallado p/ agua 3/4 x 45 cm",
+        "id": "389b5978-9e6a-4b1e-a6d8-12f8596a1565",
+        "TIPO": "Flexibles mallados para agua de 3/4",
+        "PRECIO": 3989,
+        "KIT": 12
+      },
+      {
+        "PRECIO": 4099,
+        "MEDIDA": "Flexible mallado p/ agua 3/4 x 50 cm",
+        "TIPO": "Flexibles mallados para agua de 3/4",
+        "CODIGO": "F3450",
+        "KIT": 12,
+        "id": "b1bb2138-9835-43d4-9813-5ae7b5864c45"
+      }
+    ],
+    "Flexibles mallados p/ agua c/ puntales trafilados cromados": [
+      {
+        "id": "08f8ae7d-9967-4044-858c-ddb6fe2f4623",
+        "PRECIO": 2045,
+        "TIPO": "Flexibles mallados p/ agua c/ puntales trafilados cromados",
+        "KIT": 12,
+        "CODIGO": "A20",
+        "MEDIDA": "Flexible mallado p/ agua 20 cm"
+      },
+      {
+        "PRECIO": 2106,
+        "KIT": 12,
+        "MEDIDA": "Flexible mallado p/ agua 25 cm",
+        "CODIGO": "A25",
+        "id": "9e7599eb-97f4-47cb-bd66-29f5d4547f8e",
+        "TIPO": "Flexibles mallados p/ agua c/ puntales trafilados cromados"
+      },
+      {
+        "MEDIDA": "Flexible mallado p/ agua 30 cm",
+        "CODIGO": "A30",
+        "TIPO": "Flexibles mallados p/ agua c/ puntales trafilados cromados",
+        "id": "e8bac77f-126a-4027-b216-7c3d607c3d90",
+        "KIT": 12,
+        "PRECIO": 2166
+      },
+      {
+        "KIT": 12,
+        "CODIGO": "A35",
+        "PRECIO": 2227,
+        "id": "197d5a06-e19e-484b-a551-fb3d786d5f9d",
+        "TIPO": "Flexibles mallados p/ agua c/ puntales trafilados cromados",
+        "MEDIDA": "Flexible mallado p/ agua 35 cm"
+      },
+      {
+        "TIPO": "Flexibles mallados p/ agua c/ puntales trafilados cromados",
+        "CODIGO": "A40",
+        "MEDIDA": "Flexible mallado p/ agua 40 cm",
+        "id": "3ebcb852-b5ee-4bcb-8f11-a40b63fe627b",
+        "KIT": 12,
+        "PRECIO": 2288
+      },
+      {
+        "PRECIO": 2349,
+        "CODIGO": "A45",
+        "KIT": 12,
+        "id": "7769a61f-f057-4446-898b-d3e6cdfadc4b",
+        "MEDIDA": "Flexible mallado p/ agua 45 cm",
+        "TIPO": "Flexibles mallados p/ agua c/ puntales trafilados cromados"
+      },
+      {
+        "CODIGO": "A50",
+        "KIT": 12,
+        "TIPO": "Flexibles mallados p/ agua c/ puntales trafilados cromados",
+        "id": "3c4673cf-b03d-42dc-bec9-3382f468e9b8",
+        "PRECIO": 2410,
+        "MEDIDA": "Flexible mallado p/ agua 50 cm"
+      },
+      {
+        "TIPO": "Flexibles mallados p/ agua c/ puntales trafilados cromados",
+        "MEDIDA": "Flexible mallado p/ agua 60 cm",
+        "id": "1ebe3fa1-5303-4276-80c1-9785fb171f88",
+        "CODIGO": "A60",
+        "PRECIO": 2531,
+        "KIT": 12
+      },
+      {
+        "PRECIO": 2653,
+        "KIT": 12,
+        "MEDIDA": "Flexible mallado p/ agua 70 cm",
+        "id": "8564ad45-f6e9-462e-8465-ebcd52d0d53a",
+        "CODIGO": "A70",
+        "TIPO": "Flexibles mallados p/ agua c/ puntales trafilados cromados"
+      },
+      {
+        "id": "286b5917-9c32-4798-85a0-9bf1e6565bd9",
+        "CODIGO": "A80",
+        "PRECIO": 2775,
+        "KIT": 12,
+        "MEDIDA": "Flexible mallado p/ agua 80 cm",
+        "TIPO": "Flexibles mallados p/ agua c/ puntales trafilados cromados"
+      },
+      {
+        "id": "93cd3109-0818-437a-8381-c7467fe17fa0",
+        "MEDIDA": "Flexible mallado p/ agua 90 cm",
+        "KIT": 12,
+        "PRECIO": 2896,
+        "CODIGO": "A90",
+        "TIPO": "Flexibles mallados p/ agua c/ puntales trafilados cromados"
+      },
+      {
+        "TIPO": "Flexibles mallados p/ agua c/ puntales trafilados cromados",
+        "PRECIO": 3018,
+        "CODIGO": "A100",
+        "MEDIDA": "Flexible mallado p/ agua 1,00 cm",
+        "KIT": 12,
+        "id": "e0c22da7-1931-4719-95a9-5d91d9f29d9e"
+      }
+    ],
+    "Valvulas esfericas metalicas": [
+      {
+        "TIPO": "Valvulas esfericas metalicas",
+        "PRECIO": 3575,
+        "KIT": 6,
+        "MEDIDA": "Valvula esferica 1/2 \" Bresciane\" manija acero inox",
+        "id": "34165a86-bfc5-453b-aa31-0a266bb1426f",
+        "CODIGO": "VES12"
+      },
+      {
+        "id": "9fd3da24-d99a-4275-a8c7-80ac5e049f2b",
+        "TIPO": "Valvulas esfericas metalicas",
+        "PRECIO": 5064,
+        "MEDIDA": "Valvula esferica 3/4 \"bresciane\" manija acero inox",
+        "KIT": 6,
+        "CODIGO": "VES34"
+      },
+      {
+        "CODIGO": "VES1",
+        "MEDIDA": "Valvula esferica 1 \"bresciane\" manija acero inox",
+        "PRECIO": 8154,
+        "TIPO": "Valvulas esfericas metalicas",
+        "KIT": 6,
+        "id": "7214e37a-1507-430b-8f4a-ef7292294a28"
+      },
+      {
+        "PRECIO": 3529,
+        "MEDIDA": "Valvula esferica 1/2  manija acero inox. CAFU",
+        "id": "9b780e1e-f937-47c4-b633-be8f0697f85c",
+        "KIT": 6,
+        "CODIGO": "VES12CAFU",
+        "TIPO": "Valvulas esfericas metalicas"
+      },
+      {
+        "CODIGO": "VES34CAFU",
+        "MEDIDA": "Valvula esferica 3/4 manija acero inox. CAFU",
+        "id": "994ef5a6-e655-4ad7-8c9f-6fbbaa700cc3",
+        "KIT": 6,
+        "PRECIO": 4811,
+        "TIPO": "Valvulas esfericas metalicas"
+      },
+      {
+        "MEDIDA": "Valvula esferica 1 manija acero inox. CAFU",
+        "PRECIO": 8018,
+        "CODIGO": "VES1CAFU",
+        "KIT": 6,
+        "TIPO": "Valvulas esfericas metalicas",
+        "id": "c135a3d6-6ad7-4a55-9324-b8c8c122a61e"
+      }
+    ],
+    "Flexibles monocomando ": [
+      {
+        "CODIGO": "M30C",
+        "PRECIO": 2013,
+        "id": "0fbd30a1-741f-4d62-a118-8eac65ef175b",
+        "TIPO": "Flexibles monocomando ",
+        "MEDIDA": "Flexible corto x 30 cm. ",
+        "KIT": 12
+      },
+      {
+        "id": "6a0d943c-b20a-4298-a86c-4fd6ab23b94b",
+        "TIPO": "Flexibles monocomando ",
+        "KIT": 12,
+        "CODIGO": "M40C",
+        "MEDIDA": "Flexible corto x 40 cm. ",
+        "PRECIO": 2135
+      },
+      {
+        "CODIGO": "M50C",
+        "TIPO": "Flexibles monocomando ",
+        "MEDIDA": "Flexible corto x 50 cm. ",
+        "KIT": 12,
+        "PRECIO": 2257,
+        "id": "89d2b65e-3632-4a96-8401-82fee0ced66d"
+      },
+      {
+        "KIT": 12,
+        "CODIGO": "M30L",
+        "TIPO": "Flexibles monocomando ",
+        "id": "c000c05b-1b51-4eaa-afe3-8ec1629fca25",
+        "MEDIDA": "Flexible largo x 30 cm. ",
+        "PRECIO": 2490
+      },
+      {
+        "CODIGO": "M40L",
+        "KIT": 12,
+        "id": "d6b73d06-dece-4c77-bef9-3d77d32521b8",
+        "PRECIO": 2612,
+        "TIPO": "Flexibles monocomando ",
+        "MEDIDA": "Flexible largo x 40 cm. "
+      },
+      {
+        "KIT": 12,
+        "CODIGO": "M50L",
+        "id": "0101b326-bf32-4db2-afe0-c7f0271319c1",
+        "TIPO": "Flexibles monocomando ",
+        "PRECIO": 2733,
+        "MEDIDA": "Flexible largo x 50 cm. "
+      }
+    ]
+  },
+  "POLIETILENO": {
+    "Codos": [
+      {
+        "id": "6b84d10e-b82c-41de-93da-131ffa2b55b3",
+        "CODIGO": "CODOE12",
+        "KIT": 20,
+        "TIPO": "Codos",
+        "PRECIO": 101,
+        "MEDIDA": "Codo espiga doble 1/2"
+      },
+      {
+        "CODIGO": "CODOE34",
+        "KIT": 20,
+        "MEDIDA": "Codo espiga doble 3/4",
+        "id": "1b5b662e-5244-453d-a245-44348d80e7e7",
+        "TIPO": "Codos",
+        "PRECIO": 134
+      },
+      {
+        "PRECIO": 200,
+        "KIT": 20,
+        "id": "e5f5f83f-5827-4065-a1bb-bc8c07caf186",
+        "CODIGO": "CODOE1",
+        "TIPO": "Codos",
+        "MEDIDA": "Codo espiga doble 1"
+      },
+      {
+        "KIT": 20,
+        "id": "c7a49583-a8c2-4f6f-9126-465c5fe7450e",
+        "MEDIDA": "Codo espiga rosca macho 1/2",
+        "TIPO": "Codos",
+        "CODIGO": "CODOERM12",
+        "PRECIO": 159
+      },
+      {
+        "PRECIO": 252,
+        "CODIGO": "CODOERM34",
+        "KIT": 20,
+        "TIPO": "Codos",
+        "MEDIDA": "Codo espiga rosca macho 3/4",
+        "id": "7d84e515-04ae-4e42-8869-234dafca4228"
+      },
+      {
+        "KIT": 20,
+        "CODIGO": "CODOERM1",
+        "id": "046fc54c-3d06-47ec-a765-bdaaba8da96e",
+        "TIPO": "Codos",
+        "MEDIDA": "Codo espiga rosca macho 1",
+        "PRECIO": 329
+      },
+      {
+        "CODIGO": "CODOERH12",
+        "TIPO": "Codos",
+        "id": "d9b40e58-b10d-440c-b37c-d0a33613316d",
+        "MEDIDA": "Codo espiga rosca hembra 1/2",
+        "KIT": 20,
+        "PRECIO": 119
+      },
+      {
+        "MEDIDA": "Codo espiga rosca hembra 3/4",
+        "TIPO": "Codos",
+        "id": "3f1da3a4-3242-45cd-8d5e-db9f6832dce1",
+        "CODIGO": "CODOERH34",
+        "PRECIO": 173,
+        "KIT": 20
+      },
+      {
+        "TIPO": "Codos",
+        "id": "ff77b666-8f1c-4da5-899b-76945a394dd5",
+        "PRECIO": 330,
+        "CODIGO": "CODOERH1",
+        "MEDIDA": "Codo espiga rosca hembra 1",
+        "KIT": 20
+      }
+    ],
+    "Tees": [
+      {
+        "MEDIDA": "Tee triple enchufe 1/2",
+        "id": "793dc3bb-868b-45af-89b1-3c41d44e9b04",
+        "CODIGO": "TEEE12P",
+        "KIT": 20,
+        "PRECIO": 146,
+        "TIPO": "Tees"
+      },
+      {
+        "KIT": 20,
+        "id": "500842ba-b2cb-4167-a2ec-ecd474dcb8ae",
+        "CODIGO": "TEEE34P",
+        "MEDIDA": "Tee triple enchufe  3/4",
+        "TIPO": "Tees",
+        "PRECIO": 188
+      },
+      {
+        "KIT": 20,
+        "id": "6d29c422-fcc6-4696-a795-2e7498318462",
+        "TIPO": "Tees",
+        "CODIGO": "TEEE1P",
+        "MEDIDA": "Tee triple enchufe 1",
+        "PRECIO": 314
+      },
+      {
+        "CODIGO": "TEERM12P",
+        "MEDIDA": "Tee enchufe rosca macho 1/2",
+        "PRECIO": 265,
+        "KIT": 20,
+        "TIPO": "Tees",
+        "id": "7ece0e00-d766-4a90-b162-45bf1f63e363"
+      },
+      {
+        "id": "e407b939-c335-4308-9c24-304cdfad1d93",
+        "CODIGO": "TEERM34P",
+        "KIT": 20,
+        "MEDIDA": "Tee enchufe rosca macho 3/4",
+        "TIPO": "Tees",
+        "PRECIO": 307
+      },
+      {
+        "PRECIO": 407,
+        "TIPO": "Tees",
+        "MEDIDA": "Tee enchufe rosca macho 1",
+        "KIT": 20,
+        "CODIGO": "TEERM1P",
+        "id": "3c1248dc-d5d1-4800-ad76-743567958d41"
+      },
+      {
+        "PRECIO": 246,
+        "CODIGO": "TEERH12P",
+        "id": "c72745f8-6daf-48ac-90fb-20875aca8666",
+        "TIPO": "Tees",
+        "MEDIDA": "Tee enchufe rosca hembra 1/2",
+        "KIT": 20
+      },
+      {
+        "PRECIO": 291,
+        "CODIGO": "TEERH34P",
+        "id": "4435263d-3e9b-4d0e-92fb-0bf0785eca7b",
+        "TIPO": "Tees",
+        "MEDIDA": "Tee enchufe rosca hembra 3/4",
+        "KIT": 20
+      },
+      {
+        "TIPO": "Tees",
+        "MEDIDA": "Tee enchufe rosca hembra 1",
+        "KIT": 20,
+        "CODIGO": "TEERH1P",
+        "id": "f1e12915-3c47-42ef-b6e8-31c2e2cad679",
+        "PRECIO": 412
+      }
+    ],
+    "Espigas doble": [
+      {
+        "KIT": 20,
+        "CODIGO": "ED12",
+        "TIPO": "Espigas doble",
+        "MEDIDA": "Espiga doble 1/2",
+        "id": "6451940d-eb4c-4ca1-8dc4-fbee1e88e108",
+        "PRECIO": 50
+      },
+      {
+        "TIPO": "Espigas doble",
+        "MEDIDA": "Espiga doble 3/4",
+        "id": "f0f28a26-37cd-47eb-8d49-ae9ced314092",
+        "CODIGO": "ED34",
+        "PRECIO": 74,
+        "KIT": 20
+      },
+      {
+        "PRECIO": 102,
+        "MEDIDA": "Espiga doble 1",
+        "CODIGO": "ED1",
+        "id": "062dae83-193c-4967-b6e3-60d01680be1e",
+        "TIPO": "Espigas doble",
+        "KIT": 20
+      }
+    ],
+    "Espigas reducción": [
+      {
+        "CODIGO": "ER3412",
+        "KIT": 20,
+        "MEDIDA": "Espiga reduccion 3/4 x 1/2",
+        "PRECIO": 86,
+        "id": "a47483ea-3134-45b4-8451-5b445e9d360f",
+        "TIPO": "Espigas reducción"
+      },
+      {
+        "id": "776e52b3-f671-403a-a8a1-f6a24c31dcdb",
+        "TIPO": "Espigas reducción",
+        "PRECIO": 113,
+        "MEDIDA": "Espiga reduccion 1 x 3/4",
+        "KIT": 20,
+        "CODIGO": "ER134"
+      },
+      {
+        "MEDIDA": "Espiga reduccion 1 x 1/2",
+        "id": "4566edb0-4b40-4b89-931c-223133d5396d",
+        "TIPO": "Espigas reducción",
+        "KIT": 20,
+        "CODIGO": "ER112",
+        "PRECIO": 113
+      }
+    ],
+    "Espigas rosca": [
+      {
+        "TIPO": "Espigas rosca",
+        "MEDIDA": "Espiga rosca macho 1/2",
+        "KIT": 20,
+        "id": "665808fe-3576-4acf-893f-64b2fc8f7aab",
+        "PRECIO": 50,
+        "CODIGO": "ERM12"
+      },
+      {
+        "TIPO": "Espigas rosca",
+        "KIT": 20,
+        "id": "fd1e9142-dcab-4b95-918d-303bb2b1ec3e",
+        "MEDIDA": "Espiga rosca macho 3/4",
+        "CODIGO": "ERM34",
+        "PRECIO": 79
+      },
+      {
+        "CODIGO": "ERM1",
+        "PRECIO": 111,
+        "KIT": 20,
+        "TIPO": "Espigas rosca",
+        "MEDIDA": "Espiga rosca macho 1",
+        "id": "42d1d1e8-616b-4904-9217-110f723cb727"
+      },
+      {
+        "CODIGO": "ERH12",
+        "PRECIO": 103,
+        "TIPO": "Espigas rosca",
+        "MEDIDA": "Espiga rosca hembra 1/2",
+        "KIT": 20,
+        "id": "2c90cc54-8766-46aa-9c72-66976d1fa05c"
+      },
+      {
+        "TIPO": "Espigas rosca",
+        "id": "cca788d4-0bc4-446e-ab45-f08b6619abcf",
+        "KIT": 20,
+        "CODIGO": "ERH34",
+        "MEDIDA": "Espiga rosca hembra 3/4",
+        "PRECIO": 146
+      },
+      {
+        "TIPO": "Espigas rosca",
+        "PRECIO": 185,
+        "id": "cc3fd65f-2fcf-434d-89b6-5f804b01e865",
+        "MEDIDA": "Espiga rosca hembra 1",
+        "KIT": 20,
+        "CODIGO": "ERH1"
+      },
+      {
+        "KIT": 20,
+        "PRECIO": 125,
+        "id": "64095927-0a43-4b12-a643-56922b89bf38",
+        "CODIGO": "ERM134",
+        "TIPO": "Espigas rosca",
+        "MEDIDA": "Espiga rosca macho reduccion 1 x 3/4"
+      },
+      {
+        "TIPO": "Espigas rosca",
+        "MEDIDA": "Espiga rosca macho reduccion 3/4 x 1/2",
+        "PRECIO": 90,
+        "KIT": 20,
+        "CODIGO": "ERM3412",
+        "id": "e0bae3fa-2c85-4c94-8354-d1a06116b373"
+      },
+      {
+        "MEDIDA": "Espiga rosca macho reduccion 1/2 x 3/4",
+        "PRECIO": 95,
+        "CODIGO": "ERM1234",
+        "TIPO": "Espigas rosca",
+        "KIT": 20,
+        "id": "6f66332a-e666-4f68-9c9d-fde186667c2c"
+      },
+      {
+        "KIT": 20,
+        "CODIGO": "ERM341 ",
+        "id": "fb8f702d-af5f-4f39-bfa8-ea677f4138a9",
+        "TIPO": "Espigas rosca",
+        "MEDIDA": "Espiga rosca macho reduccion 3/4 x 1",
+        "PRECIO": 127
+      },
+      {
+        "MEDIDA": "Espiga rosca macho reduccion 1/2 x 1",
+        "KIT": 20,
+        "CODIGO": "ERM121",
+        "id": "73623779-8800-44f7-ad9a-49bdc35c33ff",
+        "PRECIO": 127,
+        "TIPO": "Espigas rosca"
+      },
+      {
+        "TIPO": "Espigas rosca",
+        "MEDIDA": "Espiga rosca hembra reduccion 1/2 x 3/4",
+        "PRECIO": 158,
+        "CODIGO": "ERH1234",
+        "KIT": 20,
+        "id": "f6c05ed4-afcc-4b04-9a45-09d91cf57e34"
+      },
+      {
+        "MEDIDA": "Espiga rosca hembra reduccion 3/4 x 1",
+        "PRECIO": 182,
+        "KIT": 20,
+        "TIPO": "Espigas rosca",
+        "id": "036bfe40-eeaa-4adc-b3a7-07b8ebd84316",
+        "CODIGO": "ERH341"
+      },
+      {
+        "CODIGO": "ERH121",
+        "PRECIO": 182,
+        "MEDIDA": "Espiga rosca hembra reduccion 1/2 x 1",
+        "KIT": 20,
+        "id": "80edbe7e-59e5-4bb8-a423-b2a2fb963b6e",
+        "TIPO": "Espigas rosca"
+      },
+      {
+        "id": "a6fe28d8-3590-4c6d-aa9d-119dd8189aa0",
+        "KIT": 20,
+        "PRECIO": 182,
+        "CODIGO": "ERH134",
+        "TIPO": "Espigas rosca",
+        "MEDIDA": "Espiga rosca hembra reduccion 1 X 3/4"
+      },
+      {
+        "id": "4637d972-7f19-4817-b21f-5b92e0365f4a",
+        "KIT": 20,
+        "MEDIDA": "Espiga rosca hembra reduccion 1 X 1/2",
+        "PRECIO": 182,
+        "CODIGO": "ERH112",
+        "TIPO": "Espigas rosca"
+      },
+      {
+        "CODIGO": "ERH3412",
+        "id": "76d1907f-4b34-4ddf-b09d-131f21d55bf7",
+        "KIT": 20,
+        "PRECIO": 182,
+        "MEDIDA": "Espiga rosca hembra reduccion 3/4 X 1/2",
+        "TIPO": "Espigas rosca"
+      }
+    ]
+  },
+  "POLIPROPILENO": {
+    "Cuplas": [
+      {
+        "KIT": 20,
+        "TIPO": "Cuplas",
+        "MEDIDA": "Cupla Hembra - Hembra 1/2",
+        "PRECIO": 140,
+        "CODIGO": "CUPLA12P",
+        "id": "f7ad0231-e09d-4c2b-9322-86daa6688aa3"
+      },
+      {
+        "KIT": 20,
+        "PRECIO": 203,
+        "TIPO": "Cuplas",
+        "id": "6ec37808-39a6-4f45-badb-8a6b1d739ccd",
+        "MEDIDA": "Cupla Hembra - Hembra 3/4",
+        "CODIGO": "CUPLA34P"
+      },
+      {
+        "MEDIDA": "Cupla Hembra - Hembra 1 ",
+        "PRECIO": 318,
+        "TIPO": "Cuplas",
+        "id": "7f6d983f-9370-4e7b-99c0-d83b9e8b8841",
+        "KIT": 20,
+        "CODIGO": "CUPLA1P"
+      },
+      {
+        "MEDIDA": "Cupla Hembra - Hembra 3/4 X 1/2",
+        "CODIGO": "CUPLA3412P",
+        "KIT": 20,
+        "PRECIO": 191,
+        "TIPO": "Cuplas",
+        "id": "d07c1346-fc0a-4983-8153-a4d21318d9a1"
+      }
+    ],
+    "Tapas": [
+      {
+        "CODIGO": "TAPA12P",
+        "PRECIO": 127,
+        "TIPO": "Tapas",
+        "MEDIDA": "Tapa 1/2",
+        "id": "f3ce0f8b-759a-43da-ba77-8156941c2991",
+        "KIT": 20
+      },
+      {
+        "CODIGO": "TAPA34P",
+        "MEDIDA": "Tapa 3/4",
+        "TIPO": "Tapas",
+        "id": "bbf5e69d-1bc7-498c-bbc1-27a24febc7ef",
+        "PRECIO": 143,
+        "KIT": 20
+      },
+      {
+        "TIPO": "Tapas",
+        "CODIGO": "TAPA1P",
+        "PRECIO": 191,
+        "KIT": 20,
+        "MEDIDA": "Tapa 1 ",
+        "id": "2d36de81-0866-4816-ba08-bd28380a8db2"
+      }
+    ],
+    "Niples": [
+      {
+        "TIPO": "Niples",
+        "CODIGO": "N1260",
+        "PRECIO": 70,
+        "id": "626551a4-475f-4e10-8867-f00810093600",
+        "MEDIDA": "Niple 1/2 x 60 mm",
+        "KIT": 20
+      },
+      {
+        "id": "be9e7e79-e6b8-4c5b-9ad9-4b355ffe5174",
+        "KIT": 20,
+        "CODIGO": "N1280",
+        "TIPO": "Niples",
+        "PRECIO": 92,
+        "MEDIDA": "Niple 1/2 x 80 mm"
+      },
+      {
+        "id": "0d2f2a90-7bc1-4dda-b46c-165a8c9a5531",
+        "MEDIDA": "Niple 1/2 x 100 mm",
+        "KIT": 20,
+        "PRECIO": 111,
+        "TIPO": "Niples",
+        "CODIGO": "N12100"
+      },
+      {
+        "CODIGO": "N12120",
+        "PRECIO": 125,
+        "KIT": 20,
+        "TIPO": "Niples",
+        "id": "11f3b8e0-6616-404c-a54b-1561af457e81",
+        "MEDIDA": "Niple 1/2 x 120 mm"
+      },
+      {
+        "PRECIO": 147,
+        "TIPO": "Niples",
+        "MEDIDA": "Niple 1/2 x 150 mm",
+        "id": "474d6f9d-4544-47d2-add5-2aa311d34fb1",
+        "CODIGO": "N12150",
+        "KIT": 20
+      },
+      {
+        "CODIGO": "N12200",
+        "MEDIDA": "Niple 1/2 x 200 mm",
+        "PRECIO": 201,
+        "id": "e60bc706-2821-4469-899f-86c769e57ccf",
+        "TIPO": "Niples",
+        "KIT": 20
+      },
+      {
+        "KIT": 20,
+        "id": "9cf74f0d-3eff-4e4a-a7a7-644d80eae1f0",
+        "MEDIDA": "Niple 3/4 x 60 mm",
+        "CODIGO": "N3460",
+        "TIPO": "Niples",
+        "PRECIO": 86
+      },
+      {
+        "id": "378bb27b-3775-41ed-868e-fbbc6409bd41",
+        "MEDIDA": "Niple 3/4 x80 mm",
+        "PRECIO": 120,
+        "TIPO": "Niples",
+        "KIT": 20,
+        "CODIGO": "N3480"
+      },
+      {
+        "KIT": 20,
+        "PRECIO": 147,
+        "CODIGO": "N34100",
+        "id": "88213718-3fde-4a53-b6ec-45f6c503f1aa",
+        "TIPO": "Niples",
+        "MEDIDA": "Niple 3/4 x 100 mm"
+      },
+      {
+        "KIT": 20,
+        "CODIGO": "N34120",
+        "PRECIO": 177,
+        "id": "a9bad977-897d-45e2-8883-9224ed3f59d3",
+        "MEDIDA": "Niple 3/4 x 120 mm",
+        "TIPO": "Niples"
+      },
+      {
+        "PRECIO": 216,
+        "id": "058b62a0-9b49-4b7f-aa41-9a0004c7ccff",
+        "CODIGO": "N34150",
+        "MEDIDA": "Niple 3/4 x 150 mm",
+        "KIT": 20,
+        "TIPO": "Niples"
+      },
+      {
+        "CODIGO": "N34200",
+        "TIPO": "Niples",
+        "PRECIO": 261,
+        "MEDIDA": "Niple 3/4 x 200 mm",
+        "KIT": 20,
+        "id": "38878251-1404-404c-8e7b-fb2ce11b0fe9"
+      },
+      {
+        "CODIGO": "N160",
+        "TIPO": "Niples",
+        "id": "43ed23b0-6b49-4103-a60f-7c6a98c04684",
+        "PRECIO": 125,
+        "KIT": 20,
+        "MEDIDA": "Niple 1 x 60 mm"
+      },
+      {
+        "KIT": 20,
+        "PRECIO": 168,
+        "CODIGO": "N180",
+        "id": "9a9bf4a3-52fd-4c39-bf39-3b0ff3210744",
+        "MEDIDA": "Niple 1 x 80 mm",
+        "TIPO": "Niples"
+      },
+      {
+        "KIT": 20,
+        "TIPO": "Niples",
+        "CODIGO": "N1100",
+        "id": "f649eaa4-7724-448d-8709-9ce6545e3029",
+        "PRECIO": 216,
+        "MEDIDA": "Niple 1 x 100 mm"
+      },
+      {
+        "CODIGO": "N1120",
+        "TIPO": "Niples",
+        "KIT": 20,
+        "MEDIDA": "Niple 1 x 120 mm",
+        "id": "ecb680d2-a07b-4e90-ad44-e8f0989ffd1a",
+        "PRECIO": 266
+      },
+      {
+        "PRECIO": 317,
+        "id": "1f239d1a-1255-403e-b566-118fed495270",
+        "CODIGO": "N1150",
+        "MEDIDA": "Niple 1 x 150 mm",
+        "TIPO": "Niples",
+        "KIT": 20
+      },
+      {
+        "MEDIDA": "Niple 1 x 200 mm",
+        "TIPO": "Niples",
+        "PRECIO": 359,
+        "CODIGO": "N1200",
+        "id": "24ada75f-5b5d-45f2-b3b7-9933e3ab8012",
+        "KIT": 20
+      }
+    ],
+    "Uniones Doble": [
+      {
+        "TIPO": "Uniones Doble",
+        "id": "8a366e67-ad52-4216-97e2-a608c17bb089",
+        "KIT": 20,
+        "PRECIO": 604,
+        "CODIGO": "UD12P",
+        "MEDIDA": "Union doble Hembra  - Hembra 1/2"
+      },
+      {
+        "TIPO": "Uniones Doble",
+        "KIT": 20,
+        "MEDIDA": "Union doble Hembra  - Hembra 3/4",
+        "id": "4a2d841a-72d0-4b29-b0db-c183f5aca63d",
+        "PRECIO": 643,
+        "CODIGO": "UD34P"
+      },
+      {
+        "PRECIO": 899,
+        "CODIGO": "UD1P",
+        "MEDIDA": "Union doble Hembra  - Hembra 1 ",
+        "KIT": 20,
+        "id": "c8c3eaac-4c8c-44fd-8d79-ce020ea69aa8",
+        "TIPO": "Uniones Doble"
+      }
+    ],
+    "Tapones": [
+      {
+        "MEDIDA": "Tapon 1/2",
+        "CODIGO": "TAPON12P",
+        "PRECIO": 102,
+        "KIT": 20,
+        "TIPO": "Tapones",
+        "id": "e2cd4d2b-7380-4ffb-bdf9-1d1d4a2f5540"
+      },
+      {
+        "id": "0717c274-d85c-42bf-9ed3-edd3539cc5a4",
+        "KIT": 20,
+        "PRECIO": 102,
+        "MEDIDA": "Tapon 3/4",
+        "TIPO": "Tapones",
+        "CODIGO": "TAPON34P"
+      },
+      {
+        "MEDIDA": "Tapon 1",
+        "KIT": 20,
+        "id": "41fb4496-df2c-4244-9b41-fbcc6ecdf174",
+        "CODIGO": "TAPON1P",
+        "PRECIO": 127,
+        "TIPO": "Tapones"
+      }
+    ],
+    "Entreroscas": [
+      {
+        "TIPO": "Entreroscas",
+        "CODIGO": "E12P",
+        "id": "7549fbdf-c8fd-47e8-8009-2e5de36a8859",
+        "PRECIO": 105,
+        "MEDIDA": "Entrerosca 1/2",
+        "KIT": 20
+      },
+      {
+        "CODIGO": "E34P",
+        "MEDIDA": "Entrerosca 3/4",
+        "id": "64d56961-67b4-4d80-8730-8ad8b0e2c04b",
+        "PRECIO": 124,
+        "TIPO": "Entreroscas",
+        "KIT": 20
+      },
+      {
+        "TIPO": "Entreroscas",
+        "PRECIO": 159,
+        "id": "1b42acf4-47b2-417d-b681-bab23758b6a5",
+        "CODIGO": "E1P",
+        "KIT": 20,
+        "MEDIDA": "Entrerosca 1"
+      },
+      {
+        "KIT": 20,
+        "TIPO": "Entreroscas",
+        "PRECIO": 142,
+        "id": "bfd4d9f0-f194-491a-bfef-ae590684cdd9",
+        "MEDIDA": "Entrerosca 3/4 x 1/2",
+        "CODIGO": "E3412P"
+      },
+      {
+        "PRECIO": 165,
+        "MEDIDA": "Entrerosca 1 x1/2",
+        "KIT": 20,
+        "TIPO": "Entreroscas",
+        "id": "ee48fba0-ca78-42dd-b234-55590595bac3",
+        "CODIGO": "E112P"
+      },
+      {
+        "CODIGO": "E134P",
+        "MEDIDA": "Entrerosca 1 x3/4",
+        "KIT": 20,
+        "PRECIO": 165,
+        "TIPO": "Entreroscas",
+        "id": "2898306a-d540-47ab-a3aa-66bc6758e159"
+      }
+    ],
+    "Tees": [
+      {
+        "TIPO": "Tees",
+        "id": "c5b5c53b-eedc-4e0a-8c1d-31c8e940007e",
+        "MEDIDA": "Tee 1/2",
+        "KIT": 20,
+        "PRECIO": 222,
+        "CODIGO": "TEE12P"
+      },
+      {
+        "CODIGO": "TEE34P",
+        "KIT": 20,
+        "TIPO": "Tees",
+        "id": "90e47e1e-8293-4617-a350-1a9713a658db",
+        "MEDIDA": "Tee 3/4",
+        "PRECIO": 397
+      },
+      {
+        "MEDIDA": "Tee 1 ",
+        "TIPO": "Tees",
+        "KIT": 20,
+        "id": "a239c66b-606e-44e9-b045-8191e00847ad",
+        "CODIGO": "TEE1P",
+        "PRECIO": 604
+      }
+    ],
+    "Codos": [
+      {
+        "TIPO": "Codos",
+        "KIT": 20,
+        "MEDIDA": "Codo Hembra - Hembra 90 º 1/2",
+        "CODIGO": "CODOHH12P",
+        "PRECIO": 137,
+        "id": "45962b24-3196-4cca-bfab-15cc9cec8b8b"
+      },
+      {
+        "id": "2a8b05e9-49d3-4ee2-a65a-3573acd9e195",
+        "CODIGO": "CODOHH34P",
+        "MEDIDA": "Codo Hembra - Hembra 90 º 3/4",
+        "KIT": 20,
+        "PRECIO": 224,
+        "TIPO": "Codos"
+      },
+      {
+        "PRECIO": 365,
+        "id": "f5ca5573-8cf9-418e-abf5-55cce6e410a8",
+        "CODIGO": "CODOHH1P",
+        "MEDIDA": "Codo Hembra - Hembra 90 º 1 ",
+        "TIPO": "Codos",
+        "KIT": 20
+      },
+      {
+        "MEDIDA": "Codo Macho - Hembra 90 º 1/2",
+        "KIT": 20,
+        "TIPO": "Codos",
+        "id": "ee185472-9de1-41f1-bb48-36a36c6996ae",
+        "CODIGO": "CODOHM12P",
+        "PRECIO": 146
+      },
+      {
+        "MEDIDA": "Codo Macho - Hembra 90 º 3/4",
+        "CODIGO": "CODOMH34P",
+        "KIT": 20,
+        "id": "5e9f78cd-105d-4f23-8ff9-f0237d282d39",
+        "TIPO": "Codos",
+        "PRECIO": 222
+      }
+    ],
+    "Bujes Reducción": [
+      {
+        "CODIGO": "B3412P",
+        "KIT": 20,
+        "PRECIO": 116,
+        "MEDIDA": "Buje reduccion 3/4 x 1/2",
+        "id": "0f9f4592-dc77-44a0-b073-73f5b1b3898d",
+        "TIPO": "Bujes Reducción"
+      },
+      {
+        "TIPO": "Bujes Reducción",
+        "MEDIDA": "Buje reduccion 1 x 3/4",
+        "CODIGO": "B134P",
+        "id": "ea1b6642-8f99-40a8-b68c-a712ff54318a",
+        "KIT": 20,
+        "PRECIO": 142
+      },
+      {
+        "id": "7f48fac0-a2a9-4402-b166-d0323a1976ea",
+        "MEDIDA": "Buje reduccion 1 x 1/2",
+        "TIPO": "Bujes Reducción",
+        "KIT": 20,
+        "PRECIO": 152,
+        "CODIGO": "B112P"
+      }
+    ],
+    "Curvas": [
+      {
+        "KIT": 20,
+        "id": "56ea059a-3550-42d5-b1a3-ff8bb836c43f",
+        "PRECIO": 305,
+        "CODIGO": "CURVA12P",
+        "TIPO": "Curvas",
+        "MEDIDA": "Curva 1/2 90º"
+      },
+      {
+        "KIT": 20,
+        "PRECIO": 445,
+        "TIPO": "Curvas",
+        "MEDIDA": "Curva 3/4  90º",
+        "CODIGO": "CURVA34P",
+        "id": "f7017d11-808e-474e-ad51-609ffb09741c"
+      }
+    ]
+  },
+  "REJAS Y TAPAS": {
+    "Tapas": [
+      {
+        "CODIGO": "T10AI",
+        "PRECIO": 813,
+        "TIPO": "Tapas",
+        "id": "da4c5ac9-299e-4731-bcca-4fd943030ae4",
+        "KIT": 10,
+        "MEDIDA": "Tapa p/ piso de Acero 10 x 10 Acero Inoxidable"
+      },
+      {
+        "TIPO": "Tapas",
+        "PRECIO": 975,
+        "MEDIDA": "Tapa p/ piso de Acero 12 x 12 Acero Inoxidable",
+        "CODIGO": "T12AI",
+        "id": "80d12236-8107-4de8-a231-99f4be87967a",
+        "KIT": 10
+      },
+      {
+        "CODIGO": "T15AI",
+        "id": "b76c1d4a-a0ce-4e3a-8716-e61d1003240e",
+        "MEDIDA": "Tapa p/ piso de Acero 15 x 15 Acero Inoxidable",
+        "KIT": 10,
+        "TIPO": "Tapas",
+        "PRECIO": 1138
+      },
+      {
+        "KIT": 10,
+        "TIPO": "Tapas",
+        "id": "b7e80b59-3e71-4c35-99d6-6c3dec860a22",
+        "CODIGO": "T20AI",
+        "MEDIDA": "Tapa p/ piso de Acero 20 x 20 Acero Inoxidable",
+        "PRECIO": 1788
+      }
+    ],
+    "Rejillas": [
+      {
+        "KIT": 10,
+        "MEDIDA": "Rejilla de ventilacion  20x40  800cm3 para gabinete gas",
+        "TIPO": "Rejillas",
+        "CODIGO": "R2042",
+        "PRECIO": 779.625,
+        "id": "1b30f2cd-fb08-4179-9719-f2269eea557c"
+      },
+      {
+        "PRECIO": 615,
+        "KIT": 10,
+        "CODIGO": "R15S100",
+        "TIPO": "Rejillas",
+        "id": "b8c55f8c-7db2-4d13-a4ba-9f08057cb02f",
+        "MEDIDA": "Rejilla de ventilación Esmaltada 15 x 15 p/ amurar APROBADA 100 CM2"
+      },
+      {
+        "id": "02b18b39-ee7c-408a-a321-acff731b8fe8",
+        "KIT": 10,
+        "PRECIO": 615,
+        "CODIGO": "R15A100T",
+        "MEDIDA": "Rejilla de ventilación Esmaltada 15 x 15 p/ tornillo APROBADA 100 CM2",
+        "TIPO": "Rejillas"
+      },
+      {
+        "PRECIO": 1230,
+        "TIPO": "Rejillas",
+        "CODIGO": "R1530A200",
+        "id": "991caed8-79a5-4fcc-a0ba-a649370ea639",
+        "MEDIDA": "Rejilla de ventilación Esmaltada 15 X 30 p/ amurar APROBADA 200 CM2",
+        "KIT": 10
+      },
+      {
+        "KIT": 10,
+        "MEDIDA": "Rejilla de ventilación Esmaltada 15 X 30 p/ tornilloAPROBADA 200 CM2",
+        "PRECIO": 1230,
+        "CODIGO": "R1530A200T",
+        "id": "b0fd897a-2de9-4180-9ad6-bca892fa1922",
+        "TIPO": "Rejillas"
+      },
+      {
+        "MEDIDA": "Rejilla de ventilación Esmaltada 20 X 20 p/ amurar APROBADA 100 CM2",
+        "CODIGO": "R20A100",
+        "KIT": 10,
+        "id": "1bb0be3b-074a-4ce4-8e8c-0295e9962764",
+        "PRECIO": 810,
+        "TIPO": "Rejillas"
+      },
+      {
+        "PRECIO": 810,
+        "KIT": 10,
+        "id": "1bad5776-575b-4db5-ad62-7da25ead9eaf",
+        "MEDIDA": "Rejilla de ventilación Esmaltada 20 X 20 p/tornillo APROBADA 100 CM2",
+        "CODIGO": "R20A100t",
+        "TIPO": "Rejillas"
+      },
+      {
+        "PRECIO": 999,
+        "KIT": 10,
+        "TIPO": "Rejillas",
+        "CODIGO": "R20A200",
+        "MEDIDA": "Rejilla de ventilación Esmaltada 20 X 20 p/ amurar APROBADA 200 CM2",
+        "id": "130d636f-5213-4cf4-9215-66243456417a"
+      }
+    ],
+    "Rejas": [
+      {
+        "MEDIDA": "Reja p/ piso de Acero 10 x 10 Acero Inoxidable",
+        "KIT": 10,
+        "id": "8bb628c4-c951-42a1-b6cb-180e96f93abc",
+        "TIPO": "Rejas",
+        "CODIGO": "R10AI",
+        "PRECIO": 813
+      },
+      {
+        "PRECIO": 975,
+        "KIT": 10,
+        "CODIGO": "R12AI",
+        "TIPO": "Rejas",
+        "MEDIDA": "Reja p/ piso de Acero 12 x 12 Acero Inoxidable",
+        "id": "ef09a5f6-763b-4067-8434-851955069475"
+      },
+      {
+        "id": "1dd24f07-5d21-4bfa-9a4a-38ba69a29dd9",
+        "PRECIO": 1138,
+        "CODIGO": "R15AI",
+        "TIPO": "Rejas",
+        "MEDIDA": "Reja p/ piso de Acero 15 x 15 Acero Inoxidable",
+        "KIT": 10
+      },
+      {
+        "id": "1b9f5fb7-16b6-41e8-aedc-638d347c0072",
+        "CODIGO": "R20AI",
+        "MEDIDA": "Reja p/ piso de Acero 20 x 20 Acero Inoxidable",
+        "KIT": 10,
+        "TIPO": "Rejas",
+        "PRECIO": 1788
+      },
+      {
+        "CODIGO": "R10PVC",
+        "TIPO": "Rejas",
+        "id": "1549816e-547b-453e-b905-1259ed6e6d1a",
+        "MEDIDA": "Reja p/ piso de plastico 10 x 10con marco",
+        "PRECIO": 362,
+        "KIT": 10
+      },
+      {
+        "PRECIO": 441,
+        "TIPO": "Rejas",
+        "MEDIDA": "Reja p/ piso de plastico 15 x 15 con marco",
+        "KIT": 10,
+        "CODIGO": "R15PVC",
+        "id": "a913e154-939e-4283-ad9a-f561891363ea"
+      },
+      {
+        "CODIGO": "R20PVC",
+        "TIPO": "Rejas",
+        "KIT": 10,
+        "PRECIO": 682,
+        "MEDIDA": "Reja p/ piso de plastico 20 X 20 con marco",
+        "id": "951fe495-9caf-4827-a7ae-ebb3d15183bd"
+      }
+    ]
+  },
+  "TERMOCUPLAS": {
+    "Tuercas": [
+      {
+        "TIPO": "Tuercas",
+        "KIT": 20,
+        "PRECIO": 176,
+        "MEDIDA": "Tuerca 8 X 1",
+        "CODIGO": "T8X1",
+        "id": "3eefd5eb-e648-4980-9fb3-7e8bef6456f6"
+      },
+      {
+        "MEDIDA": "Tuerca Eitar",
+        "PRECIO": 176,
+        "TIPO": "Tuercas",
+        "KIT": 20,
+        "CODIGO": "TTE",
+        "id": "326ca453-8b4b-4b48-a44f-537d96710f38"
+      },
+      {
+        "MEDIDA": "Tuerca Rheen ",
+        "id": "6d52793d-d9d3-458d-bc42-7583c1374613",
+        "CODIGO": "TTR",
+        "KIT": 20,
+        "PRECIO": 176,
+        "TIPO": "Tuercas"
+      },
+      {
+        "id": "39e93204-dabc-41a2-9473-5f143b909adf",
+        "MEDIDA": "Tuerca Ottonello",
+        "PRECIO": 176,
+        "CODIGO": "TTO",
+        "KIT": 20,
+        "TIPO": "Tuercas"
+      },
+      {
+        "KIT": 20,
+        "TIPO": "Tuercas",
+        "id": "ff3e279e-10fa-448e-9c35-08de9937f1ff",
+        "MEDIDA": "Tuerca Eskabe",
+        "CODIGO": "TTES",
+        "PRECIO": 234
+      },
+      {
+        "TIPO": "Tuercas",
+        "id": "f4ec323a-fcaf-4fe6-ac49-4a6b7a6826f8",
+        "CODIGO": "TTA",
+        "PRECIO": 114,
+        "MEDIDA": "Tuerca de ajuste plana 8 x 1",
+        "KIT": 20
+      },
+      {
+        "id": "c0d91985-462d-41a6-a641-2d0feb8acabd",
+        "PRECIO": 119.4102,
+        "CODIGO": "TP91",
+        "TIPO": "Tuercas",
+        "KIT": 20,
+        "MEDIDA": "Tuerca PARTIDA  9x1"
+      }
+    ],
+    "Termocuplas intercambiables solas": [
+      {
+        "MEDIDA": "Termocupla intercambiable AMERICANA x 40 cm",
+        "PRECIO": 2625,
+        "id": "eec7a63d-1f7b-491d-8f4d-b2249d3e02cb",
+        "CODIGO": "TIA40",
+        "KIT": 10,
+        "TIPO": "Termocuplas intercambiables solas"
+      },
+      {
+        "id": "76d30df1-8635-4b62-bba2-4bcaa09d3ead",
+        "TIPO": "Termocuplas intercambiables solas",
+        "CODIGO": "TSI20",
+        "PRECIO": 1641,
+        "MEDIDA": "Termocupla intercambiable sola x 20 cm SIN TUERCA NI SOPORTE",
+        "KIT": 10
+      },
+      {
+        "CODIGO": "TSI30",
+        "id": "ce5ad634-711b-4afe-8507-10eec062180f",
+        "TIPO": "Termocuplas intercambiables solas",
+        "KIT": 10,
+        "MEDIDA": "Termocupla intercambiable sola x 30 cm  SIN TUERCA NI SOPORTE",
+        "PRECIO": 1971
+      },
+      {
+        "id": "e65a086e-5f63-4640-88c7-3e01fb9c322e",
+        "PRECIO": 2301,
+        "KIT": 10,
+        "CODIGO": "TSI40",
+        "TIPO": "Termocuplas intercambiables solas",
+        "MEDIDA": "Termocupla intercambiable sola x 40 cm SIN TUERCA NI SOPORTE"
+      },
+      {
+        "CODIGO": "TSI50",
+        "PRECIO": 2631,
+        "id": "de506f72-a221-4332-809f-704a571476c8",
+        "TIPO": "Termocuplas intercambiables solas",
+        "MEDIDA": "Termocupla intercambiable sola x 50 cm SIN TUERCA NI SOPORTE",
+        "KIT": 10
+      },
+      {
+        "CODIGO": "TSI60",
+        "MEDIDA": "Termocupla intercambiable sola x 60 cm SIN TUERCA NI SOPORTE",
+        "id": "60afc257-fc9e-478d-9fd6-249a25a83aba",
+        "KIT": 10,
+        "PRECIO": 2962,
+        "TIPO": "Termocuplas intercambiables solas"
+      },
+      {
+        "MEDIDA": "Termocupla intercambiable sola x 70 cm SIN TUERCA NI SOPORTE",
+        "CODIGO": "TSI70",
+        "TIPO": "Termocuplas intercambiables solas",
+        "PRECIO": 3292,
+        "id": "e7b8c492-ab1c-4e75-9088-872ad2af5abf",
+        "KIT": 10
+      },
+      {
+        "id": "cc59c2fe-e16e-4cf6-8c93-031df60fadd8",
+        "TIPO": "Termocuplas intercambiables solas",
+        "CODIGO": "TSI80",
+        "KIT": 10,
+        "PRECIO": 3622,
+        "MEDIDA": "Termocupla intercambiable solax 80 cm SIN TUERCA NI SOPORTE"
+      },
+      {
+        "KIT": 10,
+        "CODIGO": "TSI100",
+        "TIPO": "Termocuplas intercambiables solas",
+        "PRECIO": 4289,
+        "MEDIDA": "Termocupla intercambiable sola x 100 cm SIN TUERCA NI SOPORTE",
+        "id": "30f48d78-90fa-47d3-a8a5-f54bf71cba7f"
+      },
+      {
+        "id": "d3b72129-9a74-4f9d-8f25-8a10a82ba88e",
+        "CODIGO": "TSI120",
+        "KIT": 10,
+        "TIPO": "Termocuplas intercambiables solas",
+        "MEDIDA": "Termocupla intercambiable sola x 120 cm SIN TUERCA NI SOPORTE",
+        "PRECIO": 4964
+      },
+      {
+        "TIPO": "Termocuplas intercambiables solas",
+        "KIT": 10,
+        "PRECIO": 5983,
+        "CODIGO": "TSI150",
+        "MEDIDA": "Termocupla intercambiable solax 150 cm SIN TUERCA NI SOPORTE",
+        "id": "3c452e26-3b8d-4b5c-8695-6308bfd6a439"
+      }
+    ],
+    "Termocuplas c/ tuerca & soporte intercamb. ": [
+      {
+        "MEDIDA": "Termocupla intercambiable x 20 cm - 8 X 1 C/TUERCA Y SOPORTE",
+        "PRECIO": 1913,
+        "KIT": 10,
+        "id": "13bbea33-738a-4371-87c3-470c488edc90",
+        "TIPO": "Termocuplas c/ tuerca & soporte intercamb. ",
+        "CODIGO": "TI20"
+      },
+      {
+        "TIPO": "Termocuplas c/ tuerca & soporte intercamb. ",
+        "id": "1b9737a1-376f-4537-aa62-ee9f029b3cdf",
+        "KIT": 10,
+        "CODIGO": "TI30",
+        "PRECIO": 2244,
+        "MEDIDA": "Termocupla intercambiable x 30 cm 8 X 1 C/TUERCA Y SOPORTE"
+      },
+      {
+        "MEDIDA": "Termocupla intercambiable x 40 cm - 8 X 1 C/TUERCA Y SOPORTE",
+        "PRECIO": 2574,
+        "KIT": 10,
+        "id": "92bd1074-95ed-403d-b683-f6766b4a4bcd",
+        "TIPO": "Termocuplas c/ tuerca & soporte intercamb. ",
+        "CODIGO": "TI40"
+      },
+      {
+        "KIT": 10,
+        "TIPO": "Termocuplas c/ tuerca & soporte intercamb. ",
+        "MEDIDA": "Termocupla intercambiable x 50 cm - 8 X 1 C/TUERCA Y SOPORTE",
+        "id": "b063f684-5724-4055-90cc-e56082a19cf4",
+        "CODIGO": "TI50",
+        "PRECIO": 2904
+      },
+      {
+        "KIT": 10,
+        "CODIGO": "TI60",
+        "id": "9452b5ad-fd26-4886-85c7-77bd2b9cdbb8",
+        "MEDIDA": "Termocupla intercambiable x 60 cm - 8 X 1 C/TUERCA Y SOPORTE",
+        "PRECIO": 3234,
+        "TIPO": "Termocuplas c/ tuerca & soporte intercamb. "
+      },
+      {
+        "id": "b81d144a-60bc-4330-8464-a59a09913bdb",
+        "CODIGO": "TI70",
+        "PRECIO": 3564,
+        "MEDIDA": "Termocupla intercambiable x 70 cm - 8 X 1 C/TUERCA Y SOPORTE",
+        "KIT": 10,
+        "TIPO": "Termocuplas c/ tuerca & soporte intercamb. "
+      },
+      {
+        "MEDIDA": "Termocupla intercambiable x 80 cm - 8 X 1 C/TUERCA Y SOPORTE",
+        "CODIGO": "TI80",
+        "PRECIO": 3895,
+        "KIT": 10,
+        "id": "2435a6ca-a8ec-4349-9c93-d7379d17e90c",
+        "TIPO": "Termocuplas c/ tuerca & soporte intercamb. "
+      },
+      {
+        "PRECIO": 4562,
+        "TIPO": "Termocuplas c/ tuerca & soporte intercamb. ",
+        "MEDIDA": "Termocupla intercambiable x 100 cm - 8 X 1 C/TUERCA Y SOPORTE",
+        "KIT": 10,
+        "id": "30b00a07-c1a7-40dd-b176-d0eb51efd6bf",
+        "CODIGO": "TI100"
+      },
+      {
+        "PRECIO": 4899,
+        "KIT": 10,
+        "id": "d77a2966-1983-41da-b4a1-b1f32a16962d",
+        "CODIGO": "TI110",
+        "TIPO": "Termocuplas c/ tuerca & soporte intercamb. ",
+        "MEDIDA": "Termocupla intercambiable x 110 cm - 8 X 1 C/TUERCA Y SOPORTE"
+      },
+      {
+        "TIPO": "Termocuplas c/ tuerca & soporte intercamb. ",
+        "CODIGO": "TI120",
+        "MEDIDA": "Termocupla intercambiable x 120 cm - 8 X 1 C/TUERCA Y SOPORTE",
+        "KIT": 10,
+        "PRECIO": 5237,
+        "id": "3ddb53fa-5bc4-4377-8608-e217768e1e0d"
+      },
+      {
+        "KIT": 10,
+        "PRECIO": 5576,
+        "CODIGO": "TI130",
+        "MEDIDA": "Termocupla intercambiable x 130 cm - 8 X 1 C/TUERCA Y SOPORTE",
+        "id": "72fa62ef-1c36-412a-9ff4-9c5daad458e2",
+        "TIPO": "Termocuplas c/ tuerca & soporte intercamb. "
+      },
+      {
+        "TIPO": "Termocuplas c/ tuerca & soporte intercamb. ",
+        "PRECIO": 6255,
+        "KIT": 10,
+        "CODIGO": "TI150",
+        "id": "00e4a054-c9e3-49be-b451-ef870b1372c6",
+        "MEDIDA": "Termocupla intercambiable x 150 cm - 8 X 1 C/TUERCA Y SOPORTE"
+      }
+    ],
+    "Termocuplas solas": [
+      {
+        "MEDIDA": "Termocuplas Euro 30 cm",
+        "PRECIO": 552,
+        "TIPO": "Termocuplas solas",
+        "KIT": 10,
+        "CODIGO": "TEURO30",
+        "id": "270cfdbb-37a2-46d4-a56a-cc04a1020bfb"
+      },
+      {
+        "PRECIO": 685,
+        "TIPO": "Termocuplas solas",
+        "CODIGO": "TEURO50",
+        "id": "dc3402e6-75d2-4cad-b5f1-cc6f832c25a3",
+        "KIT": 10,
+        "MEDIDA": "Termocuplas Euro 50 cm"
+      },
+      {
+        "PRECIO": 733,
+        "CODIGO": "TEURO60",
+        "MEDIDA": "Termocuplas Euro 60 cm",
+        "id": "84054355-1dbc-4d4c-9441-baeb0ea9f080",
+        "TIPO": "Termocuplas solas",
+        "KIT": 10
+      },
+      {
+        "TIPO": "Termocuplas solas",
+        "KIT": 10,
+        "CODIGO": "TEURO70",
+        "PRECIO": 773,
+        "id": "6377d9ff-8155-49b5-a50c-c6d9583ae1b6",
+        "MEDIDA": "Termocuplas Euro 70 cm"
+      },
+      {
+        "MEDIDA": "Termocuplas Euro 80 cm",
+        "CODIGO": "TEURO80",
+        "TIPO": "Termocuplas solas",
+        "KIT": 10,
+        "PRECIO": 826,
+        "id": "75843e98-ef9d-4576-b723-f0197ad0267d"
+      },
+      {
+        "PRECIO": 916.4340000000001,
+        "TIPO": "Termocuplas solas",
+        "MEDIDA": "Termocuplas Euro 90 cm",
+        "id": "bec9398d-d4a9-4de3-810f-87b99e6486b0",
+        "CODIGO": "TEURO90",
+        "KIT": 10
+      },
+      {
+        "KIT": 10,
+        "CODIGO": "TSM820",
+        "id": "eece39c1-d26c-4cc5-ab63-46db703d39cf",
+        "TIPO": "Termocuplas solas",
+        "PRECIO": 634.0005,
+        "MEDIDA": "Termocuplas simil SM8 20 CM"
+      },
+      {
+        "MEDIDA": "Termocuplas simil SM8 30 CM",
+        "CODIGO": "TSM830",
+        "KIT": 10,
+        "TIPO": "Termocuplas solas",
+        "PRECIO": 901,
+        "id": "e364b965-6c2d-4a0e-9bb9-f828ff701221"
+      },
+      {
+        "PRECIO": 1430.43,
+        "CODIGO": "TSIT30",
+        "KIT": 10,
+        "TIPO": "Termocuplas solas",
+        "id": "20bc7b63-52cb-4a23-bf57-eea3bcc2a0ca",
+        "MEDIDA": "Termocuplas simil SIT 30 CM"
+      },
+      {
+        "PRECIO": 1579.53,
+        "MEDIDA": "Termocuplas simil SIT 60 CM",
+        "id": "3292e772-0666-48ef-b1e7-efe42f14bc4c",
+        "KIT": 10,
+        "CODIGO": "TSIT60",
+        "TIPO": "Termocuplas solas"
+      },
+      {
+        "MEDIDA": "Termocuplas simil Soporte Orbis Universal",
+        "CODIGO": "TSOU40",
+        "KIT": 10,
+        "TIPO": "Termocuplas solas",
+        "PRECIO": 632,
+        "id": "bd2d8e3e-e5e6-4e66-9bf9-ff11222f6ab9"
+      },
+      {
+        "PRECIO": 927,
+        "CODIGO": "TSEGUER100",
+        "KIT": 10,
+        "id": "86fdfaf5-f955-4b9b-a7b2-e83d3b06567d",
+        "MEDIDA": "Termocuplas SEGEUR 100 CM",
+        "TIPO": "Termocuplas solas"
+      }
+    ],
+    "Soportes": [
+      {
+        "MEDIDA": "Soporte8 X 1",
+        "PRECIO": 370,
+        "KIT": 20,
+        "id": "b96f12c3-3470-4e15-8bb5-7f1e868e5c37",
+        "CODIGO": "TS8X1",
+        "TIPO": "Soportes"
+      },
+      {
+        "id": "0249b3f8-c8ef-481a-bb72-bb63bdb6cbee",
+        "MEDIDA": "Soporte Longvie",
+        "TIPO": "Soportes",
+        "PRECIO": 370,
+        "CODIGO": "TSL",
+        "KIT": 20
+      },
+      {
+        "MEDIDA": "Soporte Orbis",
+        "PRECIO": 370,
+        "TIPO": "Soportes",
+        "CODIGO": "TSO ",
+        "id": "0c7aa813-1e12-4285-af67-49ab0c8a9be9",
+        "KIT": 20
+      },
+      {
+        "MEDIDA": "Soporte Eitar",
+        "id": "63fe4b7d-1a06-4bb3-a525-3e165a0d891f",
+        "TIPO": "Soportes",
+        "KIT": 20,
+        "PRECIO": 370,
+        "CODIGO": "TSE"
+      },
+      {
+        "PRECIO": 516,
+        "TIPO": "Soportes",
+        "id": "0ddf5896-1cda-4ff9-9169-815176e66893",
+        "KIT": 20,
+        "MEDIDA": "Soporte Rheen ",
+        "CODIGO": "TSR"
+      },
+      {
+        "PRECIO": 370,
+        "TIPO": "Soportes",
+        "id": "067feb59-415d-4afc-8e0f-28f3830ae780",
+        "CODIGO": "TSE2000",
+        "MEDIDA": "Soporte Eskabe 2000",
+        "KIT": 20
+      },
+      {
+        "PRECIO": 370,
+        "KIT": 20,
+        "CODIGO": "TSE5000",
+        "MEDIDA": "Soporte Eskabe 5000",
+        "id": "5c187c5c-de94-4a01-8cc3-3b4b9139feb8",
+        "TIPO": "Soportes"
+      },
+      {
+        "TIPO": "Soportes",
+        "PRECIO": 432,
+        "KIT": 20,
+        "CODIGO": "TSC",
+        "id": "daa54a9f-e0cf-4baf-b4f0-f6d3df2cb4a6",
+        "MEDIDA": "Soporte CTZ"
+      }
+    ]
+  },
+  "TERMOFUSION": {
+    "Llaves": [
+      {
+        "PRECIO": 9833,
+        "KIT": 10,
+        "TIPO": "Llaves",
+        "CODIGO": "LP20FN",
+        "id": "86daeebc-f773-4379-a854-73b99e7a68a4",
+        "MEDIDA": "LLAVE DE PASO C/CABEZAL BRONCE 20 M M FUSION IND. ARGENTINA"
+      },
+      {
+        "MEDIDA": "LLAVE DE PASO C/CABEZAL BRONCE 25 M M FUSION IND. ARGENTINA",
+        "PRECIO": 10468,
+        "id": "7abe5a32-9aaf-461b-a1df-fde4d7154951",
+        "KIT": 10,
+        "CODIGO": "LP25FN",
+        "TIPO": "Llaves"
+      },
+      {
+        "KIT": 10,
+        "CODIGO": "LP32FN",
+        "MEDIDA": "LLAVE DE PASO C/CABEZAL BRONCE 32 M M FUSION IND. ARGENTINA",
+        "PRECIO": 12212,
+        "TIPO": "Llaves",
+        "id": "9ab22bbb-c926-4b5e-aca8-a2e2698f5f72"
+      },
+      {
+        "KIT": 10,
+        "TIPO": "Llaves",
+        "MEDIDA": "LLAVE ESFERICA C/ ESFERA PLASTICA 20",
+        "id": "01608fd5-6861-40e9-8c38-cbe9fdbde1d7",
+        "PRECIO": 1667,
+        "CODIGO": "LLE20F"
+      },
+      {
+        "id": "a12bcf11-0b92-47ea-8244-2c98530dc227",
+        "CODIGO": "LLE25F",
+        "KIT": 10,
+        "TIPO": "Llaves",
+        "MEDIDA": "LLAVE ESFERICA C/ ESFERA PLASTICA 25",
+        "PRECIO": 2668
+      },
+      {
+        "MEDIDA": "LLAVE ESFERICA C/ ESFERA PLASTICA32",
+        "CODIGO": "LLE32F",
+        "PRECIO": 4002,
+        "KIT": 10,
+        "TIPO": "Llaves",
+        "id": "ae076a86-78a5-4a9b-b08a-c493b6a6a26c"
+      }
+    ],
+    "Sobrepasos Largos": [
+      {
+        "KIT": 20,
+        "CODIGO": "SP20F",
+        "PRECIO": 914,
+        "id": "f849589d-95a3-42e3-b9c4-66265d77f1e2",
+        "MEDIDA": "SOBREPASO LARGO  20  MM  FUSION",
+        "TIPO": "Sobrepasos Largos"
+      },
+      {
+        "TIPO": "Sobrepasos Largos",
+        "id": "05af6b5d-78b9-41a3-841a-f00a56082e23",
+        "PRECIO": 1335,
+        "CODIGO": "SP25F",
+        "KIT": 20,
+        "MEDIDA": "SOBREPASO LARGO 25  MM  FUSION"
+      },
+      {
+        "MEDIDA": "SOBREPASO LARGO 32  MM  FUSION",
+        "id": "ed4e2f3a-6630-4239-b612-ae4b74d05461",
+        "CODIGO": "SP32F ",
+        "KIT": 20,
+        "TIPO": "Sobrepasos Largos",
+        "PRECIO": 2137
+      }
+    ],
+    "Buje Fusion": [
+      {
+        "TIPO": "Buje Fusion",
+        "id": "f6da4561-21d6-4474-bcc1-cedc5c338d63",
+        "PRECIO": 122,
+        "MEDIDA": "BUJE 20 X 25 FUSION",
+        "KIT": 20,
+        "CODIGO": "BUJE2520F"
+      }
+    ],
+    "Cuplas": [
+      {
+        "id": "604b6cda-351a-4c62-8d22-0f02d0cd35cd",
+        "MEDIDA": "CUPLA 20 M M FUSION",
+        "KIT": 20,
+        "TIPO": "Cuplas",
+        "PRECIO": 111,
+        "CODIGO": "CUPLA20F"
+      },
+      {
+        "MEDIDA": "CUPLA 25 M M FUSION",
+        "id": "92a17b8b-d165-408c-a4a0-81728f084463",
+        "PRECIO": 137,
+        "CODIGO": "CUPLA25F",
+        "KIT": 20,
+        "TIPO": "Cuplas"
+      },
+      {
+        "CODIGO": "CUPLA32F",
+        "id": "08cabdbc-8ea2-45c3-a1a5-dd90740e962b",
+        "KIT": 20,
+        "TIPO": "Cuplas",
+        "MEDIDA": "CUPLA 32 M M FUSION",
+        "PRECIO": 172
+      },
+      {
+        "KIT": 20,
+        "MEDIDA": "CUPLA 25 X 20 M M FUSION",
+        "TIPO": "Cuplas",
+        "id": "58350e6c-9377-4172-a1a2-9e29f52d464a",
+        "PRECIO": 136,
+        "CODIGO": "CUPLA2025F"
+      },
+      {
+        "id": "7c8269d2-11c6-448c-8a01-cc297236ee61",
+        "KIT": 20,
+        "MEDIDA": "CUPLA 32 X 20 M M FUSION",
+        "PRECIO": 176,
+        "TIPO": "Cuplas",
+        "CODIGO": "CUPLA3220F"
+      },
+      {
+        "TIPO": "Cuplas",
+        "MEDIDA": "CUPLA 32 X 25 M M FUSION",
+        "KIT": 20,
+        "id": "ee9e5101-5239-4629-bba8-04a7977f0576",
+        "PRECIO": 171,
+        "CODIGO": "CUPLA3225F"
+      }
+    ],
+    "Codos": [
+      {
+        "PRECIO": 127,
+        "KIT": 20,
+        "MEDIDA": "CODO 90º 20 M M FUSION",
+        "id": "866f36e8-4d39-4e31-99f2-264b9e49ea0a",
+        "CODIGO": "CODO20F",
+        "TIPO": "Codos"
+      },
+      {
+        "id": "621519ee-77ec-4e83-8f2a-e442eeef2501",
+        "PRECIO": 179,
+        "CODIGO": "CODO25F",
+        "KIT": 20,
+        "TIPO": "Codos",
+        "MEDIDA": "CODO 90º 25 M M FUSION"
+      },
+      {
+        "PRECIO": 308,
+        "KIT": 20,
+        "id": "6fd9c1d0-7d6d-4db6-8664-ce3366dee0e4",
+        "MEDIDA": "CODO 90º 32 M M FUSION",
+        "TIPO": "Codos",
+        "CODIGO": "CODO32F"
+      },
+      {
+        "TIPO": "Codos",
+        "CODIGO": "CODO2045F",
+        "MEDIDA": "CODO 45º 20 M M FUSION",
+        "id": "7316198b-2aae-4928-9245-9b0dc8c5d1bd",
+        "KIT": 20,
+        "PRECIO": 190
+      },
+      {
+        "KIT": 20,
+        "id": "e4fe0007-ff80-4a47-9674-0ced38cadeba",
+        "TIPO": "Codos",
+        "CODIGO": "CODO2545F",
+        "PRECIO": 302,
+        "MEDIDA": "CODO 45º 25 M M FUSION"
+      },
+      {
+        "PRECIO": 193,
+        "KIT": 20,
+        "MEDIDA": "CODO REDUCCION 25 X 20 M M FUSION",
+        "id": "8a59352e-3d38-4259-beea-d64d898b5e2b",
+        "TIPO": "Codos",
+        "CODIGO": "codo2520f"
+      },
+      {
+        "TIPO": "Codos",
+        "CODIGO": "codo3220f",
+        "MEDIDA": "CODO REDUCCION 32 X 20 M M FUSION",
+        "PRECIO": 457,
+        "id": "f2490570-e7ca-407c-aea2-9fd87e95afa7",
+        "KIT": 20
+      },
+      {
+        "CODIGO": "codo3225f",
+        "TIPO": "Codos",
+        "MEDIDA": "CODO REDUCCION 32 X 25 M M FUSION",
+        "PRECIO": 337,
+        "id": "a0be9550-ceac-4826-aa9d-7d99b9771971",
+        "KIT": 20
+      }
+    ],
+    "Codos Inserto": [
+      {
+        "MEDIDA": "CODO C/ INSERTO METALICO HEMBRA 20X1/2  FUSION",
+        "PRECIO": 1094,
+        "KIT": 20,
+        "TIPO": "Codos Inserto",
+        "CODIGO": "CODOH2012F",
+        "id": "1a31f0a8-9897-4b58-8d46-f7d296f25ac2"
+      },
+      {
+        "id": "340ccc83-a549-4b9c-9780-b9ffa902a317",
+        "TIPO": "Codos Inserto",
+        "MEDIDA": "CODO C/ INSERTO METALICO HEMBRA 20X3/4  FUSION",
+        "CODIGO": "CODOH2034F",
+        "KIT": 20,
+        "PRECIO": 2226
+      },
+      {
+        "id": "96792f38-85b9-4599-80e1-f6b141dc4109",
+        "PRECIO": 1184,
+        "MEDIDA": "CODO C/ INSERTO METALICO HEMBRA 25X1/2  FUSION",
+        "TIPO": "Codos Inserto",
+        "KIT": 20,
+        "CODIGO": "CODOH2512F"
+      },
+      {
+        "KIT": 20,
+        "PRECIO": 2357,
+        "CODIGO": "CODOH2534F",
+        "TIPO": "Codos Inserto",
+        "id": "49cd3f8f-c35b-4456-9e61-4d44d53d513e",
+        "MEDIDA": "CODO C/ INSERTO METALICO HEMBRA 25X3/4  FUSION"
+      },
+      {
+        "CODIGO": "CODOH3234F",
+        "PRECIO": 2913,
+        "KIT": 20,
+        "MEDIDA": "CODO C/ INSERTO METALICO HEMBRA 32X3/4  FUSION",
+        "id": "d85f379f-46a3-439f-8747-85dd05b4f445",
+        "TIPO": "Codos Inserto"
+      },
+      {
+        "id": "9f7f0f89-1224-45e7-aeac-19fe100512fd",
+        "MEDIDA": "CODO C/ INSERTO METALICO HEMBRA 32X1  FUSION",
+        "PRECIO": 4381,
+        "TIPO": "Codos Inserto",
+        "KIT": 20,
+        "CODIGO": "CODOH321F"
+      },
+      {
+        "PRECIO": 1558,
+        "CODIGO": "CODOM2012F",
+        "MEDIDA": "CODO C/ INSERTO METALICO MACHO 20X1/2  FUSION",
+        "TIPO": "Codos Inserto",
+        "KIT": 20,
+        "id": "8e0c15c8-2d45-41ae-a389-b23e63c3d82a"
+      },
+      {
+        "PRECIO": 2881,
+        "TIPO": "Codos Inserto",
+        "KIT": 20,
+        "MEDIDA": "CODO C/ INSERTO METALICO MACHO 20X3/4  FUSION",
+        "id": "36f7264c-6291-4b31-962c-0777070bbd5f",
+        "CODIGO": "CODOM2034F"
+      },
+      {
+        "id": "61ddd294-553e-4a96-acdc-76d1fff295d8",
+        "CODIGO": "CODO2512F",
+        "MEDIDA": "CODO C/ INSERTO METALICO MACHO 25X1/2  FUSION",
+        "PRECIO": 1636,
+        "TIPO": "Codos Inserto",
+        "KIT": 20
+      },
+      {
+        "CODIGO": "CODOM2534F",
+        "TIPO": "Codos Inserto",
+        "id": "a734dcef-0303-423f-a419-f8af2740782b",
+        "PRECIO": 2881,
+        "KIT": 20,
+        "MEDIDA": "CODO C/ INSERTO METALICO MACHO 25X34  FUSION"
+      },
+      {
+        "MEDIDA": "CODO C/ INSERTO METALICO MACHO 32X1  FUSION",
+        "TIPO": "Codos Inserto",
+        "PRECIO": 4714,
+        "KIT": 20,
+        "CODIGO": "CODOM321F",
+        "id": "28b66a37-fa01-435a-9293-4809900a4a1e"
+      }
+    ],
+    "Valvula": [
+      {
+        "id": "8a25c3fc-b79e-4e37-a47d-58053b2d7256",
+        "TIPO": "Valvula",
+        "PRECIO": 2303,
+        "KIT": 10,
+        "MEDIDA": "VALVULA ESFERICA METAL DOBLE UNION FUSION DE 20 MM",
+        "CODIGO": "VEM20"
+      }
+    ],
+    "Uniones Dobles": [
+      {
+        "CODIGO": "UD20F",
+        "KIT": 20,
+        "MEDIDA": "UNION DOBLE 20 MM  FUSION",
+        "PRECIO": 619,
+        "id": "bc7ba257-10c1-4518-925e-463ee74a327f",
+        "TIPO": "Uniones Dobles"
+      },
+      {
+        "KIT": 20,
+        "MEDIDA": "UNION DOBLE 25 MM  FUSION",
+        "CODIGO": "UD25F",
+        "PRECIO": 666,
+        "TIPO": "Uniones Dobles",
+        "id": "e69b7134-f1de-44f7-9656-0893cbc2f5b5"
+      },
+      {
+        "CODIGO": "UD32F",
+        "MEDIDA": "UNION DOBLE 32 MM  FUSION",
+        "id": "82c580e9-f149-49f3-9786-d6de706967fe",
+        "TIPO": "Uniones Dobles",
+        "KIT": 20,
+        "PRECIO": 952
+      }
+    ],
+    "Curvas": [
+      {
+        "KIT": 20,
+        "CODIGO": "CURVA20F",
+        "MEDIDA": "CURVA 20 A 90º FUSION",
+        "TIPO": "Curvas",
+        "id": "1405e29d-e198-4b1f-904d-d89a60af7bb9",
+        "PRECIO": 480
+      },
+      {
+        "PRECIO": 624,
+        "KIT": 20,
+        "CODIGO": "CURVA25F",
+        "id": "8ead451b-af72-4062-af51-d16b749f4d33",
+        "TIPO": "Curvas",
+        "MEDIDA": "CURVA 25 A 90º FUSION"
+      }
+    ],
+    "Cuplas Inserto": [
+      {
+        "id": "40a12070-ddf1-413d-935f-dbdd2b457cbf",
+        "PRECIO": 0,
+        "TIPO": "Cuplas Inserto",
+        "MEDIDA": "CUPLA C/ INSERTO METALICO HEMBRA 20X3/8 FUSION",
+        "KIT": 20,
+        "CODIGO": "CH2038F"
+      },
+      {
+        "id": "ba555315-ace3-4216-9960-8f6c3adbdc30",
+        "CODIGO": "CH2012F",
+        "TIPO": "Cuplas Inserto",
+        "PRECIO": 1065,
+        "KIT": 20,
+        "MEDIDA": "CUPLA C/ INSERTO METALICO HEMBRA 20X1/2  FUSION"
+      },
+      {
+        "MEDIDA": "CUPLA C/ INSERTO METALICO HEMBRA 20X3/4  FUSION",
+        "KIT": 20,
+        "PRECIO": 1544,
+        "id": "9dd92d27-9a70-452d-ab62-947072e48a0d",
+        "CODIGO": "CH2034F",
+        "TIPO": "Cuplas Inserto"
+      },
+      {
+        "TIPO": "Cuplas Inserto",
+        "id": "38d4ce88-e129-4fba-9b37-4d34dd45afbc",
+        "CODIGO": "CH2512F",
+        "KIT": 20,
+        "MEDIDA": "CUPLA C/ INSERTO METALICO HEMBRA 25X1/2  FUSION",
+        "PRECIO": 1096
+      },
+      {
+        "CODIGO": "CH2534F",
+        "TIPO": "Cuplas Inserto",
+        "id": "188872d0-8686-4375-84bd-152557ab29b3",
+        "MEDIDA": "CUPLA C/ INSERTO METALICO HEMBRA 25X3/4 FUSION",
+        "PRECIO": 1559,
+        "KIT": 20
+      },
+      {
+        "PRECIO": 3667,
+        "MEDIDA": "CUPLA C/ INSERTO METALICO HEMBRA 32X1 FUSION",
+        "TIPO": "Cuplas Inserto",
+        "CODIGO": "CH321F",
+        "KIT": 20,
+        "id": "19670ab7-b5c4-49c5-8693-17b962e2f060"
+      },
+      {
+        "MEDIDA": "CUPLA C/ INSERTO METALICO MACHO 20X1/2  FUSION",
+        "PRECIO": 1523,
+        "KIT": 20,
+        "TIPO": "Cuplas Inserto",
+        "CODIGO": "CM2012F",
+        "id": "0b274bd1-d90d-4aa2-9c38-dfd4287a0a30"
+      },
+      {
+        "CODIGO": "CM2034F",
+        "PRECIO": 2037,
+        "TIPO": "Cuplas Inserto",
+        "id": "e9811567-e7f4-4b33-b2e6-04a690f551ae",
+        "MEDIDA": "CUPLA C/ INSERTO METALICO MACHO 20X3/4  FUSION",
+        "KIT": 20
+      },
+      {
+        "TIPO": "Cuplas Inserto",
+        "CODIGO": "CM2512F",
+        "MEDIDA": "CUPLA C/ INSERTO METALICO MACHO 25X1/2  FUSION",
+        "id": "6d004f44-0578-427a-8d6c-b7bdc4e90823",
+        "PRECIO": 1562,
+        "KIT": 20
+      },
+      {
+        "MEDIDA": "CUPLA C/ INSERTO METALICO MACHO 25X3/4  FUSION",
+        "KIT": 20,
+        "PRECIO": 2056,
+        "TIPO": "Cuplas Inserto",
+        "CODIGO": "CM2534F",
+        "id": "825a2574-f1cf-4473-a88b-308a45c5327d"
+      },
+      {
+        "CODIGO": "CM3234F",
+        "TIPO": "Cuplas Inserto",
+        "MEDIDA": "CUPLA C/ INSERTO METALICO MACHO 32X3/4  FUSION",
+        "PRECIO": 4191,
+        "KIT": 20,
+        "id": "06e561e6-af88-4908-9962-8b4442020413"
+      },
+      {
+        "PRECIO": 4714,
+        "TIPO": "Cuplas Inserto",
+        "CODIGO": "CM321F",
+        "MEDIDA": "CUPLA C/ INSERTO METALICO MACHO 32X1  FUSION",
+        "KIT": 20,
+        "id": "047790c5-0948-44ff-847d-e4aa25ed108c"
+      }
+    ],
+    "Tapas": [
+      {
+        "MEDIDA": "TAPA 20 MM  FUSION",
+        "PRECIO": 107,
+        "KIT": 20,
+        "id": "fb889b4d-101b-4f37-924f-dbe8c4a523e2",
+        "TIPO": "Tapas",
+        "CODIGO": "TAPA20F"
+      },
+      {
+        "id": "823d0d65-745e-4799-80b3-fc8850e9af79",
+        "PRECIO": 124,
+        "TIPO": "Tapas",
+        "KIT": 20,
+        "MEDIDA": "TAPA 25 MM  FUSION",
+        "CODIGO": "TAPA25F"
+      },
+      {
+        "CODIGO": "TAPA32F",
+        "KIT": 20,
+        "PRECIO": 168,
+        "TIPO": "Tapas",
+        "MEDIDA": "TAPA 32 MM  FUSION",
+        "id": "90f42ad6-370d-4483-9a3d-88b4a29001df"
+      }
+    ],
+    "Tees Inserto": [
+      {
+        "MEDIDA": "TEE C/ INSERTO METALICO HEMBRA 20X1/2  FUSION",
+        "id": "1504a4dd-cf58-45b0-a79f-d9a9f186a438",
+        "CODIGO": "TEEH2012F",
+        "TIPO": "Tees Inserto",
+        "PRECIO": 1266,
+        "KIT": 20
+      },
+      {
+        "id": "b35ef01c-1e5f-4ace-8a56-d137acfbd7af",
+        "CODIGO": "TEEH2512F",
+        "TIPO": "Tees Inserto",
+        "KIT": 20,
+        "MEDIDA": "TEE C/ INSERTO METALICO HEMBRA 25X1/2 FUSION",
+        "PRECIO": 2305
+      },
+      {
+        "id": "531ff319-a880-40c2-976c-78ec394c45c1",
+        "CODIGO": "TEEh2534F",
+        "PRECIO": 3012,
+        "MEDIDA": "TEE C/ INSERTO METALICO HEMBRA 25X3/4  FUSION",
+        "TIPO": "Tees Inserto",
+        "KIT": 20
+      },
+      {
+        "PRECIO": 307,
+        "id": "ec9e3a63-70ac-48ba-be89-bcfa7f31bed8",
+        "KIT": 20,
+        "CODIGO": "TEEH3212F",
+        "MEDIDA": "TEE C/ INSERTO METALICO HEMBRA 32X1/2  FUSION",
+        "TIPO": "Tees Inserto"
+      },
+      {
+        "id": "d0502258-d053-4baf-b520-d059f6a3ad3d",
+        "TIPO": "Tees Inserto",
+        "MEDIDA": "TEE C/ INSERTO METALICO MACHO 20X12  FUSION",
+        "KIT": 20,
+        "PRECIO": 1271,
+        "CODIGO": "TEEM2012F"
+      },
+      {
+        "MEDIDA": "TEE C/ INSERTO METALICO MACHO 25X12  FUSION",
+        "id": "2b418d8e-2d88-4183-b273-e10bbdd2ad95",
+        "KIT": 20,
+        "TIPO": "Tees Inserto",
+        "CODIGO": "TEEM2512F",
+        "PRECIO": 1723
+      },
+      {
+        "CODIGO": "TEEM2534F",
+        "TIPO": "Tees Inserto",
+        "PRECIO": 3405,
+        "MEDIDA": "TEE C/ INSERTO METALICO MACHO 25X3/4  FUSION",
+        "id": "4cb87d26-a560-4ed2-888e-38e1fdde57f1",
+        "KIT": 20
+      }
+    ],
+    "Tees": [
+      {
+        "MEDIDA": "TEE 20 MM  FUSION",
+        "TIPO": "Tees",
+        "PRECIO": 162,
+        "id": "5416358b-5cf8-4ce0-a6f2-04c135e5b301",
+        "KIT": 20,
+        "CODIGO": "TEE20F"
+      },
+      {
+        "id": "246f5880-261c-44f9-9645-3cc0a9dd2b19",
+        "MEDIDA": "TEE 25 MM  FUSION",
+        "CODIGO": "TEE25F",
+        "TIPO": "Tees",
+        "KIT": 20,
+        "PRECIO": 206
+      },
+      {
+        "id": "94215ab6-b62a-43bc-ab01-514a40572570",
+        "TIPO": "Tees",
+        "PRECIO": 366,
+        "MEDIDA": "TEE 32 MM  FUSION",
+        "CODIGO": "TEE32F",
+        "KIT": 20
+      },
+      {
+        "KIT": 20,
+        "id": "c24c23cd-d75d-4737-ba31-787c331d897e",
+        "MEDIDA": "TEE 25 X 20 M M FUSION",
+        "TIPO": "Tees",
+        "PRECIO": 252,
+        "CODIGO": "TEE2520F"
+      },
+      {
+        "KIT": 20,
+        "TIPO": "Tees",
+        "id": "539d6b37-53ee-44f8-af6d-0c883d9aa13f",
+        "PRECIO": 581,
+        "CODIGO": "TEE3220F",
+        "MEDIDA": "TEE 32 X 20 M M FUSION"
+      },
+      {
+        "KIT": 20,
+        "TIPO": "Tees",
+        "MEDIDA": "TEE 32 X 25 M M FUSION",
+        "id": "0ce849e0-3152-4ba1-8985-538d826d7fee",
+        "CODIGO": "TEE3225F",
+        "PRECIO": 410
+      }
+    ]
+  }
+}

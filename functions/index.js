@@ -3,6 +3,9 @@ import express from 'express';
 import dotenv from 'dotenv';
 import * as functions from 'firebase-functions';
 import admin from 'firebase-admin';
+/* import connectBusboy from 'connect-busboy';
+ */
+import fileParser from 'express-multipart-file-parser';
 
 import {
   mailingRouter /* ,
@@ -40,17 +43,18 @@ export const app = functions
 const getProductsApi = express();
 
 getProductsApi.use(express.static('public'));
-
+getProductsApi.use(fileParser);
 getProductsApi.use(express.json());
 getProductsApi.use(bodyParser.urlencoded({ extended: true }));
-getProductsApi.use((req, res, next) => {
+/* getProductsApi.use(connectBusboy());
+ */ /* getProductsApi.use((req, res, next) => {
   /* res.setHeader('Access-Control-Allow-Origin', '*'); */ // Desabilitar CORS para prueba
-  /* res.header(
+/* res.header(
     'Access-Control-Allow-Headers',
     'Origin, X-Requested-With, Content-Type, Accept'
-  ); */
+  ); 
   next();
-});
+}); */
 
 getProductsApi.use('/api/products', productsRouter);
 
