@@ -6,7 +6,7 @@ import XLSX from 'xlsx';
 /* const products = require(path.resolve('productsFirebaseJson.json'));
  */
 
-export const updateAllPrices = (productsJson) => {
+export const updateAllPrices = (productsJson, factorAumento) => {
   let updatedProductsJson = {};
   for (const prodType in productsJson) {
     updatedProductsJson[prodType] = {};

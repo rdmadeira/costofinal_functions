@@ -7,12 +7,6 @@ import {
   doc,
 } from 'firebase/firestore';
 import { firebaseConfig } from './config.js';
-import {
-  getStorage,
-  ref,
-  getDownloadURL,
-  uploadBytesResumable,
-} from 'firebase/storage';
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -161,5 +155,3 @@ export const createNewProductsToFirestore = async (productsJson, test) => {
             };
           }
         }; */
-
-const storage = getStorage();

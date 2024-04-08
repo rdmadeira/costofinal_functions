@@ -5,28 +5,13 @@ import {
 } from '../firebase/utils.js';
 import { createAsyncJsonFromDB, updatePrices } from '../utils/utils.js';
 
-import { updateAllPrices } from '../utils/utils.js';
+import path from 'path';
 
-import { fileURLToPath } from 'url';
-import path, { dirname } from 'path';
-
-import {
-  getStorage,
-  ref,
-  uploadBytes,
-  getDownloadURL,
-  uploadBytesResumable,
-} from 'firebase/storage';
 import admin from 'firebase-admin';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const storage = getStorage();
 
 export const getProductsHandler = async (req, res, next) => {
   const products = await getProductsFromFirestore();
-  console.log('productsHandler', products);
+  console.log('req.body', req.body);
 
   if (!products.isSuccess) {
     res.status(500).json({ message: products.message });
@@ -60,7 +45,10 @@ export const putProductsHandler = async (req, res, next) => {
 };
 
 export const getUpdatePriceHandler = async (req, res, next) => {
-  res.sendFile(path.resolve('src/pages/index.html'));
+  console.log('req.body', req.body);
+
+  res.status(200).sendFile(path.resolve('src/pages/index.html'));
+  next();
 };
 
 // Todavia falta:
@@ -94,8 +82,7 @@ const uploadFile = async (originalname, mimetype, buffer, filePath) => {
 
 export const postUpdatePriceHandler = async (req, res, next) => {
   try {
-    const { fieldname, originalname, encoding, mimetype, buffer } =
-      req.files[0];
+    const { originalname, mimetype, buffer } = req.files[0];
     const filePath = path.resolve('src/temp/files', originalname);
     /*     console.log('filePath', filePath);
      */
