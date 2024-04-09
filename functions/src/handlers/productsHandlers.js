@@ -44,11 +44,10 @@ export const putProductsHandler = async (req, res, next) => {
   res.status(200).json({ isSuccess: true, message: response.message });
 };
 
-export const getUpdatePriceHandler = async (req, res, next) => {
+export const getUpdatePriceHandler = async (req, res) => {
   console.log('req.body', req.body);
 
-  res.status(200).sendFile(path.resolve('src/pages/index.html'));
-  next();
+  res.status(200).sendFile(path.resolve('src/' + 'pages/' + 'index.html'));
 };
 
 // Todavia falta:
@@ -83,7 +82,7 @@ const uploadFile = async (originalname, mimetype, buffer, filePath) => {
 export const postUpdatePriceHandler = async (req, res, next) => {
   try {
     const { originalname, mimetype, buffer } = req.files[0];
-    const filePath = path.resolve('src/temp/files', originalname);
+    const filePath = path.resolve('tmp/', originalname);
     /*     console.log('filePath', filePath);
      */
 

@@ -1,7 +1,9 @@
 import path from 'path';
-import fs from 'fs';
+/* import fs from 'fs'; */
+import fs from 'fs-extra';
 import { getProductsFromFirestore } from '../firebase/utils.js';
 import XLSX from 'xlsx';
+import os from 'os';
 
 /* const products = require(path.resolve('productsFirebaseJson.json'));
  */
@@ -29,9 +31,10 @@ export const updateAllPrices = (productsJson, factorAumento) => {
 };
 
 export const createAsyncJsonFromDB = async (collectionName) => {
-  const createJsonFileFromObject = (jsonObject) => {
+  const createJsonFileFromObject = async (jsonObject) => {
     const jsonStringfy = JSON.stringify(jsonObject);
-    const jsonPath = path.resolve('src/temp/files', 'db_products.json');
+    const jsonPath = path.resolve('/tmp/', 'db_products.json');
+    console.log('jsonPath', jsonPath);
 
     fs.writeFileSync(jsonPath, jsonStringfy);
   };
@@ -44,7 +47,7 @@ export const createAsyncJsonFromDB = async (collectionName) => {
 
 export const updatePrices = async (excelFile) => {
   let products;
-  const jsonPath = path.resolve('src/temp/files', 'db_products.json');
+  const jsonPath = path.resolve('/tmp/', 'db_products.json');
   console.log('jsonPath', jsonPath);
 
   fs.readFile(jsonPath, 'utf-8', (err, data) => {
