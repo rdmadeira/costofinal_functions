@@ -4,6 +4,7 @@ import fs from 'fs-extra';
 import { getProductsFromFirestore } from '../firebase/utils.js';
 import XLSX from 'xlsx';
 import os from 'os';
+const tmpPath = os.tmpdir();
 
 /* const products = require(path.resolve('productsFirebaseJson.json'));
  */
@@ -33,21 +34,21 @@ export const updateAllPrices = (productsJson, factorAumento) => {
 export const createAsyncJsonFromDB = async (collectionName) => {
   const createJsonFileFromObject = async (jsonObject) => {
     const jsonStringfy = JSON.stringify(jsonObject);
-    const jsonPath = path.resolve('/tmp/', 'db_products.json');
+    const jsonPath = path.join(tmpPath, 'db_products.json');
     console.log('jsonPath', jsonPath);
 
     fs.writeFileSync(jsonPath, jsonStringfy);
   };
 
   const productsFromDB = await getProductsFromFirestore(collectionName);
-  console.log(productsFromDB);
-
+  /*   console.log(productsFromDB);
+   */
   createJsonFileFromObject(productsFromDB.data);
 };
 
 export const updatePrices = async (excelFile) => {
   let products;
-  const jsonPath = path.resolve('/tmp/', 'db_products.json');
+  const jsonPath = path.join(tmpPath, 'db_products.json');
   console.log('jsonPath', jsonPath);
 
   fs.readFile(jsonPath, 'utf-8', (err, data) => {
@@ -104,4 +105,51 @@ export const updatePrices = async (excelFile) => {
   //
   //
   //
+};
+
+export const set_Date_To_File = () => {
+  const now = new Date();
+  const día = now.getDate();
+  const mes = now.getMonth();
+  const year = now.getFullYear();
+  const hora = now.getHours();
+  const min = now.getMinutes();
+  const seg = now.getSeconds();
+
+  const string = `D${día}-${mes}-${year}_T${hora}-${min}-${seg}`;
+
+  console.log(string);
+
+  return string;
+};
+
+import fs from 'fs';
+
+import { Readable } from 'stream';
+export const uploadFile = async (originalname, mimetype, buffer) => {
+  const filename = set_Date_To_File() + '.' + originalname.split('.').pop(); // agarra la extensión
+  console.log('filename', filename);
+  const filePath = path.join(tmpPath, filename);
+
+  const fileStream = Readable.from(buffer);
+  const storage = admin.storage().bucket();
+
+  const fileUpload = storage.file(filename);
+  const writeStream = fileUpload.createWriteStream({
+    metadata: {
+      contentType: mimetype,
+    },
+  });
+  fileStream
+    .pipe(writeStream)
+    .on('error', (error) => {
+      console.log('error', error);
+    })
+    .on('finish', () => console.log('File upload finished'));
+
+  fs.writeFile(filePath, buffer, (err) =>
+    err
+      ? console.log('error', err)
+      : console.log('File uploaded in filesystem!!!')
+  );
 };

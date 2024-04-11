@@ -46,15 +46,6 @@ getProductsApi.use(express.static('public'));
 getProductsApi.use(fileParser);
 getProductsApi.use(express.json());
 getProductsApi.use(bodyParser.urlencoded({ extended: true }));
-/* getProductsApi.use(connectBusboy());
- */ /* getProductsApi.use((req, res, next) => {
-  /* res.setHeader('Access-Control-Allow-Origin', '*'); */ // Desabilitar CORS para prueba
-/* res.header(
-    'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With, Content-Type, Accept'
-  ); 
-  next();
-}); */
 
 getProductsApi.use('/api/products', productsRouter);
 

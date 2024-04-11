@@ -52,41 +52,13 @@ export const getUpdatePriceHandler = async (req, res) => {
 
 // Todavia falta:
 
-import fs from 'fs';
-import { Readable } from 'stream';
-
-//mandar a utils ---
-const uploadFile = async (originalname, mimetype, buffer, filePath) => {
-  const fileStream = Readable.from(buffer);
-  const storage = admin.storage().bucket();
-  const fileUpload = storage.file(originalname);
-  const writeStream = fileUpload.createWriteStream({
-    metadata: {
-      contentType: mimetype,
-    },
-  });
-  fileStream
-    .pipe(writeStream)
-    .on('error', (error) => {
-      console.log('error', error);
-    })
-    .on('finish', () => console.log('File upload finished'));
-
-  fs.writeFile(filePath, buffer, (err) =>
-    err
-      ? console.log('error', err)
-      : console.log('File uploaded in filesystem!!!')
-  );
-};
+import { uploadFile } from '../utils/utils.js';
 
 export const postUpdatePriceHandler = async (req, res, next) => {
   try {
     const { originalname, mimetype, buffer } = req.files[0];
-    const filePath = path.resolve('tmp/', originalname);
-    /*     console.log('filePath', filePath);
-     */
 
-    await uploadFile(originalname, mimetype, buffer, filePath);
+    await uploadFile(originalname, mimetype, buffer);
 
     await createAsyncJsonFromDB('products');
 
