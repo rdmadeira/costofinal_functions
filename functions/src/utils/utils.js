@@ -5,6 +5,7 @@ import { getProductsFromFirestore } from '../firebase/utils.js';
 import XLSX from 'xlsx';
 import os from 'os';
 const tmpPath = os.tmpdir();
+import admin from 'firebase-admin';
 
 /* const products = require(path.resolve('productsFirebaseJson.json'));
  */
@@ -60,7 +61,7 @@ export const updatePrices = async (excelFile) => {
     products = JSON.parse(data);
     const productsKeys = Object.keys(products);
 
-    console.log('products', products);
+    /*  console.log('products', products); */
 
     const excel = XLSX.readFile(excelFile);
     const sheet = excel.Sheets['HojaParaActualizar'];
@@ -86,35 +87,34 @@ export const updatePrices = async (excelFile) => {
         });
       });
     });
-    fs.writeFileSync(
-      jsonPath.replace('db', 'updated'),
-      JSON.stringify(products)
-    );
-    console.log('updatedPrices', products);
+
+    const updatedJsonPath = jsonPath.replace('db', 'updated');
+    fs.writeFileSync(updatedJsonPath, JSON.stringify(products));
 
     console.log(`
       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       !!!!!!!!!!!!!!  ACTUALIZADO CON EXITO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      !!!! Path: ${updatedJsonPath}
     `);
   });
-
-  // PRODUCTS ---> UNDEFINED ---> RESOLVER..........
-  //
-  // ACA............................................................
-  //
-  //
-  //
 };
 
-export const set_Date_To_File = () => {
-  const now = new Date();
-  const día = now.getDate();
-  const mes = now.getMonth();
-  const year = now.getFullYear();
-  const hora = now.getHours();
-  const min = now.getMinutes();
-  const seg = now.getSeconds();
+export const sendUpdatedProductsToDB = () => {
+  console.log('hacer acá el envio a DB, probar con products2');
+};
+
+const set_Date_To_File = () => {
+  const now = Date.now();
+  const nowAR = new Date(now - 10800000);
+  console.log('nowAr', nowAR);
+
+  const día = nowAR.getDate();
+  const mes = nowAR.getMonth() + 1;
+  const year = nowAR.getFullYear();
+  const hora = nowAR.getHours();
+  const min = nowAR.getMinutes();
+  const seg = nowAR.getSeconds();
 
   const string = `D${día}-${mes}-${year}_T${hora}-${min}-${seg}`;
 
@@ -122,8 +122,6 @@ export const set_Date_To_File = () => {
 
   return string;
 };
-
-import fs from 'fs';
 
 import { Readable } from 'stream';
 export const uploadFile = async (originalname, mimetype, buffer) => {
@@ -152,4 +150,5 @@ export const uploadFile = async (originalname, mimetype, buffer) => {
       ? console.log('error', err)
       : console.log('File uploaded in filesystem!!!')
   );
+  return filePath;
 };

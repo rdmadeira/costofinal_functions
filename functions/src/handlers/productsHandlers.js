@@ -7,8 +7,6 @@ import { createAsyncJsonFromDB, updatePrices } from '../utils/utils.js';
 
 import path from 'path';
 
-import admin from 'firebase-admin';
-
 export const getProductsHandler = async (req, res, next) => {
   const products = await getProductsFromFirestore();
   console.log('req.body', req.body);
@@ -52,17 +50,19 @@ export const getUpdatePriceHandler = async (req, res) => {
 
 // Todavia falta:
 
-import { uploadFile } from '../utils/utils.js';
+import { uploadFile, sendUpdatedProductsToDB } from '../utils/utils.js';
 
 export const postUpdatePriceHandler = async (req, res, next) => {
   try {
     const { originalname, mimetype, buffer } = req.files[0];
 
-    await uploadFile(originalname, mimetype, buffer);
+    const fileXLSPath = await uploadFile(originalname, mimetype, buffer);
 
     await createAsyncJsonFromDB('products');
 
-    updatePrices(filePath);
+    updatePrices(fileXLSPath);
+
+    sendUpdatedProductsToDB();
 
     res.send('Ok');
   } catch (error) {
