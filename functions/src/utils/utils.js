@@ -1,7 +1,7 @@
 import path from 'path';
 /* import fs from 'fs'; */
 import fs from 'fs-extra';
-import { getProductsFromFirestore } from '../firebase/utils.js';
+import { getProductsFromFirestore, sendDataToDB } from '../firebase/utils.js';
 import XLSX from 'xlsx';
 import os from 'os';
 const tmpPath = os.tmpdir();
@@ -100,14 +100,16 @@ export const updatePrices = async (excelFile) => {
   });
 };
 
-export const sendUpdatedProductsToDB = () => {
-  console.log('hacer acá el envio a DB, probar con products2');
+export const sendUpdatedProductsToDB = async (collectionName) => {
+  const updatedJsonPath = path.join(tmpPath, 'updated_products.json');
+  const updatedJsonFile = JSON.parse(fs.readFileSync(updatedJsonPath));
+
+  await sendDataToDB(updatedJsonFile, collectionName);
 };
 
-const set_Date_To_File = () => {
+const set_Date_To_String = () => {
   const now = Date.now();
   const nowAR = new Date(now - 10800000);
-  console.log('nowAr', nowAR);
 
   const día = nowAR.getDate();
   const mes = nowAR.getMonth() + 1;
@@ -118,14 +120,12 @@ const set_Date_To_File = () => {
 
   const string = `D${día}-${mes}-${year}_T${hora}-${min}-${seg}`;
 
-  console.log(string);
-
   return string;
 };
 
 import { Readable } from 'stream';
 export const uploadFile = async (originalname, mimetype, buffer) => {
-  const filename = set_Date_To_File() + '.' + originalname.split('.').pop(); // agarra la extensión
+  const filename = set_Date_To_String() + '.' + originalname.split('.').pop(); // agarra la extensión
   console.log('filename', filename);
   const filePath = path.join(tmpPath, filename);
 

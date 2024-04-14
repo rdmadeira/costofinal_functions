@@ -118,6 +118,19 @@ export const createNewProductsToFirestore = async (productsJson, test) => {
   }
 };
 
+export const sendDataToDB = async (jsonFile, collectionName) => {
+  console.log('collectionName', collectionName);
+
+  try {
+    Object.keys(jsonFile).forEach(async (key) => {
+      await setDoc(doc(db, collectionName, key), jsonFile[key]);
+    });
+    console.log('Actualizado con exito en la base de datos');
+  } catch (error) {
+    return console.log(error);
+  }
+};
+
 /* No hace falta porque la logica del updateProducts solo cambia a los que coincide 
   export const updateOneSubproductToFirestore = async (productsJson, test) => {
     try {

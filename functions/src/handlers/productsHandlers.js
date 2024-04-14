@@ -43,9 +43,11 @@ export const putProductsHandler = async (req, res, next) => {
 };
 
 export const getUpdatePriceHandler = async (req, res) => {
-  console.log('req.body', req.body);
+  console.log('process.chdir()', process.cwd());
 
-  res.status(200).sendFile(path.resolve('src/' + 'pages/' + 'index.html'));
+  res
+    .status(200)
+    .sendFile(path.resolve(process.cwd() + '/public/' + 'update-prices.html'));
 };
 
 // Todavia falta:
@@ -55,16 +57,17 @@ import { uploadFile, sendUpdatedProductsToDB } from '../utils/utils.js';
 export const postUpdatePriceHandler = async (req, res, next) => {
   try {
     const { originalname, mimetype, buffer } = req.files[0];
+    const collectionName = req.body.collectionName;
 
     const fileXLSPath = await uploadFile(originalname, mimetype, buffer);
 
     await createAsyncJsonFromDB('products');
 
-    updatePrices(fileXLSPath);
+    await updatePrices(fileXLSPath);
 
-    sendUpdatedProductsToDB();
+    await sendUpdatedProductsToDB(collectionName);
 
-    res.send('Ok');
+    res.status(200).send('Ok');
   } catch (error) {
     console.log('error', error);
     next(error);
