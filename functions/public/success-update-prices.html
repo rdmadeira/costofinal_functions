@@ -56,12 +56,6 @@
       background-color: #2e3d90;
       color: #d1d1d1;
     }
-    input[type='file']:hover {
-      background-color: #d1d1d1;
-      color: #2e3d90;
-      cursor: pointer;
-      transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
-    }
     input[type='submit'] {
       background-color: #2e3d90;
       color: antiquewhite;
@@ -70,12 +64,6 @@
       border-radius: 5px;
       width: 50%;
       margin: 15px 0;
-    }
-    input[type='submit']:hover {
-      background-color: antiquewhite;
-      color: #2e3d90;
-      cursor: pointer;
-      transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
   </style>
   <body>
@@ -90,46 +78,11 @@
       </div>
       <!-- https://us-central1-costofinal-b391b.cloudfunctions.net/products/api/products/update-price -->
       <!-- http://127.0.0.1:5001/costofinal-b391b/us-central1/products/api/products/update-price -->
-      <form
-        action="https://us-central1-costofinal-b391b.cloudfunctions.net/products/api/products/update-price"
-        method="post"
-        enctype="multipart/form-data"
-      >
-        <div class="formCtn">
-          <h3>Actualización de Precios</h3>
-          <div class="inputCtn">
-            <label for="fileUpload">Seleccione el archivo XLS:</label>
-            <input
-              type="file"
-              name="fileUpload"
-              id="fileUpload"
-              accept=".xls, .xlsx"
-              required
-            />
-          </div>
-          <div class="inputCtn">
-            <div>
-              <input
-                type="radio"
-                name="collectionName"
-                id="products"
-                value="products"
-              />Products
-            </div>
-            <div>
-              <input
-                type="radio"
-                name="collectionName"
-                id="products2"
-                value="products2"
-                checked
-              />Products2
-            </div>
-          </div>
 
-          <input type="submit" value="Enviar" id="button" />
-        </div>
-      </form>
+      <div class="formCtn">
+        <h3>Succesfully Updated!</h3>
+        <div class="inputCtn">Your new prices is now available!</div>
+      </div>
     </div>
   </body>
 </html>

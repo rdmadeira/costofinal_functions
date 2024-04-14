@@ -61,13 +61,40 @@ export const postUpdatePriceHandler = async (req, res, next) => {
 
     const fileXLSPath = await uploadFile(originalname, mimetype, buffer);
 
-    await createAsyncJsonFromDB('products');
+    const createAsyncJsonResponse = await createAsyncJsonFromDB('products');
+    if (!createAsyncJsonResponse.isSuccess) {
+      console.log(
+        'createAsyncJsonResponse.message',
+        createAsyncJsonResponse.message
+      );
 
-    await updatePrices(fileXLSPath);
+      return next(createAsyncJsonResponse.error);
+    }
 
-    await sendUpdatedProductsToDB(collectionName);
+    const updatePricesResponse = updatePrices(fileXLSPath);
 
-    res.status(200).send('Ok');
+    if (!updatePricesResponse.isSuccess) {
+      console.log('updatePricesResponse.message', updatePricesResponse.message);
+
+      return next(updatePricesResponse.error);
+    }
+
+    const sendUpdatedProductsToDBResponse = await sendUpdatedProductsToDB(
+      collectionName
+    );
+
+    if (!sendUpdatedProductsToDBResponse.isSuccess) {
+      console.log(
+        'sendUpdatedProductsToDBResponse.message',
+        sendUpdatedProductsToDBResponse.message
+      );
+
+      return next(sendUpdatedProductsToDBResponse.error);
+    }
+
+    await res
+      .status(200)
+      .sendFile(path.resolve('public/' + 'success-update-prices.html'));
   } catch (error) {
     console.log('error', error);
     next(error);

@@ -12,8 +12,8 @@ import {
   authRouter, */,
   productsRouter,
 } from './src/routes/index.js';
-/* import { setHeaderAllowOrigin } from './src/middlewares/setHeader.js';
-import errorHandler from './src/errors/errorsHandler.js'; */
+/* import { setHeaderAllowOrigin } from './src/middlewares/setHeader.js';*/
+import errorHandler from './src/errors/errorsHandler.js';
 
 import bodyParser from 'body-parser';
 
@@ -48,21 +48,6 @@ getProductsApi.use(express.json());
 getProductsApi.use(bodyParser.urlencoded({ extended: true }));
 
 getProductsApi.use('/api/products', productsRouter);
+getProductsApi.use(errorHandler);
 
 export const products = functions.https.onRequest(getProductsApi);
-
-/* ***************************************************** */
-/* const updateProducts = express();
-updateProducts.use(express.json());
-updateProducts.use(setHeaderAllowOrigin);
-updateProducts.use('/api/products', productsRouter);
-updateProducts.use('/api/auth', authRouter);
-updateProducts.use(errorHandler);
-
-<<<<<<< HEAD
-export const products = functions.https.onRequest(updateProducts);
- */
-
-/* export const products = functions
-  .runWith({ secrets: ['USER_UID', 'DATABASE_API_KEY'] })
-  .https.onRequest(updateProducts); */

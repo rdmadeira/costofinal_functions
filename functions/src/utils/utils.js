@@ -41,23 +41,30 @@ export const createAsyncJsonFromDB = async (collectionName) => {
     fs.writeFileSync(jsonPath, jsonStringfy);
   };
 
-  const productsFromDB = await getProductsFromFirestore(collectionName);
-  /*   console.log(productsFromDB);
-   */
-  createJsonFileFromObject(productsFromDB.data);
+  try {
+    const productsFromDB = await getProductsFromFirestore(collectionName);
+    createJsonFileFromObject(productsFromDB.data);
+    console.log('Json file created from DB!');
+
+    return { isSuccess: true, message: 'Json file created from DB!' };
+  } catch (error) {
+    console.log(error);
+
+    return {
+      isSuccess: false,
+      message: 'Json file failed to created from DB!',
+      error,
+    };
+  }
 };
 
-export const updatePrices = async (excelFile) => {
+export const updatePrices = (excelFile) => {
   let products;
   const jsonPath = path.join(tmpPath, 'db_products.json');
-  console.log('jsonPath', jsonPath);
 
-  fs.readFile(jsonPath, 'utf-8', (err, data) => {
-    if (err) {
-      console.log('err', err);
+  try {
+    const data = fs.readFileSync(jsonPath);
 
-      throw err;
-    }
     products = JSON.parse(data);
     const productsKeys = Object.keys(products);
 
@@ -91,20 +98,52 @@ export const updatePrices = async (excelFile) => {
     const updatedJsonPath = jsonPath.replace('db', 'updated');
     fs.writeFileSync(updatedJsonPath, JSON.stringify(products));
 
+    const message = 'updated_products.json created!';
+
     console.log(`
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!  ACTUALIZADO CON EXITO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!! Path: ${updatedJsonPath}
-    `);
-  });
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        !!!!!!!!!!!!!!  JSON ACTUALIZADO CREADO CON EXITO !!!!!!!!!!!!!!!!!!!
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        !!!! Path: ${updatedJsonPath}
+      `);
+
+    return { isSuccess: true, message };
+  } catch (error) {
+    console.log(error);
+
+    return {
+      isSuccess: false,
+      message: 'Failed to update prices to json!',
+      error,
+    };
+  }
 };
 
 export const sendUpdatedProductsToDB = async (collectionName) => {
-  const updatedJsonPath = path.join(tmpPath, 'updated_products.json');
-  const updatedJsonFile = JSON.parse(fs.readFileSync(updatedJsonPath));
+  try {
+    const updatedJsonPath = path.join(tmpPath, 'updated_products.json');
+    const updatedJsonFile = JSON.parse(fs.readFileSync(updatedJsonPath));
+    await sendDataToDB(updatedJsonFile, collectionName);
+    const message = 'Your new prices is now available!';
 
-  await sendDataToDB(updatedJsonFile, collectionName);
+    console.log(`
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        !!!!!!!!!!!!!!  DATABASE ACTUALIZADO CON EXITO!!!!!!!!!!!!!!!!!!!!!!!
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      `);
+    return {
+      isSuccess: true,
+      message,
+    };
+  } catch (error) {
+    console.log('error', error);
+
+    return {
+      isSuccess: false,
+      message: 'Failed to update prices to json!',
+      error,
+    };
+  }
 };
 
 const set_Date_To_String = () => {
@@ -126,7 +165,6 @@ const set_Date_To_String = () => {
 import { Readable } from 'stream';
 export const uploadFile = async (originalname, mimetype, buffer) => {
   const filename = set_Date_To_String() + '.' + originalname.split('.').pop(); // agarra la extensión
-  console.log('filename', filename);
   const filePath = path.join(tmpPath, filename);
 
   const fileStream = Readable.from(buffer);
@@ -145,10 +183,15 @@ export const uploadFile = async (originalname, mimetype, buffer) => {
     })
     .on('finish', () => console.log('File upload finished'));
 
-  fs.writeFile(filePath, buffer, (err) =>
-    err
-      ? console.log('error', err)
-      : console.log('File uploaded in filesystem!!!')
-  );
-  return filePath;
+  try {
+    fs.writeFileSync(filePath, buffer);
+
+    console.log(`File ${filename} uploaded in filesystem!!!`);
+
+    return filePath;
+  } catch (error) {
+    console.log('error', error);
+
+    throw error;
+  }
 };
