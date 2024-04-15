@@ -24,7 +24,7 @@ export const getProductsHandler = async (req, res, next) => {
 };
 
 // Actualiza los documentos que coincide el Key con el Id de la DB:
-export const putProductsHandler = async (req, res, next) => {
+export const putCreateProductsHandler = async (req, res, next) => {
   const { products: productsJson } = req.body;
   const { isNew, test } = req.query;
 
@@ -99,4 +99,12 @@ export const postUpdatePriceHandler = async (req, res, next) => {
     console.log('error', error);
     next(error);
   }
+};
+
+export const getCreateProductsHandler = async () => {
+  res
+    .status(200)
+    .sendFile(
+      path.resolve(process.cwd() + '/public/' + 'create-products.html')
+    );
 };

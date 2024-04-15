@@ -1,0 +1,139 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear Productos</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    #bodyCtn {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      padding: 10% 0 0 0;
+      row-gap: 5%;
+      align-items: center;
+      background: url('https://us-central1-costofinal-b391b.cloudfunctions.net/products/assets/plumbing-home.jpg');
+      background-size: cover;
+      background-color: #3d8d3d;
+      background-blend-mode: multiply;
+      width: 100vw;
+      height: 100vh;
+    }
+    .formCtn {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 15px;
+      border: 1px gray solid;
+      border-radius: 15px;
+      background-color: #f0fff4;
+    }
+    .inputCtn {
+      padding: 10px 12px;
+      margin: 10px 13px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      border: 1px solid #d1d1d1;
+    }
+    .inputCtn > div {
+      display: flex;
+      padding: 5px;
+    }
+    .inputCtn label {
+      margin: 8px 0;
+    }
+    input[type='file'] {
+      background-color: #2e3d90;
+      color: #d1d1d1;
+    }
+    input[type='file']:hover {
+      background-color: #d1d1d1;
+      color: #2e3d90;
+      cursor: pointer;
+      transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    input[type='submit'] {
+      background-color: #2e3d90;
+      color: antiquewhite;
+      font-weight: bold;
+      padding: 5px 8px;
+      border-radius: 5px;
+      width: 50%;
+      margin: 15px 0;
+    }
+    input[type='submit']:hover {
+      background-color: antiquewhite;
+      color: #2e3d90;
+      cursor: pointer;
+      transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+  </style>
+  <body>
+    <div id="bodyCtn">
+      <div class="titleCtn">
+        <div>
+          <img
+            src="https://us-central1-costofinal-b391b.cloudfunctions.net/products/assets/logo.jpg"
+            width="80px"
+          />
+        </div>
+      </div>
+      <!-- https://us-central1-costofinal-b391b.cloudfunctions.net/products/api/products/update-price -->
+      <!-- http://127.0.0.1:5001/costofinal-b391b/us-central1/products/api/products/update-price -->
+      <form
+        action="https://us-central1-costofinal-b391b.cloudfunctions.net/products/api/products/update-price"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="formCtn">
+          <h3>Crear productos por planilla</h3>
+          <div class="inputCtn">
+            <label for="fileUpload">Seleccione el archivo XLS:</label>
+            <input
+              type="file"
+              name="fileUpload"
+              id="fileUpload"
+              accept=".xls, .xlsx"
+              required
+            />
+          </div>
+          <div class="inputCtn">
+            <div>
+              <input type="radio" name="todos" id="todos" value="todos" />Todos
+              los subproductos y productos
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="unico-prod"
+                id="unico-prod"
+                value="unico-prod"
+                checked
+              />Solo 1 producto
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="unico-subprod"
+                id="unico-subprod"
+                value="unico-subprod"
+              />Solo 1 subproducto y sus productos
+            </div>
+          </div>
+
+          <input type="submit" value="Enviar" id="button" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

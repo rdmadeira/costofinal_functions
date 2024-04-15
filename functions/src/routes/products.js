@@ -2,7 +2,8 @@ import { Router } from 'express';
 
 import {
   getProductsHandler,
-  putProductsHandler,
+  putCreateProductsHandler,
+  getCreateProductsHandler,
   getUpdatePriceHandler,
   postUpdatePriceHandler,
 } from '../handlers/productsHandlers.js';
@@ -10,7 +11,8 @@ import {
 const router = Router();
 
 router.get('/', getProductsHandler);
-router.put('/', putProductsHandler);
+router.get('/create-products', getCreateProductsHandler);
+router.put('/create-products', putCreateProductsHandler);
 router.get('/update-price', getUpdatePriceHandler);
 router.post('/update-price', postUpdatePriceHandler);
 
