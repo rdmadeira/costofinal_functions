@@ -88,10 +88,10 @@
           />
         </div>
       </div>
-      <!-- https://us-central1-costofinal-b391b.cloudfunctions.net/products/api/products/update-price -->
-      <!-- http://127.0.0.1:5001/costofinal-b391b/us-central1/products/api/products/update-price -->
+      <!-- https://us-central1-costofinal-b391b.cloudfunctions.net/products/api/products/create-products -->
+      <!-- http://127.0.0.1:5001/costofinal-b391b/us-central1/products/api/products/create-products -->
       <form
-        action="https://us-central1-costofinal-b391b.cloudfunctions.net/products/api/products/update-price"
+        action="http://127.0.0.1:5001/costofinal-b391b/us-central1/products/api/products/create-products"
         method="post"
         enctype="multipart/form-data"
       >
@@ -109,13 +109,17 @@
           </div>
           <div class="inputCtn">
             <div>
-              <input type="radio" name="todos" id="todos" value="todos" />Todos
-              los subproductos y productos
+              <input
+                type="radio"
+                name="create-mode"
+                id="todos"
+                value="todos"
+              />Todos los subproductos y productos
             </div>
             <div>
               <input
                 type="radio"
-                name="unico-prod"
+                name="create-mode"
                 id="unico-prod"
                 value="unico-prod"
                 checked
@@ -124,10 +128,29 @@
             <div>
               <input
                 type="radio"
-                name="unico-subprod"
+                name="create-mode"
                 id="unico-subprod"
                 value="unico-subprod"
               />Solo 1 subproducto y sus productos
+            </div>
+          </div>
+          <div class="inputCtn">
+            <div>
+              <input
+                type="radio"
+                name="collectionName"
+                id="products"
+                value="products"
+              />Products
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="collectionName"
+                id="products2"
+                value="products2"
+                checked
+              />Products2
             </div>
           </div>
 

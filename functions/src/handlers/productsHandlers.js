@@ -24,13 +24,32 @@ export const getProductsHandler = async (req, res, next) => {
 };
 
 // Actualiza los documentos que coincide el Key con el Id de la DB:
-export const putCreateProductsHandler = async (req, res, next) => {
-  const { products: productsJson } = req.body;
-  const { isNew, test } = req.query;
+export const postCreateProductsHandler = async (req, res, next) => {
+  try {
+    const { originalname, mimetype, buffer } = req.files[0];
+    const createMode = req.body['create-mode'];
+    const collectionName = req.body.collectionName;
 
-  const response = isNew
-    ? await createNewProductsToFirestore(productsJson, test)
-    : await updateProductsToFirestore(productsJson, test);
+    const createAsyncJsonResponse = await createAsyncJsonFromDB('products'); // No collectionName por ahora, solo products
+    if (!createAsyncJsonResponse.isSuccess) {
+      console.log(
+        'createAsyncJsonResponse.message',
+        createAsyncJsonResponse.message
+      );
+
+      return next(createAsyncJsonResponse.error);
+    }
+
+    console.log('createMode', createMode, 'collectionName', collectionName);
+
+    const excelFilePath = uploadFile(originalname, mimetype, buffer);
+
+    // Hacer archivo Json a partir del excel:
+    productsExcelToJson(excelFilePath, createAsyncJsonResponse.path);
+  } catch (error) {}
+
+  /* await createNewProductsToFirestore(productsJson, test);
+  await updateProductsToFirestore(productsJson, test);
 
   console.log('response', response);
 
@@ -39,7 +58,7 @@ export const putCreateProductsHandler = async (req, res, next) => {
     return next(response.error);
   }
 
-  res.status(200).json({ isSuccess: true, message: response.message });
+  res.status(200).json({ isSuccess: true, message: response.message }); */
 };
 
 export const getUpdatePriceHandler = async (req, res) => {
@@ -59,7 +78,7 @@ export const postUpdatePriceHandler = async (req, res, next) => {
     const { originalname, mimetype, buffer } = req.files[0];
     const collectionName = req.body.collectionName;
 
-    const fileXLSPath = await uploadFile(originalname, mimetype, buffer);
+    const fileXLSPath = uploadFile(originalname, mimetype, buffer);
 
     const createAsyncJsonResponse = await createAsyncJsonFromDB('products');
     if (!createAsyncJsonResponse.isSuccess) {
@@ -101,7 +120,7 @@ export const postUpdatePriceHandler = async (req, res, next) => {
   }
 };
 
-export const getCreateProductsHandler = async () => {
+export const getCreateProductsHandler = async (req, res, next) => {
   res
     .status(200)
     .sendFile(

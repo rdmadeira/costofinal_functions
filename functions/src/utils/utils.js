@@ -1,11 +1,14 @@
 import path from 'path';
 /* import fs from 'fs'; */
 import fs from 'fs-extra';
-import { getProductsFromFirestore, sendDataToDB } from '../firebase/utils.js';
+import {
+  getProductsFromFirestore,
+  sendDataToDB,
+  uploadFileToStorageFirebase,
+} from '../firebase/utils.js';
 import XLSX from 'xlsx';
 import os from 'os';
 const tmpPath = os.tmpdir();
-import admin from 'firebase-admin';
 
 /* const products = require(path.resolve('productsFirebaseJson.json'));
  */
@@ -39,14 +42,20 @@ export const createAsyncJsonFromDB = async (collectionName) => {
     console.log('jsonPath', jsonPath);
 
     fs.writeFileSync(jsonPath, jsonStringfy);
+
+    return jsonPath;
   };
 
   try {
     const productsFromDB = await getProductsFromFirestore(collectionName);
-    createJsonFileFromObject(productsFromDB.data);
+    const createdJsonPath = createJsonFileFromObject(productsFromDB.data);
     console.log('Json file created from DB!');
 
-    return { isSuccess: true, message: 'Json file created from DB!' };
+    return {
+      isSuccess: true,
+      message: 'Json file created from DB!',
+      path: createdJsonPath,
+    };
   } catch (error) {
     console.log(error);
 
@@ -162,28 +171,12 @@ const set_Date_To_String = () => {
   return string;
 };
 
-import { Readable } from 'stream';
-export const uploadFile = async (originalname, mimetype, buffer) => {
+export const uploadFile = (originalname, mimetype, buffer) => {
   const filename = set_Date_To_String() + '.' + originalname.split('.').pop(); // agarra la extensión
   const filePath = path.join(tmpPath, filename);
 
-  const fileStream = Readable.from(buffer);
-  const storage = admin.storage().bucket();
-
-  const fileUpload = storage.file(filename);
-  const writeStream = fileUpload.createWriteStream({
-    metadata: {
-      contentType: mimetype,
-    },
-  });
-  fileStream
-    .pipe(writeStream)
-    .on('error', (error) => {
-      console.log('error', error);
-    })
-    .on('finish', () => console.log('File upload finished'));
-
   try {
+    uploadFileToStorageFirebase(mimetype, buffer, filename);
     fs.writeFileSync(filePath, buffer);
 
     console.log(`File ${filename} uploaded in filesystem!!!`);
@@ -194,4 +187,100 @@ export const uploadFile = async (originalname, mimetype, buffer) => {
 
     throw error;
   }
+};
+
+export const productsExcelToJson = (excelFilePath, jsonPath) => {
+  const excel = XLSX.readFile(excelFilePath);
+  const products = JSON.parse(fs.readFileSync(jsonPath));
+
+  const sheetNames = menuName
+    ? excel.SheetNames.filter(
+        (sheetName) => sheetName.toLowerCase() === menuName.toLowerCase()
+      )
+    : excel.SheetNames;
+
+  !menuName && sheetNames.splice(0, 1); // PRIMERA HOJA 'PAGINA DE INICIO' NO ESTOY USANDO
+
+  const transformProductsFirebaseJsonToFlatArray = () => {
+    const subMenuKeys = Object.keys(products);
+    let allProductsArray = [];
+
+    subMenuKeys.forEach((subMenuKey) => {
+      const subSubMenuKeys = Object.keys(products[subMenuKey]);
+
+      subSubMenuKeys.forEach((subSubMenuKey) => {
+        allProductsArray.push(products[subMenuKey][subSubMenuKey]);
+      });
+    });
+
+    const allProductsFlattenArray = allProductsArray.flatMap(
+      (arrayOfProducts) => arrayOfProducts
+    );
+    console.log('allProductsFlattenArray', allProductsFlattenArray.length);
+
+    return allProductsFlattenArray;
+  };
+
+  function transformToNewJson() {
+    let newJson = {};
+    const allFirebaseProductsFlattenArray =
+      transformProductsFirebaseJsonToFlatArray();
+
+    sheetNames.forEach((sheetName) => {
+      let newJsonDataObject = {};
+      let sheet = excel.Sheets[sheetName];
+      let datosSheetName = XLSX.utils.sheet_to_json(sheet);
+      console.log(datosSheetName);
+
+      /* Chequear si el codigo ya existe, usar el mismo ID */
+      datosSheetName.forEach((product) => {
+        let productWithId = {};
+        const existentProduct = allFirebaseProductsFlattenArray.find(
+          (firebaseProduct) => firebaseProduct.CODIGO === product.CODIGO
+        );
+
+        if (existentProduct) {
+          productWithId = { ...product, id: existentProduct.id };
+        } else {
+          productWithId = { ...product, id: uuid.v4() };
+        }
+
+        const typeOfProduct = product['TIPO'];
+        if (typeOfProduct) {
+          if (newJsonDataObject[typeOfProduct]) {
+            newJsonDataObject[typeOfProduct].push(productWithId);
+          } else {
+            newJsonDataObject[typeOfProduct] = [productWithId];
+          }
+
+          return;
+        }
+        if (newJsonDataObject['Sin nombre']) {
+          newJsonDataObject['Sin nombre'].push(productWithId);
+        } else {
+          newJsonDataObject['Sin nombre'] = [productWithId];
+        }
+      });
+      newJson[sheetName] = newJsonDataObject;
+    });
+
+    return newJson;
+  }
+
+  const jsonpath = path.join(tmpPath, 'newProducts.json');
+
+  if (sheetNames.length < 1) {
+    console.log(
+      `
+    ----------------- No coincide el argumento menuName con ninguna sheetName!! ----------------     `
+    );
+    return;
+  }
+
+  const dataToJson = transformToNewJson();
+  fs.writeFileSync(jsonpath, JSON.stringify(dataToJson));
+  console.log(
+    `
+    ----------------- Json productos creado con exito!! ----------------     `
+  );
 };

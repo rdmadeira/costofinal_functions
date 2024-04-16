@@ -6,6 +6,8 @@ import {
   getFirestore,
   doc,
 } from 'firebase/firestore';
+import admin from 'firebase-admin';
+
 import { firebaseConfig } from './config.js';
 
 // Initialize Firebase
@@ -129,6 +131,30 @@ export const sendDataToDB = async (jsonFile, collectionName) => {
   } catch (error) {
     return console.log(error);
   }
+};
+
+import { Readable } from 'stream';
+
+export const uploadFileToStorageFirebase = async (
+  mimetype,
+  buffer,
+  filename
+) => {
+  const fileStream = Readable.from(buffer);
+  const storage = admin.storage().bucket();
+
+  const fileUpload = storage.file(filename);
+  const writeStream = fileUpload.createWriteStream({
+    metadata: {
+      contentType: mimetype,
+    },
+  });
+  fileStream
+    .pipe(writeStream)
+    .on('error', (error) => {
+      console.log('error', error);
+    })
+    .on('finish', () => console.log('File upload to Storage finished'));
 };
 
 /* No hace falta porque la logica del updateProducts solo cambia a los que coincide 

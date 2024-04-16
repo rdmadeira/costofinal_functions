@@ -2,7 +2,7 @@ import { Router } from 'express';
 
 import {
   getProductsHandler,
-  putCreateProductsHandler,
+  postCreateProductsHandler,
   getCreateProductsHandler,
   getUpdatePriceHandler,
   postUpdatePriceHandler,
@@ -12,7 +12,7 @@ const router = Router();
 
 router.get('/', getProductsHandler);
 router.get('/create-products', getCreateProductsHandler);
-router.put('/create-products', putCreateProductsHandler);
+router.post('/create-products', postCreateProductsHandler);
 router.get('/update-price', getUpdatePriceHandler);
 router.post('/update-price', postUpdatePriceHandler);
 
