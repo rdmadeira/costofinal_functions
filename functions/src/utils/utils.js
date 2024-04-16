@@ -36,7 +36,7 @@ export const updateAllPrices = (productsJson, factorAumento) => {
 };
 
 export const createAsyncJsonFromDB = async (collectionName) => {
-  const createJsonFileFromObject = async (jsonObject) => {
+  const createJsonFileFromObject = (jsonObject) => {
     const jsonStringfy = JSON.stringify(jsonObject);
     const jsonPath = path.join(tmpPath, 'db_products.json');
     console.log('jsonPath', jsonPath);
@@ -55,6 +55,7 @@ export const createAsyncJsonFromDB = async (collectionName) => {
       isSuccess: true,
       message: 'Json file created from DB!',
       path: createdJsonPath,
+      data: productsFromDB.data,
     };
   } catch (error) {
     console.log(error);
@@ -189,9 +190,8 @@ export const uploadFile = (originalname, mimetype, buffer) => {
   }
 };
 
-export const productsExcelToJson = (excelFilePath, jsonPath) => {
+export const productsExcelToJson = (excelFilePath, products) => {
   const excel = XLSX.readFile(excelFilePath);
-  const products = JSON.parse(fs.readFileSync(jsonPath));
 
   const sheetNames = menuName
     ? excel.SheetNames.filter(
@@ -221,7 +221,7 @@ export const productsExcelToJson = (excelFilePath, jsonPath) => {
     return allProductsFlattenArray;
   };
 
-  function transformToNewJson() {
+  function transformToNewObject() {
     let newJson = {};
     const allFirebaseProductsFlattenArray =
       transformProductsFirebaseJsonToFlatArray();
@@ -277,10 +277,24 @@ export const productsExcelToJson = (excelFilePath, jsonPath) => {
     return;
   }
 
-  const dataToJson = transformToNewJson();
-  fs.writeFileSync(jsonpath, JSON.stringify(dataToJson));
-  console.log(
-    `
-    ----------------- Json productos creado con exito!! ----------------     `
-  );
+  const dataToJson = transformToNewObject();
+
+  try {
+    fs.writeFileSync(jsonpath, JSON.stringify(dataToJson));
+
+    const message = `
+    ------------------------------------------------------------------------
+      ----------------- Json productos creado con exito!! ----------------  
+    ------------------------------------------------------------------------   
+      `;
+
+    console.log(message);
+
+    return { data: dataToJson, path: jsonpath, isSuccess: true, message };
+  } catch (error) {
+    const message = error.message || 'Error al crear newProducts.json';
+    console.log(message);
+
+    return { error, path: null, isSuccess: false, message };
+  }
 };

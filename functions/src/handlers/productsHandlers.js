@@ -1,9 +1,9 @@
+import { getProductsFromFirestore } from '../firebase/utils.js';
 import {
-  getProductsFromFirestore,
-  updateProductsToFirestore,
-  createNewProductsToFirestore,
-} from '../firebase/utils.js';
-import { createAsyncJsonFromDB, updatePrices } from '../utils/utils.js';
+  createAsyncJsonFromDB,
+  updatePrices,
+  productsExcelToJson,
+} from '../utils/utils.js';
 
 import path from 'path';
 
@@ -27,7 +27,7 @@ export const getProductsHandler = async (req, res, next) => {
 export const postCreateProductsHandler = async (req, res, next) => {
   try {
     const { originalname, mimetype, buffer } = req.files[0];
-    const createMode = req.body['create-mode'];
+    const merge = req.body.merge;
     const collectionName = req.body.collectionName;
 
     const createAsyncJsonResponse = await createAsyncJsonFromDB('products'); // No collectionName por ahora, solo products
@@ -45,8 +45,41 @@ export const postCreateProductsHandler = async (req, res, next) => {
     const excelFilePath = uploadFile(originalname, mimetype, buffer);
 
     // Hacer archivo Json a partir del excel:
-    productsExcelToJson(excelFilePath, createAsyncJsonResponse.path);
-  } catch (error) {}
+    const createNewProductJsonResponse = productsExcelToJson(
+      excelFilePath,
+      createAsyncJsonResponse.data // db_products data para transformProductsFirebaseJsonToFlatArray
+    );
+
+    if (!productJsonResponse.isSuccess) {
+      console.log(
+        'createNewProductJsonResponse',
+        createNewProductJsonResponse.message
+      );
+      return next(createNewProductJsonResponse.error);
+    }
+    const sendNewProductsToFirestoreResponse = await sendNewProductsToFirestore(
+      createNewProductJsonResponse,
+      collectionName,
+      merge
+    );
+
+    if (!sendNewProductsToFirestoreResponse.isSuccess) {
+      console.log(
+        'sendNewProductsToFirestoreResponse',
+        sendNewProductsToFirestoreResponse.message
+      );
+      return next(sendNewProductsToFirestoreResponse.error);
+    }
+
+    res
+      .status(200)
+      .sendFile(
+        path.resolve(process.cwd() + '/public/' + 'success-post-products.html')
+      );
+  } catch (error) {
+    console.log('error', error);
+    next(error);
+  }
 
   /* await createNewProductsToFirestore(productsJson, test);
   await updateProductsToFirestore(productsJson, test);
