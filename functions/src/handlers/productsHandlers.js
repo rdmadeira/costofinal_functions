@@ -31,6 +31,10 @@ export const postCreateProductsHandler = async (req, res, next) => {
   try {
     const { originalname, mimetype, buffer } = req.files[0];
     const merge = req.body.merge;
+    const mergeTipoProducto = req.body.mergeTipoProducto; // usar
+
+    console.log('mergeTipoProducto', mergeTipoProducto); // true o undefined
+
     const collectionName = req.body.collectionName;
 
     const createAsyncJsonResponse = await createAsyncJsonFromDB('products'); // No collectionName por ahora, solo products
@@ -63,7 +67,8 @@ export const postCreateProductsHandler = async (req, res, next) => {
     const sendNewProductsToFirestoreResponse = await sendNewProductsToFirestore(
       createNewProductJsonResponse.data,
       collectionName,
-      merge
+      merge,
+      mergeTipoProducto
     );
 
     if (!sendNewProductsToFirestoreResponse.isSuccess) {

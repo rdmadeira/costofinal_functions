@@ -40,11 +40,14 @@ export const getProductsFromFirestore = async () => {
 export const sendNewProductsToFirestore = async (
   newProductsJson,
   collectionName,
-  merge
+  merge,
+  mergeTipoProducto
 ) => {
   let message = '';
   let isMerge = merge == 'true' ? true : false;
-  console.log('merge', merge, 'isMerge', isMerge);
+  let isMergeTipoProducto = mergeTipoProducto == 'true' ? true : false;
+
+  // usar getDocs y mantener todo el tipo de producto agregando los productos nuevos en tipo - if mergeTipoProducto === true
 
   try {
     const newProductsJsonKeys = Object.keys(newProductsJson);
