@@ -8,6 +8,8 @@ import {
 } from '../firebase/utils.js';
 import XLSX from 'xlsx';
 import os from 'os';
+import { v4 as uuidv4 } from 'uuid';
+
 const tmpPath = os.tmpdir();
 
 /* const products = require(path.resolve('productsFirebaseJson.json'));
@@ -193,13 +195,9 @@ export const uploadFile = (originalname, mimetype, buffer) => {
 export const productsExcelToJson = (excelFilePath, products) => {
   const excel = XLSX.readFile(excelFilePath);
 
-  const sheetNames = menuName
-    ? excel.SheetNames.filter(
-        (sheetName) => sheetName.toLowerCase() === menuName.toLowerCase()
-      )
-    : excel.SheetNames;
+  let sheetNames = excel.SheetNames;
 
-  !menuName && sheetNames.splice(0, 1); // PRIMERA HOJA 'PAGINA DE INICIO' NO ESTOY USANDO
+  sheetNames.splice(0, 1); // PRIMERA HOJA 'PAGINA DE INICIO' NO ESTOY USANDO
 
   const transformProductsFirebaseJsonToFlatArray = () => {
     const subMenuKeys = Object.keys(products);
@@ -242,7 +240,7 @@ export const productsExcelToJson = (excelFilePath, products) => {
         if (existentProduct) {
           productWithId = { ...product, id: existentProduct.id };
         } else {
-          productWithId = { ...product, id: uuid.v4() };
+          productWithId = { ...product, id: uuidv4() };
         }
 
         const typeOfProduct = product['TIPO'];

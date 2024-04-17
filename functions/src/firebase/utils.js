@@ -50,11 +50,9 @@ export const sendNewProductsToFirestore = async (
     const newProductsJsonKeys = Object.keys(newProductsJson);
     for (let i = 0; i < newProductsJsonKeys.length; i++) {
       const key = newProductsJsonKeys[i];
-      await setDoc(
-        doc(db, collectionName, newProductsJsonKeys[i]),
-        newProductsJson[key],
-        { merge: isMerge }
-      );
+      await setDoc(doc(db, collectionName, key), newProductsJson[key], {
+        merge: isMerge,
+      });
       message += `Producto ${key} creado con succeso! `;
     }
     console.log('message', message);

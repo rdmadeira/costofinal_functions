@@ -1,4 +1,7 @@
-import { getProductsFromFirestore } from '../firebase/utils.js';
+import {
+  getProductsFromFirestore,
+  sendNewProductsToFirestore,
+} from '../firebase/utils.js';
 import {
   createAsyncJsonFromDB,
   updatePrices,
@@ -40,7 +43,7 @@ export const postCreateProductsHandler = async (req, res, next) => {
       return next(createAsyncJsonResponse.error);
     }
 
-    console.log('createMode', createMode, 'collectionName', collectionName);
+    console.log('merge', merge, 'collectionName', collectionName);
 
     const excelFilePath = uploadFile(originalname, mimetype, buffer);
 
@@ -50,7 +53,7 @@ export const postCreateProductsHandler = async (req, res, next) => {
       createAsyncJsonResponse.data // db_products data para transformProductsFirebaseJsonToFlatArray
     );
 
-    if (!productJsonResponse.isSuccess) {
+    if (!createNewProductJsonResponse.isSuccess) {
       console.log(
         'createNewProductJsonResponse',
         createNewProductJsonResponse.message
@@ -58,7 +61,7 @@ export const postCreateProductsHandler = async (req, res, next) => {
       return next(createNewProductJsonResponse.error);
     }
     const sendNewProductsToFirestoreResponse = await sendNewProductsToFirestore(
-      createNewProductJsonResponse,
+      createNewProductJsonResponse.data,
       collectionName,
       merge
     );
