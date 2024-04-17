@@ -52,6 +52,27 @@
     .inputCtn label {
       margin: 8px 0;
     }
+    .tooltip {
+      position: relative;
+    }
+    .tooltip .tooltip-text {
+      visibility: hidden;
+      position: absolute;
+      width: 450px;
+      background-color: #002b0c70;
+      z-index: 1;
+      color: #f0fff4;
+      bottom: 30px;
+      right: -110px;
+      padding: 10px;
+    }
+    .tooltip-text {
+      position: absolute;
+      display: inline-block;
+    }
+    .tooltip:hover .tooltip-text {
+      visibility: visible;
+    }
     input[type='file'] {
       background-color: #2e3d90;
       color: #d1d1d1;
