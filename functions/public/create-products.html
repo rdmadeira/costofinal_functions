@@ -108,7 +108,7 @@
             />
           </div>
           <div class="inputCtn">
-            <div>
+            <div class="tooltip">
               <input
                 type="radio"
                 name="merge"
@@ -117,8 +117,15 @@
               /><label for="merge-true">
                 Combina los Subproductos con los existentes
               </label>
+              <span class="tooltip-text"
+                >Los subproductos son los documentos de la collección elijida.
+                Esta opción permite para cada subproducto que coincida, mesclar
+                el nuevo TIPO con los TIPOS ya existentes. Los tipos son las
+                claves (keys) del objecto subproducto. Si el tipo o el
+                subproducto no coincide, se creará uno nuevo</span
+              >
             </div>
-            <div>
+            <div class="tooltip">
               <input
                 type="radio"
                 name="merge"
@@ -128,8 +135,14 @@
               /><label for="merge-false">
                 Reemplaza todos los Subproductos existentes
               </label>
+              <span class="tooltip-text"
+                >Los subproductos son los documentos de la collección elijida.
+                Esta opción permite para cada subproducto que coincida
+                reemplazar todo el documento Si no coincide el key, se creará un
+                nuevo documento.
+              </span>
             </div>
-            <div>
+            <div class="tooltip">
               <input
                 type="checkbox"
                 name="mergeTipoProducto"
@@ -137,9 +150,15 @@
                 value="true"
                 checked
               /><label for="merge-tipo">
-                Combina los tipos de Subproductos también con los tipos
-                existentes
+                Combina los productos de un tipo de subproducto con los
+                productos existentes
               </label>
+              <span class="tooltip-text"
+                >Está opción permite que, si es la opción combinación de
+                subproductos elijida, los productos de un tipo existente se
+                mescla con los productos de este mismo tipo existentes. Si no
+                coincide con el key, se creará.</span
+              >
             </div>
           </div>
           <div class="inputCtn">

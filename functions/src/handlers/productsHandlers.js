@@ -12,10 +12,8 @@ import path from 'path';
 
 export const getProductsHandler = async (req, res, next) => {
   const products = await getProductsFromFirestore();
-  console.log('req.body', req.body);
 
   if (!products.isSuccess) {
-    res.status(500).json({ message: products.message });
     return next(products.error);
   }
 

@@ -31,7 +31,7 @@ export const getProductsFromFirestore = async () => {
 
     return {
       error: new Error('Internal Server Error'),
-      message: 'Error en el servidor',
+      message: 'Falla en obtener los datos de productos en la base de datos',
       isSuccess: false,
     };
   }
@@ -48,14 +48,41 @@ export const sendNewProductsToFirestore = async (
   let isMergeTipoProducto = mergeTipoProducto == 'true' ? true : false;
 
   // usar getDocs y mantener todo el tipo de producto agregando los productos nuevos en tipo - if mergeTipoProducto === true
-
   try {
+    const productsFromDbResponse = await getProductsFromFirestore();
+    if (!productsFromDbResponse.isSuccess) {
+      return {
+        isSuccess: productsFromDbResponse.isSuccess,
+        message: productsFromDbResponse.message,
+        error: productsFromDbResponse.error,
+      };
+    }
+
     const newProductsJsonKeys = Object.keys(newProductsJson);
+    const products = productsFromDbResponse.data;
+
     for (let i = 0; i < newProductsJsonKeys.length; i++) {
       const key = newProductsJsonKeys[i];
-      await setDoc(doc(db, collectionName, key), newProductsJson[key], {
-        merge: isMerge,
-      });
+      const subProdkeys = Object.keys(newProductsJson[key]);
+      // Sí el merge es nivel tipo de subproducto:
+      if (isMergeTipoProducto && isMerge) {
+        // for in bucle tambien sirve
+        for (let i = 0; i < subProdkeys.length; i++) {
+          // Probar si este setDoc reemplaza el que ya existe (para mi no) o duplica. Debe tener que hacer lógica, si el id ya existe, reemplazar
+          await setDoc(
+            doc(db, collectionName, key),
+            newProductsJson[key][subProdkeys[i]],
+            {
+              merge: true,
+            }
+          );
+        }
+      } else {
+        await setDoc(doc(db, collectionName, key), newProductsJson[key], {
+          merge: isMerge,
+        });
+      }
+
       message += `Producto ${key} creado con succeso! `;
     }
     console.log('message', message);
@@ -167,6 +194,7 @@ export const sendDataToDB = async (jsonFile, collectionName) => {
 };
 
 import { Readable } from 'stream';
+import { error } from 'console';
 
 export const uploadFileToStorageFirebase = async (
   mimetype,
