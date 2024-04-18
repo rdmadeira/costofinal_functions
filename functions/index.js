@@ -4,7 +4,6 @@ import dotenv from 'dotenv';
 import * as functions from 'firebase-functions';
 import { initializeApp } from 'firebase-admin/app';
 
-import { google } from 'googleapis';
 import fileParser from 'express-multipart-file-parser';
 
 import {
@@ -20,6 +19,7 @@ import bodyParser from 'body-parser';
 initializeApp(functions.config().firebase);
 
 // refresh token access - error de Gaxios Error
+/* import { google } from 'googleapis';
 const OAuth2 = google.auth.OAuth2;
 const oauth2Client = new OAuth2(
   '75874645639-ljho2noqskj5ocqj8kq9tv63i4c5rj46.apps.googleusercontent.com',
@@ -29,9 +29,9 @@ const oauth2Client = new OAuth2(
 oauth2Client.setCredentials({
   refresh_token:
     '1//04CZ-RIvKzNwOCgYIARAAGAQSNwF-L9Irv1_ntUJEGRdfhHHC5vDTN9yBiHrh63Fgbnzm_D428xTSlFTOgADw_aVOGqLtbKwyVb4',
-});
+}); 
 const accessToken = oauth2Client.getAccessToken();
-console.log('accessToken', accessToken);
+console.log('accessToken', accessToken);*/
 
 dotenv.config({ path: process.cwd() });
 

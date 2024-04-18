@@ -45,8 +45,6 @@ export const postCreateProductsHandler = async (req, res, next) => {
       return next(createAsyncJsonResponse.error);
     }
 
-    console.log('merge', merge, 'collectionName', collectionName);
-
     const excelFilePath = uploadFile(originalname, mimetype, buffer);
 
     // Hacer archivo Json a partir del excel:
@@ -63,10 +61,6 @@ export const postCreateProductsHandler = async (req, res, next) => {
       return next(createNewProductJsonResponse.error);
     }
 
-    console.log(
-      'createNewProductJsonResponse.data[FERRETERIA]',
-      createNewProductJsonResponse.data['FERRETERIA']
-    );
     const sendNewProductsToFirestoreResponse = await sendNewProductsToFirestore(
       createNewProductJsonResponse.data,
       collectionName,

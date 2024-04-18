@@ -291,6 +291,11 @@ export const productsExcelToJson = (excelFilePath, products) => {
     const message = error.message || 'Error al crear newProducts.json';
     console.log(message);
 
-    return { error, path: null, isSuccess: false, message };
+    return {
+      error: new Error(error.message),
+      path: null,
+      isSuccess: false,
+      message,
+    };
   }
 };
