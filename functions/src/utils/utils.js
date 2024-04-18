@@ -214,7 +214,6 @@ export const productsExcelToJson = (excelFilePath, products) => {
     const allProductsFlattenArray = allProductsArray.flatMap(
       (arrayOfProducts) => arrayOfProducts
     );
-    console.log('allProductsFlattenArray', allProductsFlattenArray.length);
 
     return allProductsFlattenArray;
   };
@@ -228,7 +227,6 @@ export const productsExcelToJson = (excelFilePath, products) => {
       let newJsonDataObject = {};
       let sheet = excel.Sheets[sheetName];
       let datosSheetName = XLSX.utils.sheet_to_json(sheet);
-      console.log(datosSheetName);
 
       /* Chequear si el codigo ya existe, usar el mismo ID */
       datosSheetName.forEach((product) => {

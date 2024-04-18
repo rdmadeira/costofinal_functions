@@ -16,7 +16,7 @@
       display: flex;
       flex-direction: column;
       justify-content: start;
-      padding: 10% 0 0 0;
+      padding: 4% 0 0 0;
       row-gap: 5%;
       align-items: center;
       background: url('https://us-central1-costofinal-b391b.cloudfunctions.net/products/assets/plumbing-home.jpg');
@@ -26,9 +26,12 @@
       width: 100vw;
       height: 100vh;
     }
+    form {
+      width: clamp(360px, 80%, 600px);
+    }
     .formCtn {
       display: flex;
-      flex-direction: column;
+      /* flex-direction: column; */
       justify-content: space-around;
       align-items: center;
       flex-wrap: wrap;
@@ -45,12 +48,26 @@
       border-radius: 5px;
       border: 1px solid #d1d1d1;
     }
+    .formCtn > h3 {
+      width: 80%;
+      text-align: center;
+    }
+    .inputCtnProducts {
+      order: 3;
+    }
+    .inputCtnMerge {
+      order: 4;
+      /* width: 100%; */
+    }
     .inputCtn > div {
       display: flex;
       padding: 5px;
+      width: 80%;
     }
     .inputCtn label {
       margin: 8px 0;
+      font-size: min(max(2.5vw, 11px), 15px);
+      margin-left: 10px;
     }
     .tooltip {
       position: relative;
@@ -91,6 +108,7 @@
       border-radius: 5px;
       width: 50%;
       margin: 15px 0;
+      order: 5;
     }
     input[type='submit']:hover {
       background-color: antiquewhite;
@@ -128,13 +146,14 @@
               required
             />
           </div>
-          <div class="inputCtn">
+          <div class="inputCtn inputCtnMerge">
             <div class="tooltip">
               <input
                 type="radio"
                 name="merge"
                 id="merge-true"
                 value="true"
+                checked
               /><label for="merge-true">
                 Combina los Subproductos con los existentes
               </label>
@@ -152,7 +171,6 @@
                 name="merge"
                 id="merge-false"
                 value="false"
-                checked
               /><label for="merge-false">
                 Reemplaza todos los Subproductos existentes
               </label>
@@ -182,14 +200,14 @@
               >
             </div>
           </div>
-          <div class="inputCtn">
+          <div class="inputCtn inputCtnProducts">
             <div>
               <input
                 type="radio"
                 name="collectionName"
                 id="products"
                 value="products"
-              />Products
+              /><label for="products">Products</label>
             </div>
             <div>
               <input
@@ -198,7 +216,7 @@
                 id="products2"
                 value="products2"
                 checked
-              />Products2
+              /><label for="products2">Products2</label>
             </div>
           </div>
 

@@ -62,6 +62,11 @@ export const postCreateProductsHandler = async (req, res, next) => {
       );
       return next(createNewProductJsonResponse.error);
     }
+
+    console.log(
+      'createNewProductJsonResponse.data[FERRETERIA]',
+      createNewProductJsonResponse.data['FERRETERIA']
+    );
     const sendNewProductsToFirestoreResponse = await sendNewProductsToFirestore(
       createNewProductJsonResponse.data,
       collectionName,
