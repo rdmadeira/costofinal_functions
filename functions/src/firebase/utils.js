@@ -46,7 +46,7 @@ export const sendNewProductsToFirestore = async (
   let message = '';
   let isMerge = merge == 'true' ? true : false;
   let isMergeTipoProducto = mergeTipoProducto == 'true' ? true : false;
-
+  console.log('newProductsJson[FERRETERIA]', newProductsJson['FERRETERIA']);
   // usar getDocs y mantener todo el tipo de producto agregando los productos nuevos en tipo - if mergeTipoProducto === true
   try {
     const productsFromDbResponse = await getProductsFromFirestore();
@@ -67,16 +67,33 @@ export const sendNewProductsToFirestore = async (
       // Sí el merge es nivel tipo de subproducto:
       if (isMergeTipoProducto && isMerge) {
         // for in bucle tambien sirve
-        for (let i = 0; i < subProdkeys.length; i++) {
-          // Probar si este setDoc reemplaza el que ya existe (para mi no) o duplica. Debe tener que hacer lógica, si el id ya existe, reemplazar
-          await setDoc(
-            doc(db, collectionName, key),
-            newProductsJson[key][subProdkeys[i]],
-            {
-              merge: true,
+        let subProdToDB = products[key];
+
+        for (let j = 0; j < subProdkeys.length; j++) {
+          // No acepta array, tendría que fabricar el nuevo array y setear el nuevo objecto
+          /* await setDoc(doc(db, collectionName, key), newProductsJson[key], {
+            merge: true,
+          }); */
+          const subKey = subProdkeys[j];
+          let tipoSubProdToDBArray = products[key][subKey];
+          newProductsJson[key][subKey].forEach((newProdObject, index) => {
+            const productExistsIndex = products[key][subKey].findIndex(
+              // no va find, tengo que usar el indice el array original:
+              (prodObject) => newProdObject.id === prodObject.id
+            );
+            if (productExistsIndex > 0) {
+              console.log('productExists', newProdObject); //ok
+              tipoSubProdToDBArray[productExistsIndex] = newProdObject;
+            } else {
+              console.log('productnoexists', newProdObject); //ok
+              tipoSubProdToDBArray.push(newProdObject);
             }
-          );
+          });
+          subProdToDB[subKey] = tipoSubProdToDBArray;
         }
+        await setDoc(doc(db, collectionName, key), subProdToDB, {
+          merge: isMerge,
+        });
       } else {
         await setDoc(doc(db, collectionName, key), newProductsJson[key], {
           merge: isMerge,
