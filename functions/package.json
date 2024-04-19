@@ -24,7 +24,6 @@
     "firebase-admin": "^11.8.0",
     "firebase-functions": "^4.8.2",
     "fs-extra": "^11.2.0",
-    "googleapis": "^134.0.0",
     "jsonwebtoken": "^9.0.0",
     "mime-types": "^2.1.35",
     "nodemailer": "^6.9.1",

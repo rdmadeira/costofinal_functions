@@ -7,6 +7,7 @@ import {
   doc,
 } from 'firebase/firestore';
 import admin from 'firebase-admin';
+
 /* import { getAuth } from 'firebase/auth'; */
 
 import { firebaseConfig } from './config.js';
@@ -46,7 +47,6 @@ export const sendNewProductsToFirestore = async (
   let message = '';
   let isMerge = merge == 'true' ? true : false;
   let isMergeTipoProducto = mergeTipoProducto == 'true' ? true : false;
-  console.log('newProductsJson[FERRETERIA]', newProductsJson['FERRETERIA']);
   // usar getDocs y mantener todo el tipo de producto agregando los productos nuevos en tipo - if mergeTipoProducto === true
   try {
     const productsFromDbResponse = await getProductsFromFirestore();
@@ -65,9 +65,9 @@ export const sendNewProductsToFirestore = async (
       const key = newProductsJsonKeys[i];
       const subProdkeys = Object.keys(newProductsJson[key]);
       // Sí el merge es nivel tipo de subproducto:
+      let subProdToDB = products[key];
       if (isMergeTipoProducto && isMerge) {
         // for in bucle tambien sirve
-        let subProdToDB = products[key];
 
         for (let j = 0; j < subProdkeys.length; j++) {
           // No acepta array, tendría que fabricar el nuevo array y setear el nuevo objecto
@@ -97,6 +97,10 @@ export const sendNewProductsToFirestore = async (
           merge: isMerge,
         });
       } else {
+        if (isMergeTipoProducto === false)
+          await setDoc(doc(db, collectionName, key), subProdToDB, {
+            merge: false,
+          });
         await setDoc(doc(db, collectionName, key), newProductsJson[key], {
           merge: isMerge,
         });
