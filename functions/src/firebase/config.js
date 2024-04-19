@@ -8,7 +8,7 @@ export const firebaseConfig = {
   measurementId: 'G-JT7HWX4825',
 };
 
-const oAuth_Credentials = {
+export const oAuth_Credentials = {
   access_token:
     'ya29.a0Ad52N3_7suOwHBFTRYDqSOraudtlUJwbeYyHEYXBfimgcPs4Ne9dpeODR1xzI7LBOwpzVFcb5mFegEk5xACIWrYHDPW9OShipcIJtqbHvE00kdVzUtCcJrXftzScMIy3A51BuIaIEKR8y5GEet0mB__5LGDeTYui3sCZaCgYKAcUSARISFQHGX2MiRU5PmdfiqphF0d65L7XcDw0171',
   scope: 'https://mail.google.com/',

@@ -129,7 +129,6 @@ export const sendDataToDB = async (jsonFile, collectionName) => {
 };
 
 import { Readable } from 'stream';
-import { error } from 'console';
 
 export const uploadFileToStorageFirebase = async (
   mimetype,

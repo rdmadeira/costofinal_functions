@@ -158,7 +158,7 @@ export const postUpdatePriceHandler = async (req, res, next) => {
   }
 };
 
-export const getCreateProductsHandler = async (req, res, next) => {
+export const getCreateProductsHandler = async (req, res) => {
   res
     .status(200)
     .sendFile(
