@@ -22,8 +22,8 @@ initializeApp(functions.config().firebase);
 /* import { google } from 'googleapis';
 const OAuth2 = google.auth.OAuth2;
 const oauth2Client = new OAuth2(
-  '75874645639-ljho2noqskj5ocqj8kq9tv63i4c5rj46.apps.googleusercontent.com',
-  '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',
+  process.env.CLIENT_ID_GOOGLEAPIS,
+  process.env.CLIENT_SECRET_KEY_GOOGLEAPIS,
   'https://developers.google.com/oauthplayground'
 );
 oauth2Client.setCredentials({
