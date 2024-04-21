@@ -3,7 +3,7 @@ import path from 'path';
 import fs from 'fs-extra';
 import {
   getProductsFromFirestore,
-  sendDataToDB,
+  sendAllDataToDB,
   uploadFileToStorageFirebase,
 } from '../firebase/utils.js';
 import XLSX from 'xlsx';
@@ -135,7 +135,7 @@ export const sendUpdatedProductsToDB = async (collectionName) => {
   try {
     const updatedJsonPath = path.join(tmpPath, 'updated_products.json');
     const updatedJsonFile = JSON.parse(fs.readFileSync(updatedJsonPath));
-    await sendDataToDB(updatedJsonFile, collectionName);
+    await sendAllDataToDB(updatedJsonFile, collectionName);
     const message = 'Your new prices is now available!';
 
     console.log(`

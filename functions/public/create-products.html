@@ -59,6 +59,9 @@
       order: 4;
       /* width: 100%; */
     }
+    #checkboxCtn {
+      margin: 0 0 5% 5%;
+    }
     .inputCtn > div {
       display: flex;
       padding: 5px;
@@ -76,13 +79,15 @@
       visibility: hidden;
       position: absolute;
       width: 450px;
-      background-color: #002b0c70;
+      background-color: #001706b0;
       z-index: 1;
       color: #f0fff4;
       bottom: 30px;
-      right: -110px;
+      left: 50%;
       padding: 10px;
+      border: double aquamarine 4px;
     }
+
     .tooltip-text {
       position: absolute;
       display: inline-block;
@@ -136,6 +141,7 @@
       >
         <div class="formCtn">
           <h3>Crear productos por planilla</h3>
+
           <div class="inputCtn">
             <label for="fileUpload">Seleccione el archivo XLS:</label>
             <input
@@ -146,6 +152,7 @@
               required
             />
           </div>
+
           <div class="inputCtn inputCtnMerge">
             <div class="tooltip">
               <input
@@ -165,23 +172,7 @@
                 subproducto no coincide, se creará uno nuevo</span
               >
             </div>
-            <div class="tooltip">
-              <input
-                type="radio"
-                name="merge"
-                id="merge-false"
-                value="false"
-              /><label for="merge-false">
-                Reemplaza todos los Subproductos existentes
-              </label>
-              <span class="tooltip-text"
-                >Los subproductos son los documentos de la collección elijida.
-                Esta opción permite para cada subproducto que coincida
-                reemplazar todo el documento Si no coincide el key, se creará un
-                nuevo documento.
-              </span>
-            </div>
-            <div class="tooltip">
+            <div class="tooltip" id="checkboxCtn">
               <input
                 type="checkbox"
                 name="mergeTipoProducto"
@@ -198,6 +189,22 @@
                 mescla con los productos de este mismo tipo existentes. Si no
                 coincide con el key, se creará.</span
               >
+            </div>
+            <div class="tooltip">
+              <input
+                type="radio"
+                name="merge"
+                id="merge-false"
+                value="false"
+              /><label for="merge-false">
+                Reemplaza todos los Subproductos existentes
+              </label>
+              <span class="tooltip-text"
+                >Los subproductos son los documentos de la collección elijida.
+                Esta opción permite para cada subproducto que coincida
+                reemplazar todo el documento Si no coincide el key, se creará un
+                nuevo documento.
+              </span>
             </div>
           </div>
           <div class="inputCtn inputCtnProducts">
@@ -225,4 +232,21 @@
       </form>
     </div>
   </body>
+  <script>
+    const checkboxEl = document.getElementById('merge-tipo');
+    const mergeDivEl = document.getElementById('checkboxCtn');
+
+    document.body.addEventListener('change', (e) => {
+      if (e.target.id === 'merge-false') {
+        checkboxEl.disabled = true;
+        checkboxEl.checked = false;
+        mergeDivEl.style.color = 'gray';
+      }
+      if (e.target.id === 'merge-true') {
+        checkboxEl.disabled = false;
+        checkboxEl.checked = true;
+        mergeDivEl.style.color = 'inherit';
+      }
+    });
+  </script>
 </html>

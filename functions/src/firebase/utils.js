@@ -97,7 +97,7 @@ export const sendNewProductsToFirestore = async (
           merge: isMerge,
         });
       } else {
-        if (isMergeTipoProducto === false)
+        if (isMerge && isMergeTipoProducto === false)
           await setDoc(doc(db, collectionName, key), subProdToDB, {
             merge: false,
           });
@@ -119,7 +119,7 @@ export const sendNewProductsToFirestore = async (
   }
 };
 
-export const sendDataToDB = async (jsonFile, collectionName) => {
+export const sendAllDataToDB = async (jsonFile, collectionName) => {
   console.log('collectionName', collectionName);
 
   try {
