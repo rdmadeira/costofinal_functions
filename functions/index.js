@@ -1,6 +1,7 @@
 import express from 'express';
 
 import dotenv from 'dotenv';
+import cors from 'cors';
 import * as functions from 'firebase-functions';
 import admin from 'firebase-admin';
 
@@ -60,16 +61,14 @@ getProductsApi.use(express.static('public'));
 getProductsApi.use(fileParser);
 getProductsApi.use(express.json());
 getProductsApi.use(bodyParser.urlencoded({ extended: true }));
-getProductsApi.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
 
-  res.header(
-    'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With, Content-Type, Accept, Authorization'
-  );
-
-  next();
-});
+getProductsApi.use(
+  cors({
+    origin: ['http://localhost:3000', 'https://www.costofinal.com.ar'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  })
+);
 
 getProductsApi.use('/api/products', productsRouter);
 getProductsApi.use(errorHandler);

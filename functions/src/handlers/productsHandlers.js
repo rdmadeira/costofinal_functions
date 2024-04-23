@@ -100,11 +100,19 @@ export const postCreateProductsHandler = async (req, res, next) => {
 };
 
 export const getUpdatePriceHandler = async (req, res) => {
-  console.log('process.chdir()', process.cwd());
+  const token = req.headers?.authorization?.split(' ')[1] || null;
 
-  res
-    .status(200)
-    .sendFile(path.resolve(process.cwd() + '/public/' + 'update-prices.html'));
+  if (token === process.env.AUTH_UID)
+    res
+      .status(200)
+      .sendFile(
+        path.resolve(process.cwd() + '/public/' + 'update-prices.html')
+      );
+  else {
+    res
+      .status(401)
+      .sendFile(path.resolve(process.cwd() + '/public/' + '401.html'));
+  }
 };
 
 // Todavia falta:
@@ -159,9 +167,17 @@ export const postUpdatePriceHandler = async (req, res, next) => {
 };
 
 export const getCreateProductsHandler = async (req, res) => {
-  res
-    .status(200)
-    .sendFile(
-      path.resolve(process.cwd() + '/public/' + 'create-products.html')
-    );
+  const token = req.headers?.authorization?.split(' ')[1] || null;
+
+  if (token === process.env.AUTH_UID)
+    res
+      .status(200)
+      .sendFile(
+        path.resolve(process.cwd() + '/public/' + 'create-products.html')
+      );
+  else {
+    res
+      .status(401)
+      .sendFile(path.resolve(process.cwd() + '/public/' + '401.html'));
+  }
 };
