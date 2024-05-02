@@ -299,3 +299,27 @@ export const productsExcelToJson = (excelFilePath, products) => {
     };
   }
 };
+
+export const createExcelFileFromJson = (parsedJson, filename) => {
+  let workbook = XLSX.utils.book_new();
+
+  const jsonFileKeys = Object.keys(parsedJson);
+
+  jsonFileKeys.forEach((key) => {
+    const jsonFileSubkeys = Object.keys(parsedJson[key]);
+    let subProdArray = [];
+
+    jsonFileSubkeys.forEach((subkey) => {
+      subProdArray.push(parsedJson[key][subkey]);
+    });
+
+    const flatSubProdArray = subProdArray.flatMap((item) => item);
+
+    const worksheet = XLSX.utils.json_to_sheet(flatSubProdArray);
+    XLSX.utils.book_append_sheet(workbook, worksheet, key.toUpperCase());
+  });
+
+  const filePath = path.join(tmpPath, filename);
+
+  XLSX.writeFile(workbook, filePath);
+};
