@@ -75,11 +75,13 @@ export const sendNewProductsToFirestore = async (
             merge: true,
           }); */
           const subKey = subProdkeys[j];
-          let tipoSubProdToDBArray = products[key][subKey];
+          let tipoSubProdToDBArray = products[key][subKey] || [];
           newProductsJson[key][subKey].forEach((newProdObject) => {
-            const productExistsIndex = products[key][subKey].findIndex(
+            console.log('tipoSubProdToDBArray', tipoSubProdToDBArray);
+
+            const productExistsIndex = tipoSubProdToDBArray.findIndex(
               // no va find, tengo que usar el indice el array original:
-              (prodObject) => newProdObject.id === prodObject.id
+              (prodObject) => newProdObject.id === prodObject?.id
             );
             console.log('productExistsIndex', productExistsIndex);
 

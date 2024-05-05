@@ -1,6 +1,6 @@
 import path from 'path';
-/* import fs from 'fs'; */
-import fs from 'fs-extra';
+import fs from 'fs';
+// import fs from 'fs-extra';
 import {
   getProductsFromFirestore,
   sendAllDataToDB,
@@ -197,7 +197,9 @@ export const productsExcelToJson = (excelFilePath, products) => {
 
   let sheetNames = excel.SheetNames;
 
-  sheetNames.splice(0, 1); // PRIMERA HOJA 'PAGINA DE INICIO' NO ESTOY USANDO
+  if (sheetNames.find((sheetName) => sheetName === 'PAGINA DE INICIO')) {
+    sheetNames.splice(0, 1); // PRIMERA HOJA 'PAGINA DE INICIO' NO ESTOY USANDO
+  }
 
   const transformProductsFirebaseJsonToFlatArray = () => {
     const subMenuKeys = Object.keys(products);
@@ -265,13 +267,13 @@ export const productsExcelToJson = (excelFilePath, products) => {
 
   const jsonpath = path.join(tmpPath, 'newProducts.json');
 
-  if (sheetNames.length < 1) {
+  /* if (sheetNames.length < 1) {
     console.log(
       `
     ----------------- No coincide el argumento menuName con ninguna sheetName!! ----------------     `
     );
     return;
-  }
+  } */
 
   const dataToJson = transformToNewObject();
 
@@ -300,7 +302,9 @@ export const productsExcelToJson = (excelFilePath, products) => {
   }
 };
 
-export const createExcelFileFromJson = (parsedJson, filename) => {
+export const createExcelFileFromJson = (parsedJson) => {
+  const filename = set_Date_To_String() + '.xlsx';
+
   let workbook = XLSX.utils.book_new();
 
   const jsonFileKeys = Object.keys(parsedJson);
@@ -322,4 +326,6 @@ export const createExcelFileFromJson = (parsedJson, filename) => {
   const filePath = path.join(tmpPath, filename);
 
   XLSX.writeFile(workbook, filePath);
+
+  return { filePath, filename };
 };

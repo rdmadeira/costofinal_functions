@@ -6,6 +6,7 @@ import {
   createAsyncJsonFromDB,
   updatePrices,
   productsExcelToJson,
+  createExcelFileFromJson,
 } from '../utils/utils.js';
 
 import path from 'path';
@@ -24,14 +25,36 @@ export const getProductsHandler = async (req, res, next) => {
   });
 };
 
+export const getXlsProductsHandler = async (req, res, next) => {
+  const token = req.headers?.authorization?.split(' ')[1] || null;
+  try {
+    const productsResponse = await getProductsFromFirestore();
+
+    if (!productsResponse.isSuccess) {
+      console.log('error', productsResponse.error);
+
+      return next(productsResponse.error);
+    }
+    if (token === process.env.AUTH_UID) {
+      const { filePath } = createExcelFileFromJson(productsResponse.data);
+      res.status(200).download(filePath); // Filename no se hace por download, tendria que crear un elemento a con href y hacerle click
+    } else {
+      res
+        .status(401)
+        .sendFile(path.resolve(process.cwd() + '/public/' + '401.html'));
+    }
+  } catch (error) {
+    console.log('error', error);
+    return next(error);
+  }
+};
+
 // Actualiza los documentos que coincide el Key con el Id de la DB:
 export const postCreateProductsHandler = async (req, res, next) => {
   try {
     const { originalname, mimetype, buffer } = req.files[0];
     const merge = req.body.merge;
     const mergeTipoProducto = req.body.mergeTipoProducto; // usar
-
-    console.log('mergeTipoProducto', mergeTipoProducto); // true o undefined
 
     const collectionName = req.body.collectionName;
 
@@ -85,18 +108,6 @@ export const postCreateProductsHandler = async (req, res, next) => {
     console.log('error', error);
     next(error);
   }
-
-  /* await createNewProductsToFirestore(productsJson, test);
-  await updateProductsToFirestore(productsJson, test);
-
-  console.log('response', response);
-
-  if (!response.isSuccess) {
-    res.status(500).json({ isSuccess: false, message: response.message });
-    return next(response.error);
-  }
-
-  res.status(200).json({ isSuccess: true, message: response.message }); */
 };
 
 export const getUpdatePriceHandler = async (req, res) => {
@@ -114,8 +125,6 @@ export const getUpdatePriceHandler = async (req, res) => {
       .sendFile(path.resolve(process.cwd() + '/public/' + '401.html'));
   }
 };
-
-// Todavia falta:
 
 import { uploadFile, sendUpdatedProductsToDB } from '../utils/utils.js';
 
