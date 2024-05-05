@@ -2,15 +2,19 @@ import { Router } from 'express';
 
 import {
   getProductsHandler,
-  putProductsHandler,
+  postCreateProductsHandler,
+  getCreateProductsHandler,
   getUpdatePriceHandler,
   postUpdatePriceHandler,
+  getXlsProductsHandler,
 } from '../handlers/productsHandlers.js';
 
 const router = Router();
 
 router.get('/', getProductsHandler);
-router.put('/', putProductsHandler);
+router.get('/products-to-excel', getXlsProductsHandler);
+router.get('/create-products', getCreateProductsHandler);
+router.post('/create-products', postCreateProductsHandler);
 router.get('/update-price', getUpdatePriceHandler);
 router.post('/update-price', postUpdatePriceHandler);
 

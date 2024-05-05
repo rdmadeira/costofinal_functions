@@ -1,10 +1,10 @@
 import express from 'express';
 
 import dotenv from 'dotenv';
+import cors from 'cors';
 import * as functions from 'firebase-functions';
 import admin from 'firebase-admin';
-/* import connectBusboy from 'connect-busboy';
- */
+
 import fileParser from 'express-multipart-file-parser';
 
 import {
@@ -12,12 +12,27 @@ import {
   authRouter, */,
   productsRouter,
 } from './src/routes/index.js';
-/* import { setHeaderAllowOrigin } from './src/middlewares/setHeader.js';
-import errorHandler from './src/errors/errorsHandler.js'; */
+/* import { setHeaderAllowOrigin } from './src/middlewares/setHeader.js';*/
+import errorHandler from './src/errors/errorsHandler.js';
 
 import bodyParser from 'body-parser';
 
 admin.initializeApp(functions.config().firebase);
+
+// refresh token access - error de Gaxios Error
+/* import { google } from 'googleapis';
+const OAuth2 = google.auth.OAuth2;
+const oauth2Client = new OAuth2(
+  process.env.CLIENT_ID_GOOGLEAPIS,
+  process.env.CLIENT_SECRET_KEY_GOOGLEAPIS,
+  'https://developers.google.com/oauthplayground'
+);
+oauth2Client.setCredentials({
+  refresh_token:
+    '1//04CZ-RIvKzNwOCgYIARAAGAQSNwF-L9Irv1_ntUJEGRdfhHHC5vDTN9yBiHrh63Fgbnzm_D428xTSlFTOgADw_aVOGqLtbKwyVb4',
+}); 
+const accessToken = oauth2Client.getAccessToken();
+console.log('accessToken', accessToken);*/
 
 dotenv.config({ path: process.cwd() });
 
@@ -46,32 +61,16 @@ getProductsApi.use(express.static('public'));
 getProductsApi.use(fileParser);
 getProductsApi.use(express.json());
 getProductsApi.use(bodyParser.urlencoded({ extended: true }));
-/* getProductsApi.use(connectBusboy());
- */ /* getProductsApi.use((req, res, next) => {
-  /* res.setHeader('Access-Control-Allow-Origin', '*'); */ // Desabilitar CORS para prueba
-/* res.header(
-    'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With, Content-Type, Accept'
-  ); 
-  next();
-}); */
+
+getProductsApi.use(
+  cors({
+    origin: ['http://localhost:3000', 'https://www.costofinal.com.ar'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  })
+);
 
 getProductsApi.use('/api/products', productsRouter);
+getProductsApi.use(errorHandler);
 
 export const products = functions.https.onRequest(getProductsApi);
-
-/* ***************************************************** */
-/* const updateProducts = express();
-updateProducts.use(express.json());
-updateProducts.use(setHeaderAllowOrigin);
-updateProducts.use('/api/products', productsRouter);
-updateProducts.use('/api/auth', authRouter);
-updateProducts.use(errorHandler);
-
-<<<<<<< HEAD
-export const products = functions.https.onRequest(updateProducts);
- */
-
-/* export const products = functions
-  .runWith({ secrets: ['USER_UID', 'DATABASE_API_KEY'] })
-  .https.onRequest(updateProducts); */

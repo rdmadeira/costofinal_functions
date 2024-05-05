@@ -1,0 +1,252 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear Productos</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    #bodyCtn {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      padding: 4% 0 0 0;
+      row-gap: 5%;
+      align-items: center;
+      background: url('https://us-central1-costofinal-b391b.cloudfunctions.net/products/assets/plumbing-home.jpg');
+      background-size: cover;
+      background-color: #3d8d3d;
+      background-blend-mode: multiply;
+      width: 100vw;
+      height: 100vh;
+    }
+    form {
+      width: clamp(360px, 80%, 600px);
+    }
+    .formCtn {
+      display: flex;
+      /* flex-direction: column; */
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 15px;
+      border: 1px gray solid;
+      border-radius: 15px;
+      background-color: #f0fff4;
+    }
+    .inputCtn {
+      padding: 10px 12px;
+      margin: 10px 13px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      border: 1px solid #d1d1d1;
+    }
+    .formCtn > h3 {
+      width: 80%;
+      text-align: center;
+    }
+    .inputCtnProducts {
+      order: 3;
+    }
+    .inputCtnMerge {
+      order: 4;
+      /* width: 100%; */
+    }
+    #checkboxCtn {
+      margin: 0 0 5% 5%;
+    }
+    .inputCtn > div {
+      display: flex;
+      padding: 5px;
+      width: 80%;
+    }
+    .inputCtn label {
+      margin: 8px 0;
+      font-size: min(max(2.5vw, 11px), 15px);
+      margin-left: 10px;
+    }
+    .tooltip {
+      position: relative;
+    }
+    .tooltip .tooltip-text {
+      visibility: hidden;
+      position: absolute;
+      width: 450px;
+      background-color: #001706b0;
+      z-index: 1;
+      color: #f0fff4;
+      bottom: 30px;
+      left: 50%;
+      padding: 10px;
+      border: double aquamarine 4px;
+    }
+
+    .tooltip-text {
+      position: absolute;
+      display: inline-block;
+    }
+    .tooltip:hover .tooltip-text {
+      visibility: visible;
+    }
+    input[type='file'] {
+      background-color: #2e3d90;
+      color: #d1d1d1;
+    }
+    input[type='file']:hover {
+      background-color: #d1d1d1;
+      color: #2e3d90;
+      cursor: pointer;
+      transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    input[type='submit'] {
+      background-color: #2e3d90;
+      color: antiquewhite;
+      font-weight: bold;
+      padding: 5px 8px;
+      border-radius: 5px;
+      width: 50%;
+      margin: 15px 0;
+      order: 5;
+    }
+    input[type='submit']:hover {
+      background-color: antiquewhite;
+      color: #2e3d90;
+      cursor: pointer;
+      transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+  </style>
+  <body>
+    <div id="bodyCtn">
+      <div class="titleCtn">
+        <div>
+          <img
+            src="https://us-central1-costofinal-b391b.cloudfunctions.net/products/assets/logo.jpg"
+            width="80px"
+          />
+        </div>
+      </div>
+      <!-- https://us-central1-costofinal-b391b.cloudfunctions.net/products/api/products/create-products -->
+      <!-- http://127.0.0.1:5001/costofinal-b391b/us-central1/products/api/products/create-products -->
+      <form
+        action="https://us-central1-costofinal-b391b.cloudfunctions.net/products/api/products/create-products"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="formCtn">
+          <h3>Crear productos por planilla</h3>
+
+          <div class="inputCtn">
+            <label for="fileUpload">Seleccione el archivo XLS:</label>
+            <input
+              type="file"
+              name="fileUpload"
+              id="fileUpload"
+              accept=".xls, .xlsx"
+              required
+            />
+          </div>
+
+          <div class="inputCtn inputCtnMerge">
+            <div class="tooltip">
+              <input
+                type="radio"
+                name="merge"
+                id="merge-true"
+                value="true"
+                checked
+              /><label for="merge-true">
+                Combina los Subproductos con los existentes
+              </label>
+              <span class="tooltip-text"
+                >Los subproductos son los documentos de la collección elijida.
+                Esta opción permite para cada subproducto que coincida, mesclar
+                el nuevo TIPO con los TIPOS ya existentes. Los tipos son las
+                claves (keys) del objecto subproducto. Si el tipo o el
+                subproducto no coincide, se creará uno nuevo</span
+              >
+            </div>
+            <div class="tooltip" id="checkboxCtn">
+              <input
+                type="checkbox"
+                name="mergeTipoProducto"
+                id="merge-tipo"
+                value="true"
+                checked
+              /><label for="merge-tipo">
+                Combina los productos de un tipo de subproducto con los
+                productos existentes
+              </label>
+              <span class="tooltip-text"
+                >Está opción permite que, si es la opción combinación de
+                subproductos elijida, los productos de un tipo existente se
+                mescla con los productos de este mismo tipo existentes. Si no
+                coincide con el key, se creará.</span
+              >
+            </div>
+            <div class="tooltip">
+              <input
+                type="radio"
+                name="merge"
+                id="merge-false"
+                value="false"
+              /><label for="merge-false">
+                Reemplaza todos los Subproductos existentes
+              </label>
+              <span class="tooltip-text"
+                >Los subproductos son los documentos de la collección elijida.
+                Esta opción permite para cada subproducto que coincida
+                reemplazar todo el documento Si no coincide el key, se creará un
+                nuevo documento.
+              </span>
+            </div>
+          </div>
+          <div class="inputCtn inputCtnProducts">
+            <div>
+              <input
+                type="radio"
+                name="collectionName"
+                id="products"
+                value="products"
+              /><label for="products">Products</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="collectionName"
+                id="products2"
+                value="products2"
+                checked
+              /><label for="products2">Products2</label>
+            </div>
+          </div>
+
+          <input type="submit" value="Enviar" id="button" />
+        </div>
+      </form>
+    </div>
+  </body>
+  <script>
+    const checkboxEl = document.getElementById('merge-tipo');
+    const mergeDivEl = document.getElementById('checkboxCtn');
+
+    document.body.addEventListener('change', (e) => {
+      if (e.target.id === 'merge-false') {
+        checkboxEl.disabled = true;
+        checkboxEl.checked = false;
+        mergeDivEl.style.color = 'gray';
+      }
+      if (e.target.id === 'merge-true') {
+        checkboxEl.disabled = false;
+        checkboxEl.checked = true;
+        mergeDivEl.style.color = 'inherit';
+      }
+    });
+  </script>
+</html>
