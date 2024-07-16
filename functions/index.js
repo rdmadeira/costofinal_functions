@@ -8,8 +8,8 @@ import admin from 'firebase-admin';
 import fileParser from 'express-multipart-file-parser';
 
 import {
-  mailingRouter /* ,
-  authRouter, */,
+  mailingRouter,
+  imagesRouter,
   productsRouter,
 } from './src/routes/index.js';
 /* import { setHeaderAllowOrigin } from './src/middlewares/setHeader.js';*/
@@ -74,3 +74,18 @@ getProductsApi.use('/api/products', productsRouter);
 getProductsApi.use(errorHandler);
 
 export const products = functions.https.onRequest(getProductsApi);
+
+const getImages = express();
+
+getImages.use(express.static('public'));
+getImages.use(
+  cors({
+    origin: ['http://localhost:3000', 'https://www.costofinal.com.ar'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  })
+);
+getImages.use('/api/images', imagesRouter);
+getImages.use(errorHandler);
+
+export const images = functions.https.onRequest(getImages);

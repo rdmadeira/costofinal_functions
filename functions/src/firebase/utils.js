@@ -6,15 +6,20 @@ import {
   getFirestore,
   doc,
 } from 'firebase/firestore';
+import { getStorage, ref, getDownloadURL } from 'firebase/storage';
 import admin from 'firebase-admin';
-
-/* import { getAuth } from 'firebase/auth'; */
 
 import { firebaseConfig } from './config.js';
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
+const storage = getStorage(app);
+
+export const getImageStorage = async (path) => {
+  const url = await getDownloadURL(ref(storage, 'assets/' + path));
+  return url;
+};
 
 export const getProductsFromFirestore = async () => {
   try {
