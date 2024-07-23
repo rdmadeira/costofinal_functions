@@ -1,5 +1,5 @@
 export const firebaseConfig = {
-  apiKey: process.env.DATABASE_API_KEY,
+  apiKey: process.env.DB_API_KEY,
   authDomain: 'costofinal-b391b.firebaseapp.com',
   projectId: 'costofinal-b391b',
   storageBucket: 'costofinal-b391b.appspot.com',

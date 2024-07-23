@@ -3,7 +3,6 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import * as functions from 'firebase-functions';
-import admin from 'firebase-admin';
 
 import fileParser from 'express-multipart-file-parser';
 
@@ -17,7 +16,7 @@ import errorHandler from './src/errors/errorsHandler.js';
 
 import bodyParser from 'body-parser';
 
-admin.initializeApp(functions.config().firebase);
+/* admin.initializeApp(functions.config().firebase); */
 
 // refresh token access - error de Gaxios Error
 /* import { google } from 'googleapis';

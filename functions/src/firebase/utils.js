@@ -1,4 +1,9 @@
-import { initializeApp } from 'firebase/app';
+/* import { firebaseApp } from '../../index.js'; */
+
+// import these as needed..
+import '@firebase/auth';
+
+import '@firebase/firestore';
 import {
   getDocs,
   collection,
@@ -6,18 +11,24 @@ import {
   getFirestore,
   doc,
 } from 'firebase/firestore';
-import { getStorage, ref, getDownloadURL } from 'firebase/storage';
-import admin from 'firebase-admin';
+
+import { initializeApp } from 'firebase/app';
 
 import { firebaseConfig } from './config.js';
 
+import { getStorage, ref, getDownloadURL, uploadBytes } from 'firebase/storage';
+
+import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
-const storage = getStorage(app);
+
+const firebaseApp = initializeApp(firebaseConfig);
+const auth = getAuth(firebaseApp);
+const storages1 = getStorage(firebaseApp, 'gs://costofinal-b391b.appspot.com');
+export const db = getFirestore(firebaseApp);
 
 export const getImageStorage = async (path) => {
-  const url = await getDownloadURL(ref(storage, 'assets/' + path));
+  const url = await getDownloadURL(ref(storages1, 'assets/' + path));
   return url;
 };
 
@@ -127,8 +138,15 @@ export const sendNewProductsToFirestore = async (
 };
 
 export const sendAllDataToDB = async (jsonFile, collectionName) => {
-  console.log('collectionName', collectionName);
-
+  /* signInWithEmailAndPassword(
+    auth,
+    process.env.AUTH_EMAIL,
+    process.env.AUTH_PASS
+  )
+    .then((userCredential) => {
+      // Signed in
+      const user = userCredential.user;
+ */
   try {
     Object.keys(jsonFile).forEach(async (key) => {
       await setDoc(doc(db, collectionName, key), jsonFile[key]);
@@ -139,27 +157,53 @@ export const sendAllDataToDB = async (jsonFile, collectionName) => {
   }
 };
 
-import { Readable } from 'stream';
-
 export const uploadFileToStorageFirebase = async (
   mimetype,
   buffer,
   filename
 ) => {
-  const fileStream = Readable.from(buffer);
-  const storage = admin.storage().bucket();
+  // Función para transformar el file.buffer en Arraybuffer porque daba error en el uploadBytes en bytesLength como undefined
+  function toArrayBuffer(buffer) {
+    const arrayBuffer = new ArrayBuffer(buffer.length);
+    const view = new Uint8Array(arrayBuffer);
+    for (let i = 0; i < buffer.length; ++i) {
+      view[i] = buffer[i];
+    }
+    return arrayBuffer;
+  }
 
-  const fileUpload = storage.file(filename);
-  const writeStream = fileUpload.createWriteStream({
-    metadata: {
-      contentType: mimetype,
-    },
+  const arrayBuffer = toArrayBuffer(buffer);
+
+  const xlsStorageRef = ref(storages1, 'xls/' + filename);
+
+  const metaData = {
+    contentType: mimetype,
+  };
+
+  /*  signInWithEmailAndPassword(
+    auth,
+    process.env.AUTH_EMAIL,
+    process.env.AUTH_PASS
+  ).then(() => { */
+  uploadBytes(xlsStorageRef, arrayBuffer, metaData).then((snapshot) => {
+    console.log('Uploaded a file ArrayBuffer!', snapshot);
+    /* signOut(auth); */
   });
-  fileStream
-    .pipe(writeStream)
-    .on('error', (error) => {
-      console.log('error', error);
-      throw error;
+  /* .catch((error) => console.log(error));
+  }); */
+};
+
+export const signIn = async (mail, pw) => {
+  const signInResponse = await signInWithEmailAndPassword(auth, mail, pw);
+  return signInResponse;
+};
+
+export const signOutAuth = () => {
+  signOut(auth)
+    .then(() => {
+      console.log('Signout succesfully');
     })
-    .on('finish', () => console.log('File upload to Storage finished'));
+    .catch((error) => {
+      console.log('error', error);
+    });
 };

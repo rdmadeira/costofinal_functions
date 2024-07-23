@@ -1,6 +1,8 @@
 import {
   getProductsFromFirestore,
   sendNewProductsToFirestore,
+  signIn,
+  signOutAuth,
 } from '../firebase/utils.js';
 import {
   createAsyncJsonFromDB,
@@ -51,6 +53,13 @@ export const getXlsProductsHandler = async (req, res, next) => {
 
 // Actualiza los documentos que coincide el Key con el Id de la DB:
 export const postCreateProductsHandler = async (req, res, next) => {
+  try {
+    await signIn(process.env.AUTH_EMAIL, process.env.AUTH_PASS);
+  } catch (error) {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log(errorCode, errorMessage);
+  }
   try {
     const { originalname, mimetype, buffer } = req.files[0];
     const merge = req.body.merge;
@@ -130,6 +139,13 @@ import { uploadFile, sendUpdatedProductsToDB } from '../utils/utils.js';
 
 export const postUpdatePriceHandler = async (req, res, next) => {
   try {
+    await signIn(process.env.AUTH_EMAIL, process.env.AUTH_PASS);
+  } catch (error) {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log(errorCode, errorMessage);
+  }
+  try {
     const { originalname, mimetype, buffer } = req.files[0];
     const collectionName = req.body.collectionName;
 
@@ -166,6 +182,7 @@ export const postUpdatePriceHandler = async (req, res, next) => {
       return next(sendUpdatedProductsToDBResponse.error);
     }
 
+    signOutAuth();
     await res
       .status(200)
       .sendFile(path.resolve('public/' + 'success-update-prices.html'));

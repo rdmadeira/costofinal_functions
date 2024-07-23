@@ -3,6 +3,7 @@ const errorHandler = (error, req, res, next) => {
   if (error) {
     res.status(error.statusCode || 500).json({ message: error.message, error });
   }
+  next();
 };
 
 export default errorHandler;
