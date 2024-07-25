@@ -138,22 +138,24 @@ export const sendNewProductsToFirestore = async (
 };
 
 export const sendAllDataToDB = async (jsonFile, collectionName) => {
-  /* signInWithEmailAndPassword(
-    auth,
-    process.env.AUTH_EMAIL,
-    process.env.AUTH_PASS
-  )
-    .then((userCredential) => {
-      // Signed in
-      const user = userCredential.user;
- */
-  try {
-    Object.keys(jsonFile).forEach(async (key) => {
+  // forEach no funciona para async await!!!
+  /* Object.keys(jsonFile).forEach((key) => {
       await setDoc(doc(db, collectionName, key), jsonFile[key]);
-    });
-    console.log('Actualizado con exito en la base de datos');
+      console.log('setDoc', collectionName, key);
+    }); */
+  let promises = [];
+  try {
+    for (const key in jsonFile) {
+      promises.push(setDoc(doc(db, collectionName, key), jsonFile[key]));
+    }
+    await Promise.all(promises); // Junta todas las promesas si alguna falla, aciona el catch, o cuando termina todos los resultados de las promesas, aciona el try
+
+    const message = 'Actualizado con exito en la base de datos';
+    console.log(message);
+    return { isSuccess: true, message };
   } catch (error) {
-    return console.log(error);
+    console.log('error', error);
+    return { isSuccess: false, error };
   }
 };
 
@@ -180,22 +182,26 @@ export const uploadFileToStorageFirebase = async (
     contentType: mimetype,
   };
 
-  /*  signInWithEmailAndPassword(
-    auth,
-    process.env.AUTH_EMAIL,
-    process.env.AUTH_PASS
-  ).then(() => { */
-  uploadBytes(xlsStorageRef, arrayBuffer, metaData).then((snapshot) => {
-    console.log('Uploaded a file ArrayBuffer!', snapshot);
-    /* signOut(auth); */
-  });
-  /* .catch((error) => console.log(error));
-  }); */
+  uploadBytes(xlsStorageRef, arrayBuffer, metaData)
+    .then((snapshot) => {
+      return snapshot.ref.fullPath;
+    })
+    .catch((error) => {
+      console.log('error', error);
+
+      return 'Error al hacer upload en Storage';
+    });
 };
 
 export const signIn = async (mail, pw) => {
-  const signInResponse = await signInWithEmailAndPassword(auth, mail, pw);
-  return signInResponse;
+  try {
+    const signInResponse = await signInWithEmailAndPassword(auth, mail, pw);
+
+    return signInResponse;
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
 };
 
 export const signOutAuth = () => {

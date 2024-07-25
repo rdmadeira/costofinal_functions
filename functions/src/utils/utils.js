@@ -86,6 +86,7 @@ export const updatePrices = (excelFile) => {
     const excel = XLSX.readFile(excelFile);
     const sheet = excel.Sheets['HojaParaActualizar'];
     const datosSheetName = XLSX.utils.sheet_to_json(sheet);
+
     productsKeys.forEach((productKey) => {
       Object.keys(products[productKey]).forEach((subProductoKey) => {
         products[productKey][subProductoKey].forEach((productItem, index) => {
@@ -113,6 +114,7 @@ export const updatePrices = (excelFile) => {
 
     const message = 'updated_products.json created!';
 
+    console.log(message);
     console.log(`
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         !!!!!!!!!!!!!!  JSON ACTUALIZADO CREADO CON EXITO !!!!!!!!!!!!!!!!!!!
@@ -136,8 +138,17 @@ export const sendUpdatedProductsToDB = async (collectionName) => {
   try {
     const updatedJsonPath = path.join(tmpPath, 'updated_products.json');
     const updatedJsonFile = JSON.parse(fs.readFileSync(updatedJsonPath));
-    await sendAllDataToDB(updatedJsonFile, collectionName);
-    const message = 'Your new prices is now available!';
+
+    const sendAllDataToDBResponse = await sendAllDataToDB(
+      updatedJsonFile,
+      collectionName
+    );
+
+    if (!sendAllDataToDBResponse.isSuccess) {
+      throw new Error(sendAllDataToDBResponse.error);
+    }
+
+    const message = 'Your updated Products is now available!';
 
     console.log(`
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -183,13 +194,21 @@ export const uploadFile = (originalname, mimetype, buffer) => {
     uploadFileToStorageFirebase(mimetype, buffer, filename);
     fs.writeFileSync(filePath, buffer);
 
-    console.log(`File ${filename} uploaded in filesystem!!!`);
+    console.log(`File ${filename} uploaded in Storage!!!`);
 
-    return filePath;
+    return {
+      path: filePath,
+      isSuccess: true,
+      message: `File ${filename} uploaded in Storage!!!`,
+    };
   } catch (error) {
     console.log('error', error);
 
-    throw error;
+    return {
+      isSuccess: false,
+      error: error,
+      message: `Failed to upload file in Storage`,
+    };
   }
 };
 
@@ -267,14 +286,6 @@ export const productsExcelToJson = (excelFilePath, products) => {
   }
 
   const jsonpath = path.join(tmpPath, 'newProducts.json');
-
-  /* if (sheetNames.length < 1) {
-    console.log(
-      `
-    ----------------- No coincide el argumento menuName con ninguna sheetName!! ----------------     `
-    );
-    return;
-  } */
 
   const dataToJson = transformToNewObject();
 

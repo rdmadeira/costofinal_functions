@@ -53,12 +53,14 @@ export const getXlsProductsHandler = async (req, res, next) => {
 
 // Actualiza los documentos que coincide el Key con el Id de la DB:
 export const postCreateProductsHandler = async (req, res, next) => {
+  const pw = req.body.pw;
   try {
-    await signIn(process.env.AUTH_EMAIL, process.env.AUTH_PASS);
+    await signIn(process.env.AUTH_EMAIL, pw);
   } catch (error) {
     const errorCode = error.code;
     const errorMessage = error.message;
     console.log(errorCode, errorMessage);
+    next(error);
   }
   try {
     const { originalname, mimetype, buffer } = req.files[0];
@@ -77,8 +79,15 @@ export const postCreateProductsHandler = async (req, res, next) => {
       return next(createAsyncJsonResponse.error);
     }
 
-    const excelFilePath = uploadFile(originalname, mimetype, buffer);
+    const uploadFileResponse = await uploadFile(originalname, mimetype, buffer);
 
+    if (!uploadFileResponse.isSuccess) {
+      console.log('message', uploadFileResponse.message);
+
+      next(uploadFileResponse.error);
+    }
+
+    const excelFilePath = uploadFileResponse.path;
     // Hacer archivo Json a partir del excel:
     const createNewProductJsonResponse = productsExcelToJson(
       excelFilePath,
@@ -138,18 +147,28 @@ export const getUpdatePriceHandler = async (req, res) => {
 import { uploadFile, sendUpdatedProductsToDB } from '../utils/utils.js';
 
 export const postUpdatePriceHandler = async (req, res, next) => {
+  const pw = req.body.pw;
   try {
-    await signIn(process.env.AUTH_EMAIL, process.env.AUTH_PASS);
+    await signIn(process.env.AUTH_EMAIL, pw);
   } catch (error) {
     const errorCode = error.code;
     const errorMessage = error.message;
-    console.log(errorCode, errorMessage);
+    console.log(error, errorCode, errorMessage);
+    next(error);
   }
   try {
     const { originalname, mimetype, buffer } = req.files[0];
     const collectionName = req.body.collectionName;
 
-    const fileXLSPath = uploadFile(originalname, mimetype, buffer);
+    const uploadFileResponse = uploadFile(originalname, mimetype, buffer);
+
+    if (!uploadFileResponse.isSuccess) {
+      console.log('uploadResponse.message', uploadFileResponse.message);
+
+      next(uploadFileResponse.error);
+    }
+
+    const fileXLSPath = uploadFileResponse.path; // Ver acá el archivo que mandamos a updatePrices
 
     const createAsyncJsonResponse = await createAsyncJsonFromDB('products');
     if (!createAsyncJsonResponse.isSuccess) {
@@ -183,7 +202,7 @@ export const postUpdatePriceHandler = async (req, res, next) => {
     }
 
     signOutAuth();
-    await res
+    res
       .status(200)
       .sendFile(path.resolve('public/' + 'success-update-prices.html'));
   } catch (error) {
